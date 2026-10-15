@@ -7,6 +7,8 @@ device goes through the same encode and decode pair, so keeping the
 capture as the golden vector pins the whole wire format.
 """
 
+import json
+from typing import Any
 from unittest.mock import AsyncMock
 
 import aiohttp
@@ -71,9 +73,10 @@ def test_response_decodes_a_full_captured_register_block():
     registers, the CRC rechecked over the body before a single value is
     believed.
     """
-    assert _words_from_response(
-        CAPTURED_17_REG_REPLY_HEX, function=0x03, count=17, slave=1
-    ) == [0] * 17
+    assert (
+        _words_from_response(CAPTURED_17_REG_REPLY_HEX, function=0x03, count=17, slave=1)
+        == [0] * 17
+    )
 
 
 def test_response_rejects_an_altered_crc():
@@ -180,7 +183,8 @@ async def test_connect_probes_then_holds_the_flag(hass):
     await connection.connect()
     assert connection.connected is True
     # The probe read goes to the SunSpec base the scanner would use.
-    assert post.await_args[0][0] == {"cmd": CAPTURED_REQUEST_HEX}
+    assert post.call_args is not None
+    assert post.call_args.args[0] == {"cmd": CAPTURED_REQUEST_HEX}
 
     await connection.disconnect()
     assert connection.connected is False
@@ -336,13 +340,18 @@ async def test_post_errors_map_onto_the_transport_hierarchy(hass):
     with pytest.raises(ModbusConnectionError, match="non-JSON"):
         await connection._post_json({"cmd": CAPTURED_REQUEST_HEX})
 
+    # A JSON body that parses but is not an object (an array) is the
+    # other half: parsed, then rejected by the envelope check.
+    session = _StubSession(_StubResponse(body="[1, 2]"))
+    connection._get_session = AsyncMock(return_value=session)
+    with pytest.raises(ModbusConnectionError):
+        await connection._post_json({"cmd": CAPTURED_REQUEST_HEX})
+
 
 async def test_the_session_hits_the_right_path_and_carries_the_frame(hass):
     """The URL is the captured endpoint on the configured host."""
     connection = WiLanHTTPConnection(host="192.0.2.10", timeout=10)
-    session = _StubSession(
-        _StubResponse(body={"errno": 0, "data": {"result": CAPTURED_REPLY_HEX}})
-    )
+    session = _StubSession(_StubResponse(body={"errno": 0, "data": {"result": CAPTURED_REPLY_HEX}}))
     connection._get_session = AsyncMock(return_value=session)
     await connection.exchange(1, 0x03, 40000, 2)
     url, kwargs = session.requests[0]
@@ -364,6 +373,11 @@ class _StubResponse:
     async def json(self, content_type=None):  # noqa: ARG002 - signature parity
         if isinstance(self._body, Exception):
             raise self._body
+        if isinstance(self._body, str):
+            # Mirror aiohttp: a body is run through json.loads, and a
+            # body that will not parse raises JSONDecodeError (a
+            # ValueError) exactly where the real client would.
+            return json.loads(self._body)
         return self._body
 
 
@@ -389,7 +403,7 @@ class _StubSession:
 
     def __init__(self, response: _StubResponse) -> None:
         self._response = response
-        self.requests: list[tuple[str, dict]] = []
+        self.requests: list[tuple[str, dict[str, Any]]] = []
 
     def post(self, url, **kwargs):
         self.requests.append((url, kwargs))
@@ -397,4 +411,3 @@ class _StubSession:
 
     async def close(self):
         return None
-

@@ -69,12 +69,10 @@ Errors map onto the ``modbus_connection`` hierarchy so everything above
 
 from __future__ import annotations
 
-import asyncio
 import logging
 from typing import Any
 
 import aiohttp
-
 from modbus_connection import IllegalDataAddressError
 from modbus_connection import ModbusConnectionError
 from modbus_connection import ModbusExceptionError
@@ -158,7 +156,10 @@ def _words_from_response(frame_hex: str, function: int, count: int, slave: int) 
     reply_function = frame[1]
     if reply_function & FUNC_EXCEPTION_MASK:
         code = frame[2] if len(frame) > 2 else 0
-        raise ModbusExceptionError(f"Modbus exception {code}")
+        # from_code raises the standard subclass the code names
+        # (IllegalFunctionError and friends), so callers above can
+        # branch with except instead of comparing magic numbers.
+        raise ModbusExceptionError.from_code(code, f"Modbus exception {code}")
 
     if reply_function != function:
         raise ModbusConnectionError(
@@ -168,8 +169,7 @@ def _words_from_response(frame_hex: str, function: int, count: int, slave: int) 
     byte_count = frame[2]
     if byte_count != count * 2:
         raise ModbusConnectionError(
-            f"reply announces {byte_count} data bytes, "
-            f"expected {count * 2} for {count} registers"
+            f"reply announces {byte_count} data bytes, expected {count * 2} for {count} registers"
         )
 
     body = frame[3 : 3 + byte_count]
@@ -309,13 +309,14 @@ class WiLanHTTPConnection:
 
         errno = payload.get("errno")
         if errno == ERRNO_NO_DATA:
-            raise IllegalDataAddressError("no data from the device behind the datalogger")
+            # Coded error: carries Modbus exception code 2, so the scan
+            # and the diagnostics dump report the real exception class.
+            raise IllegalDataAddressError(message="no data from the device behind the datalogger")
         if errno == ERRNO_ID_NOT_FOUND:
-            raise IllegalDataAddressError("id not found in the datalogger's registry")
+            raise IllegalDataAddressError(message="id not found in the datalogger's registry")
         if errno != 0:
             raise ModbusConnectionError(
-                f"datalogger refused the exchange "
-                f"(errno {errno}: {payload.get('errmsg', '?')})"
+                f"datalogger refused the exchange (errno {errno}: {payload.get('errmsg', '?')})"
             )
 
         result = (payload.get("data") or {}).get("result")
@@ -337,10 +338,8 @@ class WiLanHTTPConnection:
             async with session.post(url, json=body) as response:
                 response.raise_for_status()
                 payload = await response.json(content_type=None)
-        except asyncio.TimeoutError as err:
-            raise ModbusTimeoutError(
-                f"datalogger did not answer within {self._timeout}s"
-            ) from err
+        except TimeoutError as err:
+            raise ModbusTimeoutError(f"datalogger did not answer within {self._timeout}s") from err
         except aiohttp.ClientError as err:
             raise ModbusConnectionError(f"HTTP error talking to the datalogger: {err}") from err
         except ValueError as err:

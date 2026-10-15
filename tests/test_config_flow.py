@@ -382,19 +382,20 @@ async def test_dhcp_discovery_aborts_when_host_already_configured(hass):
 
 
 async def test_user_step_offers_manual_scan_and_serial_menu(hass):
-    """Adding the integration must show a Manual / Scan / Serial menu first.
+    """Adding the integration must show the connection-kind menu first.
 
     The user-step menu was introduced in v0.8.1 to make the network
     scan reachable as an explicit user choice without forcing a scan
     on every install. v0.11.0 added a third "serial" option for
-    Modbus RTU. All three options must be present.
+    Modbus RTU. The Smart WiLAN HTTP relay added a fourth "wilan"
+    option. All four options must be present.
     """
     result = await hass.config_entries.flow.async_init(
         DOMAIN, context={"source": config_entries.SOURCE_USER}
     )
     assert result["type"] == FlowResultType.MENU
     assert result["step_id"] == "user"
-    assert set(result["menu_options"]) == {"manual", "scan", "serial"}
+    assert set(result["menu_options"]) == {"manual", "scan", "serial", "wilan"}
 
 
 async def test_scan_step_picks_candidate_and_pre_fills_manual_step(hass):
