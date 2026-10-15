@@ -85,11 +85,18 @@ The integration is in the default HACS store.
    - **Connect via serial port** if the inverter is wired with RS-485.
      That needs a USB adapter, which shows up as `/dev/ttyUSB0` on
      Linux or `COM3` on Windows
+   - **FoxESS Smart WiLAN datalogger** if your inverter is connected
+     through a FoxESS Smart WiLAN / WLan-WW WiFi datalogger, which
+     serves its Modbus over HTTP instead of a network port. Enter the
+     datalogger's IP and the unit ID of the inverter behind it. See
+     [the Smart WiLAN page](docs/wilan.md)
 5. Keep the suggested port `502` and unit ID `1`, unless your inverter
    needs something else (check the page for your brand above). The
    port is the "door" on the inverter, the unit ID is the "address" of
    the device behind it. For a serial connection, enter the serial
-   settings from your inverter's manual.
+   settings from your inverter's manual. The Smart WiLAN transport has
+   no port field: the datalogger serves its HTTP interface on port 80
+   only.
 6. Tick the data you want sensors for. The default is a good start. You
    can change it later in the options
 

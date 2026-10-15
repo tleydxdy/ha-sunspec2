@@ -23,6 +23,7 @@ from .const import PARITY_EVEN
 from .const import PARITY_NONE
 from .const import TRANSPORT_RTU
 from .const import TRANSPORT_TCP
+from .const import TRANSPORT_WILAN
 from .errors import DeviceError
 from .errors import ProtocolError
 from .errors import TransientError
@@ -46,6 +47,7 @@ from .pysunspec2.modbus.unit_device import SunSpecModbusClientDeviceUnit
 from .vendors import PROFILES
 from .vendors import profile_for
 from .vendors.profile import ModelRelabel
+from .wilan_http import WiLanHTTPConnection
 
 # The embedded pysunspec2 is untyped, so every object it hands back reaches
 # mypy as Any. The alias names which Any is meant: a connected
@@ -206,7 +208,7 @@ class SunSpecApiClient:
         # The connection outlives the client. A close drops the link and
         # the model objects; the next client connects on the same object,
         # which modbus-connection reconnects on demand.
-        self._connection: ModbusConnection | None = None
+        self._connection: WiLanHTTPConnection | ModbusConnection | None = None
         # Cached SunSpec layout: base address plus (model_id, addr, len)
         # per block. Survives close() and transport failures. A new client
         # validates it before use; device or firmware changes explicitly
@@ -1095,10 +1097,21 @@ class SunSpecApiClient:
             )
         return ModbusTcpParams(host=self._host, port=self._port)
 
-    def _get_connection(self) -> ModbusConnection:
-        """The connection object, built on first use. Constructing it does no I/O."""
+    def _get_connection(self) -> WiLanHTTPConnection | ModbusConnection:
+        """The connection object, built on first use. Constructing it does no I/O.
+
+        The Smart WiLAN transport hands back an HTTP-backed connection
+        instead of a modbus-connection one. Everything downstream
+        (``SunSpecModbusClientDeviceUnit`` especially) only relies on
+        the duck-typed surface documented in ``tests/fake_unit.py``, so
+        both shapes satisfy it; this module pins the contract by
+        construction rather than by inheritance.
+        """
         if self._connection is None:
-            self._connection = ModbusConnection(self._params(), timeout=self._timeout)
+            if self._transport == TRANSPORT_WILAN:
+                self._connection = WiLanHTTPConnection(host=self._host, timeout=self._timeout)
+            else:
+                self._connection = ModbusConnection(self._params(), timeout=self._timeout)
         return self._connection
 
     async def modbus_connect(self) -> SunSpecClient:
@@ -1112,6 +1125,8 @@ class SunSpecApiClient:
         endpoint = (
             f"{self._serial_port} @ {self._baudrate} {self._parity}"
             if self._transport == TRANSPORT_RTU
+            else f"{self._host} (Smart WiLAN HTTP)"
+            if self._transport == TRANSPORT_WILAN
             else f"{self._host}:{self._port}"
         )
         self._log.debug(

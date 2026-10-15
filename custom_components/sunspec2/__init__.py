@@ -75,6 +75,7 @@ from .const import STRUCTURE_STORAGE_KEY
 from .const import STRUCTURE_STORAGE_VERSION
 from .const import TRANSPORT_RTU
 from .const import TRANSPORT_TCP
+from .const import TRANSPORT_WILAN
 from .const import WRITE_CAPABLE_MODEL_IDS
 from .const import WRITE_LOCK_TIMEOUT_SECONDS
 from .errors import CATEGORIES
@@ -230,6 +231,21 @@ async def async_setup_entry(hass: HomeAssistant, entry: SunSpec2ConfigEntry) -> 
             scan_delay=scan_delay,
         )
         log = get_adapter(serial_port or "rtu", baudrate, unit_id)
+    elif transport == TRANSPORT_WILAN:
+        # The Smart WiLAN HTTP relay. ``host`` is the datalogger's IP and
+        # ``port`` is stored as the fixed HTTP port the flow always
+        # writes, so the logger prefix and shared-endpoint lock work with
+        # the same host:port semantics as TCP entries.
+        client = SunSpecApiClient(
+            host,
+            port,
+            unit_id,
+            hass,
+            capture_enabled=capture_enabled,
+            transport=TRANSPORT_WILAN,
+            scan_delay=scan_delay,
+        )
+        log = get_adapter(host, port, unit_id)
     else:
         client = SunSpecApiClient(
             host, port, unit_id, hass, capture_enabled=capture_enabled, scan_delay=scan_delay

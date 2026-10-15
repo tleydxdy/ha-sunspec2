@@ -6,7 +6,8 @@
         "menu_options": {
           "manual": "Modbus TCP - enter IP manually",
           "scan": "Modbus TCP - scan my network",
-          "serial": "Modbus RTU - serial port (RS-485)"
+          "serial": "Modbus RTU - serial port (RS-485)",
+          "wilan": "FoxESS Smart WiLAN datalogger - HTTP"
         }
       },
       "manual": {
@@ -40,6 +41,14 @@
           "baudrate": "Baud rate",
           "parity": "Parity",
           "unit_id": "Modbus unit ID"
+        }
+      },
+      "wilan": {
+        "title": "FoxESS Smart WiLAN datalogger",
+        "description": "Configure a connection to a FoxESS Smart WiLAN (or WLan-WW) WiFi datalogger. The datalogger does not serve Modbus TCP; it relays Modbus frames over its HTTP interface instead. Enter the datalogger's IP address and the Modbus unit ID of the inverter behind it (1 on most devices). Reads only at the moment: register writes are not yet available over this connection.",
+        "data": {
+          "host": "Datalogger host or IP",
+          "unit_id": "Modbus unit ID of the device behind the datalogger"
         }
       },
       "settings": {

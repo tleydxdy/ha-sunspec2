@@ -52,6 +52,8 @@ from .const import PARITY_EVEN
 from .const import PARITY_NONE
 from .const import TRANSPORT_RTU
 from .const import TRANSPORT_TCP
+from .const import TRANSPORT_WILAN
+from .const import WILAN_HTTP_PORT
 from .const import default_models_for
 from .discovery import SunSpecCandidate
 from .discovery import async_discover_sunspec_candidates
@@ -290,7 +292,7 @@ class SunSpecFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
     async def async_step_user(self, user_input: dict[str, Any] | None = None) -> ConfigFlowResult:
         """Initial entry: ask how the inverter should be connected.
 
-        Three options:
+        Four options:
 
         * **manual**: TCP, user enters host / port / unit ID by hand.
           Safe default for users with fixed IPs.
@@ -301,10 +303,14 @@ class SunSpecFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
           via a USB adapter). Asks for serial port name, baudrate
           and parity. No network discovery here - serial buses do
           not have a discovery surface.
+        * **wilan**: a FoxESS Smart WiLAN / WLan-WW WiFi datalogger,
+          which serves its Modbus over an HTTP relay instead of a
+          TCP port. Asks for the datalogger's host and the unit id
+          of the device behind it.
         """
         return self.async_show_menu(
             step_id="user",
-            menu_options=["manual", "scan", "serial"],
+            menu_options=["manual", "scan", "serial", "wilan"],
         )
 
     async def async_step_manual(self, user_input: dict[str, Any] | None = None) -> ConfigFlowResult:
@@ -447,6 +453,59 @@ class SunSpecFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
             errors=self._errors,
         )
 
+    async def async_step_wilan(self, user_input: dict[str, Any] | None = None) -> ConfigFlowResult:
+        """Smart WiLAN setup: enter the datalogger's host and unit ID.
+
+        The datalogger serves port 80 only, so there is no port field:
+        the fixed value is stored in the entry data so the logger
+        prefix, the shared-endpoint lock and the entry title all work
+        with the same host:port semantics the TCP branches use.
+        """
+        self._errors = {}
+        if user_input is not None:
+            host = user_input[CONF_HOST]
+            unit_id = user_input[CONF_UNIT_ID]
+            valid = await self._test_connection_wilan(host, unit_id)
+            if valid:
+                uid = self._get_unique_id(host, WILAN_HTTP_PORT, unit_id)
+                _LOGGER.debug("Sunspec Smart WiLAN device unique id: %s", uid)
+                await self.async_set_unique_id(uid)
+                self._abort_if_unique_id_configured(
+                    updates={
+                        CONF_HOST: host,
+                        CONF_PORT: WILAN_HTTP_PORT,
+                        CONF_UNIT_ID: unit_id,
+                    },
+                    reload_on_update=False,
+                )
+                self.init_info = {
+                    CONF_TRANSPORT: TRANSPORT_WILAN,
+                    CONF_HOST: host,
+                    CONF_PORT: WILAN_HTTP_PORT,
+                    CONF_UNIT_ID: unit_id,
+                }
+                return await self.async_step_settings()
+            return await self._show_wilan_form(user_input)
+
+        return await self._show_wilan_form(user_input)
+
+    async def _show_wilan_form(self, user_input: dict[str, Any] | None) -> ConfigFlowResult:
+        """Render the Smart WiLAN form with sensible defaults."""
+        defaults = user_input or {
+            CONF_HOST: self._discovered_host or "",
+            CONF_UNIT_ID: self._discovered_unit_id or 1,
+        }
+        return self.async_show_form(
+            step_id="wilan",
+            data_schema=_form_schema(
+                {
+                    vol.Required(CONF_HOST, default=defaults[CONF_HOST]): str,
+                    vol.Required(CONF_UNIT_ID, default=defaults[CONF_UNIT_ID]): int,
+                }
+            ),
+            errors=self._errors,
+        )
+
     async def async_step_reconfigure(
         self, user_input: dict[str, Any] | None = None
     ) -> ConfigFlowResult:
@@ -463,12 +522,22 @@ class SunSpecFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
         """
         self._errors = {}
         entry = self._get_reconfigure_entry()
+        transport = entry.data.get(CONF_TRANSPORT, TRANSPORT_TCP)
 
         if user_input is not None:
-            host = user_input[CONF_HOST]
-            port = user_input[CONF_PORT]
-            unit_id = user_input[CONF_UNIT_ID]
-            valid = await self._test_connection_tcp(host, port, unit_id)
+            if transport == TRANSPORT_WILAN:
+                # A Smart WiLAN entry keeps its fixed HTTP port: host
+                # and unit id are what the reconfigure form changes, and
+                # the probe runs against the HTTP relay, not Modbus TCP.
+                host = user_input[CONF_HOST]
+                unit_id = user_input[CONF_UNIT_ID]
+                valid = await self._test_connection_wilan(host, unit_id)
+                port: int = WILAN_HTTP_PORT
+            else:
+                host = user_input[CONF_HOST]
+                port = user_input[CONF_PORT]
+                unit_id = user_input[CONF_UNIT_ID]
+                valid = await self._test_connection_tcp(host, port, unit_id)
             if valid:
                 # The probe must come back with a serial that matches
                 # the existing entry's unique_id - otherwise this is
@@ -496,15 +565,30 @@ class SunSpecFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
 
         defaults = {
             CONF_HOST: entry.data.get(CONF_HOST, ""),
-            CONF_PORT: entry.data.get(CONF_PORT, 502),
             CONF_UNIT_ID: entry.data.get(CONF_UNIT_ID, 1),
         }
+        if transport == TRANSPORT_WILAN:
+            # No port field: the datalogger serves its HTTP API on port
+            # 80 only, and the flow keeps that value fixed.
+            return self.async_show_form(
+                step_id="reconfigure",
+                data_schema=_form_schema(
+                    {
+                        vol.Required(CONF_HOST, default=defaults[CONF_HOST]): str,
+                        vol.Required(CONF_UNIT_ID, default=defaults[CONF_UNIT_ID]): int,
+                    }
+                ),
+                errors=self._errors,
+            )
         return self.async_show_form(
             step_id="reconfigure",
             data_schema=_form_schema(
                 {
                     vol.Required(CONF_HOST, default=defaults[CONF_HOST]): str,
-                    vol.Required(CONF_PORT, default=defaults[CONF_PORT]): int,
+                    vol.Required(
+                        CONF_PORT,
+                        default=entry.data.get(CONF_PORT, 502),
+                    ): int,
                     vol.Required(CONF_UNIT_ID, default=defaults[CONF_UNIT_ID]): int,
                 }
             ),
@@ -806,6 +890,33 @@ class SunSpecFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
             set_connection_error(self._errors, serial_port, baudrate, unit_id, err)
         return False
 
+    async def _test_connection_wilan(self, host: str, unit_id: int) -> bool:
+        """Probe a FoxESS Smart WiLAN datalogger over its HTTP relay.
+
+        Same purpose as the TCP probe: opens a fresh client against the
+        relay, walks the SunSpec model tree once, and caches common
+        block 1 so the unique-id helper can read the serial number off
+        it. The port is the fixed HTTP port, and errors land on the
+        same error-base keys the other probes use.
+        """
+        _LOGGER.debug("Test Smart WiLAN connection to %s (HTTP) unit id %s", host, unit_id)
+        await self._close_probe_client()
+        try:
+            self.client = SunSpecApiClient(
+                host,
+                WILAN_HTTP_PORT,
+                unit_id,
+                self.hass,
+                timeout=SETUP_TIMEOUT,
+                transport=TRANSPORT_WILAN,
+            )
+            self._device_info = await self.client.async_get_device_info()
+            _LOGGER.info(self._device_info)
+            return True
+        except Exception as err:
+            set_connection_error(self._errors, host, WILAN_HTTP_PORT, unit_id, err)
+        return False
+
     async def _close_probe_client(self) -> None:
         """Release the probe client's Modbus session, if one is open.
 
@@ -864,6 +975,12 @@ class SunSpecOptionsFlowHandler(config_entries.OptionsFlow):
         """Handle a flow initialized by the user."""
         if user_input is not None:
             self.settings.update(user_input)
+            if self.config_entry.data.get(CONF_TRANSPORT, TRANSPORT_TCP) == TRANSPORT_WILAN:
+                # A Smart WiLAN entry keeps the fixed HTTP port. The form
+                # never shows a port field for it, so the value has to be
+                # restored here for the title and the logger prefix that
+                # _update_options and the coordinator build from it.
+                self.settings.setdefault(CONF_PORT, WILAN_HTTP_PORT)
             _LOGGER.debug("Sunspec host settings: %s", user_input)
             return await self.async_step_model_options()
 
@@ -876,18 +993,21 @@ class SunSpecOptionsFlowHandler(config_entries.OptionsFlow):
     ) -> ConfigFlowResult:
         settings = data or self.config_entry.data
         host = settings.get(CONF_HOST)
-        port = settings.get(CONF_PORT)
         unit_id = settings.get(CONF_UNIT_ID) or settings.get("slave_id", 1)
+
+        schema: dict[Any, Any] = {
+            vol.Required(CONF_HOST, default=host): str,
+            vol.Required(CONF_UNIT_ID, default=unit_id): int,
+        }
+        if self.config_entry.data.get(CONF_TRANSPORT, TRANSPORT_TCP) != TRANSPORT_WILAN:
+            # Every transport except the Smart WiLAN one has a real
+            # user-facing port; the datalogger serves HTTP on port 80
+            # only, and nothing the user types can change that.
+            schema[vol.Required(CONF_PORT, default=settings.get(CONF_PORT))] = int
 
         return self.async_show_form(
             step_id="host_options",
-            data_schema=_form_schema(
-                {
-                    vol.Required(CONF_HOST, default=host): str,
-                    vol.Required(CONF_PORT, default=port): int,
-                    vol.Required(CONF_UNIT_ID, default=unit_id): int,
-                }
-            ),
+            data_schema=_form_schema(schema),
             errors=errors,
         )
 

@@ -50,6 +50,19 @@ CONF_ENABLED_MODELS = "models_enabled"
 CONF_TRANSPORT = "transport"
 TRANSPORT_TCP = "tcp"
 TRANSPORT_RTU = "rtu"
+# The FoxESS "Smart WiLAN" / "WLan-WW" WiFi dataloggers (and the datalogger
+# side of the Fox Hub G2) do not serve Modbus TCP or RTU on any port. The
+# relay they expose instead is an HTTP API on port 80:
+# POST /api/v1/sunspec/modbus_rw accepts one raw Modbus RTU frame, hex
+# encoded, in a JSON body, and returns the RTU response the same way. Reads
+# were verified against frames captured from the device; writes are gated
+# until they are validated on hardware (see wilan_http.py).
+TRANSPORT_WILAN = "wilan"
+
+# Port the Smart WiLAN serves its HTTP API on. Not user-configurable so
+# far, so it is stored in the entry data as a fixed value and the config
+# flow never shows a port field for this transport.
+WILAN_HTTP_PORT = 80
 
 # Modbus RTU specific config keys.
 CONF_SERIAL_PORT = "serial_port"
