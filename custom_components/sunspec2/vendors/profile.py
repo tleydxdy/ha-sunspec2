@@ -175,6 +175,10 @@ class RawBlock:
         readable (bool): False for a block of write-only setpoints
             that reads back nothing useful. It is never polled; its
             entities show what Home Assistant last wrote.
+        model_id (int|None): The vendor's own model the block extends, a
+            ``65xxx`` id say. It is read only while that model is ticked
+            in the entry's model multi-select and the device serves it;
+            None polls the block every cycle.
     """
 
     key: str
@@ -185,6 +189,7 @@ class RawBlock:
     gate: tuple[str, str] | None = None
     unit_id_offset: int = 0
     readable: bool = True
+    model_id: int | None = None
 
 
 @dataclass(frozen=True)

@@ -97,6 +97,7 @@ from .usage_stats import async_start_usage_stats
 from .vendors import VendorProfile
 from .vendors import plan_write
 from .vendors import profile_for
+from .vendors.foxess import FOX_MIRROR_MODEL_IDS
 from .vendors.profile import RawBlock
 from .vendors.profile import RawField
 
@@ -119,6 +120,19 @@ type SunSpec2ConfigEntry = ConfigEntry["SunSpecDataUpdateCoordinator"]
 # This integration only supports config entries (UI setup), no YAML config.
 # CONFIG_SCHEMA tells hassfest about that explicitly so it does not warn.
 CONFIG_SCHEMA = cv.config_entry_only_config_schema(DOMAIN)
+
+
+def raw_blocks_for_cycle(blocks: tuple[RawBlock, ...], model_ids: set[int]) -> tuple[RawBlock, ...]:
+    """The blocks to read this cycle: untethered ones always, the rest
+    only while their vendor model is ticked and served.
+
+    Args:
+        blocks (tuple[RawBlock, ...]): The profile's raw blocks.
+        model_ids (set[int]): The model ids this cycle reads, already
+            intersected with what the device serves.
+    """
+
+    return tuple(block for block in blocks if block.model_id is None or block.model_id in model_ids)
 
 
 async def async_setup(hass: HomeAssistant, config: Config) -> bool:
@@ -152,6 +166,33 @@ async def async_migrate_entry(hass: HomeAssistant, config_entry: ConfigEntry) ->
         # Update the config entry with new version and data
         hass.config_entries.async_update_entry(config_entry, data=new_data, version=2)
         _LOGGER.info("Migration to version %s successful", config_entry.version)
+
+    if config_entry.version == 2:
+        # Migrate from version 2 to version 3.
+        # Version 3 gates the vendor's private blocks behind the model
+        # multi-select: a ticked model is what pays for its registers.
+        # For the FoxESS profile that would silently stop the 65xxx
+        # mirror on any install whose tick list predates the change,
+        # so the models the mirror now hangs off get folded into the
+        # saved ticks on upgrade. Detected via the FoxESS defaults the
+        # entry can only have been ticked with.
+        saved = config_entry.options.get(
+            CONF_ENABLED_MODELS, config_entry.data.get(CONF_ENABLED_MODELS)
+        )
+        try:
+            saved_ids = {int(model) for model in saved}
+        except (TypeError, ValueError):
+            saved_ids = set()
+        if saved_ids & {64201, 64213}:
+            new_ids = sorted(saved_ids | FOX_MIRROR_MODEL_IDS)
+            new_options = {
+                **config_entry.options,
+                CONF_ENABLED_MODELS: [str(model) for model in new_ids],
+            }
+            hass.config_entries.async_update_entry(config_entry, options=new_options)
+            _LOGGER.info("Merged FoxESS mirror models %s into the model ticks", new_ids)
+        hass.config_entries.async_update_entry(config_entry, version=3)
+        _LOGGER.info("Migration to version 3 successful")
 
     return True
 
@@ -1373,8 +1414,14 @@ class SunSpecDataUpdateCoordinator(DataUpdateCoordinator[dict[int, SunSpecModelW
             data[model_id] = await self.api.async_get_data(model_id)
         # After the models, on the same session: what the vendor keeps
         # outside them. A block that fails never fails the cycle.
+        # Blocks tied to one of the vendor's own models follow the
+        # multi-select: a ticked model is what pays for its registers
+        # (FoxESS exposes a 65xxx settings mirror whose full sweep costs
+        # a minute of relay exchanges a cycle otherwise).
         if self.vendor is not None and self.vendor.raw_blocks:
-            self.raw_blocks = await self._raw_reader.async_read(self.vendor.raw_blocks)
+            self.raw_blocks = await self._raw_reader.async_read(
+                raw_blocks_for_cycle(self.vendor.raw_blocks, model_ids)
+            )
         if rescan_after_cycle:
             # Firmware changed: hand this cycle's data back as read, and
             # let the NEXT connect walk the model tree again. Flagging it

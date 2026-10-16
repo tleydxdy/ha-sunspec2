@@ -334,7 +334,7 @@ async def test_client_reconnect(hass, sunspec_client_mock_not_connected) -> None
 
 
 async def test_migrate_entry_from_v1_to_v2_with_slave_id(hass):
-    """Test migration from version 1 to version 2 with slave_id key."""
+    """Test migration from version 1 to version 3 with slave_id key."""
     from custom_components.sunspec2 import async_migrate_entry
 
     # Create a version 1 config entry with slave_id
@@ -357,7 +357,7 @@ async def test_migrate_entry_from_v1_to_v2_with_slave_id(hass):
 
     # Verify migration was successful
     assert result is True
-    assert config_entry.version == 2
+    assert config_entry.version == 3
     assert "unit_id" in config_entry.data
     assert config_entry.data["unit_id"] == 5
     assert "slave_id" not in config_entry.data
@@ -366,7 +366,7 @@ async def test_migrate_entry_from_v1_to_v2_with_slave_id(hass):
 
 
 async def test_migrate_entry_from_v1_to_v2_already_has_unit_id(hass):
-    """Test migration from version 1 to version 2 when unit_id already exists."""
+    """Test migration from version 1 to version 3 when unit_id already exists."""
     from custom_components.sunspec2 import async_migrate_entry
 
     # Create a version 1 config entry that already has unit_id (edge case)
@@ -389,7 +389,7 @@ async def test_migrate_entry_from_v1_to_v2_already_has_unit_id(hass):
 
     # Verify migration was successful
     assert result is True
-    assert config_entry.version == 2
+    assert config_entry.version == 3
     assert "unit_id" in config_entry.data
     assert config_entry.data["unit_id"] == 3
     assert "slave_id" not in config_entry.data
@@ -420,14 +420,14 @@ async def test_migrate_entry_from_v1_to_v2_with_both_keys(hass):
 
     # Verify migration was successful and unit_id was preserved
     assert result is True
-    assert config_entry.version == 2
+    assert config_entry.version == 3
     assert "unit_id" in config_entry.data
     assert config_entry.data["unit_id"] == 3
     assert "slave_id" not in config_entry.data
 
 
 async def test_migrate_entry_version_2_no_migration_needed(hass):
-    """Test that version 2 entries don't get migrated."""
+    """Test that version 2 entries only move to version 3."""
     from custom_components.sunspec2 import async_migrate_entry
 
     # Create a version 2 config entry (already migrated)
@@ -450,9 +450,86 @@ async def test_migrate_entry_version_2_no_migration_needed(hass):
 
     # Verify no migration occurred
     assert result is True
-    assert config_entry.version == 2
+    assert config_entry.version == 3
     assert "unit_id" in config_entry.data
     assert config_entry.data["unit_id"] == 5
+    # A non-FoxESS tick list passes through untouched.
+    assert config_entry.options == {}
+
+
+async def test_migrate_entry_v2_foxess_models_merged(hass):
+    """A pre-gating FoxESS entry keeps its 65xxx mirror on the update."""
+    from custom_components.sunspec2 import async_migrate_entry
+
+    config_entry = MockConfigEntry(
+        domain=DOMAIN,
+        data={
+            "host": "192.168.1.100",
+            "port": 502,
+            "unit_id": 1,
+            "models_enabled": ["64201", "64213"],
+            "scan_interval": 30,
+        },
+        entry_id="test_fox_migration",
+        version=2,
+    )
+    config_entry.add_to_hass(hass)
+
+    result = await async_migrate_entry(hass, config_entry)
+
+    assert result is True
+    assert config_entry.version == 3
+    merged = config_entry.options["models_enabled"]
+    assert set(merged) == {"64201", "64213", "65000", "65004", "65006", "65012"}
+    # The original ticks stay in place, and nothing else moved.
+    assert config_entry.data["models_enabled"] == ["64201", "64213"]
+
+
+async def test_migrate_entry_v2_foxess_models_in_options_merged(hass):
+    """The merge lands in options, next to where the form saves ticks."""
+    from custom_components.sunspec2 import async_migrate_entry
+
+    config_entry = MockConfigEntry(
+        domain=DOMAIN,
+        data={"host": "192.168.1.100", "port": 502, "unit_id": 1},
+        options={"models_enabled": [64201], "scan_interval": 30},
+        entry_id="test_fox_migration_options",
+        version=2,
+    )
+    config_entry.add_to_hass(hass)
+
+    result = await async_migrate_entry(hass, config_entry)
+
+    assert result is True
+    assert config_entry.version == 3
+    merged = config_entry.options["models_enabled"]
+    assert set(merged) == {"64201", "65000", "65004", "65006", "65012"}
+    assert config_entry.options["scan_interval"] == 30
+
+
+async def test_migrate_entry_v2_unticked_foxess_entry_left_alone(hass):
+    """Nothing to preserve: an entry with no Fox ticks gets only the bump."""
+    from custom_components.sunspec2 import async_migrate_entry
+
+    config_entry = MockConfigEntry(
+        domain=DOMAIN,
+        data={
+            "host": "192.168.1.100",
+            "port": 502,
+            "unit_id": 1,
+            "models_enabled": [103, 160],
+        },
+        entry_id="test_fox_migration_nofox",
+        version=2,
+    )
+    config_entry.add_to_hass(hass)
+
+    result = await async_migrate_entry(hass, config_entry)
+
+    assert result is True
+    assert config_entry.version == 3
+    assert config_entry.options == {}
+    assert config_entry.data["models_enabled"] == [103, 160]
 
 
 # ---------------------------------------------------------------------------

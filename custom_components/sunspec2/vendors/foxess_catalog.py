@@ -33,6 +33,7 @@ BLOCK_65001 = RawBlock(
     key="fox_dbg",
     address=41116,
     count=94,
+    model_id=65001,
     fields=(
         RawField("inverter_type", 2, "uint16"),
         RawField("active_overload_rate", 3, "uint16"),
@@ -123,6 +124,7 @@ BLOCK_65002 = RawBlock(
     key="fox_param",
     address=41210,
     count=125,
+    model_id=65002,
     fields=(
         RawField("country_region", 2, "uint16"),
         RawField("year", 3, "uint16"),
@@ -253,6 +255,7 @@ BLOCK_65003 = RawBlock(
     key="fox_dbgparam",
     address=41335,
     count=268,
+    model_id=65003,
     fields=(
         RawField("equipmentto_restart", 2, "uint16"),
         RawField("local_remote_control", 3, "uint16"),
@@ -522,6 +525,7 @@ BLOCK_65004 = RawBlock(
     key="fox_energy",
     address=41603,
     count=118,
+    model_id=65004,
     fields=(
         RawField("battery_power", 2, "int32"),
         RawField("total_active_power_of_grid", 4, "int32"),
@@ -574,6 +578,7 @@ BLOCK_65005 = RawBlock(
     key="fox_fw",
     address=41721,
     count=170,
+    model_id=65005,
     fields=(
         RawField("firmware_num", 2, "uint16"),
         RawField("mcu_ver_1", 3, "string", length=15),
@@ -596,6 +601,7 @@ BLOCK_65008 = RawBlock(
     key="fox_info2",
     address=42296,
     count=28,
+    model_id=65008,
     fields=(
         RawField("arm_hardware_version_number", 2, "uint16"),
         RawField("mdsphardware_version_number", 3, "uint16"),
@@ -615,6 +621,7 @@ BLOCK_65009 = RawBlock(
     key="fox_bms_info",
     address=42324,
     count=101,
+    model_id=65009,
     fields=(
         RawField("family_type", 2, "uint16"),
         RawField("module_type1", 3, "uint16"),
@@ -660,6 +667,7 @@ BLOCK_65010 = RawBlock(
     key="fox_tou",
     address=42425,
     count=272,
+    model_id=65010,
     fields=(
         RawField("touplan", 2, "uint16"),
         RawField("electricity_price_select", 3, "uint16"),
@@ -939,6 +947,7 @@ BLOCK_65011 = RawBlock(
     key="fox_circuit",
     address=42697,
     count=69,
+    model_id=65011,
     fields=(
         RawField("circult_merge_enable", 2, "uint16"),
         RawField("circult1_enable", 3, "uint16"),
@@ -1003,6 +1012,7 @@ BLOCK_65012 = RawBlock(
     key="fox_clock",
     address=42766,
     count=30,
+    model_id=65012,
     fields=(
         RawField("year", 2, "uint16"),
         RawField("month", 3, "uint16"),
@@ -1020,6 +1030,7 @@ BLOCK_65013 = RawBlock(
     key="fox_gip",
     address=42796,
     count=30,
+    model_id=65013,
     fields=(
         RawField("grid_imbalance_protection", 2, "uint16"),
         RawField("grid_imbalance_protection_value", 3, "uint16"),
@@ -1036,6 +1047,7 @@ BLOCK_65014 = RawBlock(
     key="fox_recover",
     address=42826,
     count=55,
+    model_id=65014,
     fields=(
         RawField("over_frequency_recovery_value", 2, "uint16"),
         RawField("under_frequency_recovery_value", 3, "uint16"),
@@ -1049,6 +1061,7 @@ BLOCK_65015 = RawBlock(
     key="fox_ileak",
     address=42881,
     count=40,
+    model_id=65015,
     fields=(
         RawField("ileak_1", 2, "uint16"),
         RawField("ileak_2", 3, "uint16"),
@@ -1075,6 +1088,7 @@ BLOCK_65016 = RawBlock(
     key="fox_island",
     address=42921,
     count=29,
+    model_id=65016,
     fields=(
         RawField("islanding_judgment_standard", 2, "uint16"),
         RawField("change_rate_of_islanding_frequency", 3, "uint16"),
@@ -1091,6 +1105,7 @@ BLOCK_65017 = RawBlock(
     key="fox_svg",
     address=42950,
     count=32,
+    model_id=65017,
     fields=(
         RawField("pidrecovery", 2, "uint16"),
         RawField("pidrecovery_function_enable", 3, "uint16"),
@@ -1109,6 +1124,7 @@ BLOCK_65018 = RawBlock(
     key="fox_pemon",
     address=42982,
     count=36,
+    model_id=65018,
     fields=(
         RawField("insulation_resistance_detection_enable", 2, "uint16"),
         RawField("insulation_resistance_threshold_setting", 3, "uint16"),
@@ -1132,6 +1148,7 @@ BLOCK_65019 = RawBlock(
     key="fox_faultmask",
     address=43018,
     count=34,
+    model_id=65019,
     fields=(
         RawField("grid_overvoltage_fault_masking", 2, "uint16"),
         RawField("grid_undervoltage_fault_masking", 3, "uint16"),
@@ -1153,6 +1170,7 @@ BLOCK_65020 = RawBlock(
     key="fox_mpptscan",
     address=43052,
     count=27,
+    model_id=65020,
     fields=(
         RawField("global_mpptscan_enable", 2, "uint16"),
         RawField("manual_mpptscan_enable", 3, "uint16"),
@@ -1166,6 +1184,7 @@ BLOCK_65021 = RawBlock(
     key="fox_advother",
     address=43079,
     count=29,
+    model_id=65021,
     fields=(
         RawField("cumulative_energy_genaration_correction", 2, "int32"),
         RawField("standby_time", 4, "uint16"),
@@ -1181,6 +1200,7 @@ BLOCK_65022 = RawBlock(
     key="fox_advpow",
     address=43108,
     count=32,
+    model_id=65022,
     fields=(
         RawField("ripple_control", 2, "uint16"),
         RawField("drm", 3, "uint16"),
@@ -1200,6 +1220,7 @@ BLOCK_65023 = RawBlock(
     key="fox_exportlimit",
     address=43140,
     count=31,
+    model_id=65023,
     fields=(
         RawField("power_limit_of_grid_feeding", 2, "uint16"),
         RawField("power_limit_mode_of_grid_feeding", 3, "uint16"),
@@ -1217,6 +1238,7 @@ BLOCK_65024 = RawBlock(
     key="fox_opuupu",
     address=43171,
     count=42,
+    model_id=65024,
     fields=(
         RawField("power_limit_of_grid_feeding", 2, "uint16"),
         RawField("opu_v1", 3, "uint16"),
@@ -1246,6 +1268,7 @@ BLOCK_65025 = RawBlock(
     key="fox_pfp",
     address=43213,
     count=31,
+    model_id=65025,
     fields=(
         RawField("pfp_enable", 2, "uint16"),
         RawField("pf_p1", 3, "uint16"),
@@ -1264,6 +1287,7 @@ BLOCK_65026 = RawBlock(
     key="fox_ems",
     address=43244,
     count=79,
+    model_id=65026,
     fields=(
         RawField("offgrid_mode", 2, "uint16"),
         RawField("bat_backup_socoffgrid", 3, "uint16"),
@@ -1283,6 +1307,7 @@ BLOCK_65027 = RawBlock(
     key="fox_rdothers",
     address=43323,
     count=57,
+    model_id=65027,
     fields=(
         RawField("clear_power_generation", 2, "uint16"),
         RawField("fault_record_clearing", 3, "uint16"),
@@ -1339,6 +1364,7 @@ BLOCK_65028 = RawBlock(
     key="fox_parallel",
     address=43380,
     count=125,
+    model_id=65028,
     fields=(
         RawField("master_slave_working_mode", 2, "uint16"),
         RawField("master_slave_setting", 3, "uint16"),
@@ -1364,6 +1390,7 @@ BLOCK_65029 = RawBlock(
     key="fox_rddebug",
     address=43505,
     count=32,
+    model_id=65029,
     fields=(
         RawField("high_address_1", 2, "uint16"),
         RawField("low_address_1", 3, "uint16"),
@@ -1388,6 +1415,7 @@ BLOCK_65030 = RawBlock(
     key="fox_rdmeter",
     address=43537,
     count=25,
+    model_id=65030,
     fields=(
         RawField("grid_meter_ctreverse", 2, "uint16"),
         RawField("solar_meter_ctreverse", 3, "uint16"),
@@ -1400,6 +1428,7 @@ BLOCK_65031 = RawBlock(
     key="fox_hub",
     address=43562,
     count=117,
+    model_id=65031,
     fields=(
         RawField("hub_fault_bytes1", 2, "uint16"),
         RawField("hub_fault_bytes2", 3, "uint16"),
@@ -1464,6 +1493,7 @@ BLOCK_65032 = RawBlock(
     key="fox_parallelmode",
     address=43679,
     count=54,
+    model_id=65032,
     fields=(
         RawField("parallel_mode", 2, "uint16"),
         RawField("num_inv", 3, "uint16"),
@@ -1488,6 +1518,7 @@ BLOCK_65034 = RawBlock(
     key="fox_emsmanual",
     address=43746,
     count=85,
+    model_id=65034,
     fields=(
         RawField("forced_charging", 2, "uint16"),
         RawField("effective_time_of_forced_charging", 3, "uint16"),
@@ -1538,6 +1569,7 @@ BLOCK_65036 = RawBlock(
     key="fox_exportcomp",
     address=43831,
     count=61,
+    model_id=65036,
     fields=(
         RawField("export_compensation_mode", 2, "uint16"),
         RawField("start_year", 3, "uint16"),
@@ -1566,6 +1598,7 @@ BLOCK_65037 = RawBlock(
     key="fox_offgrid",
     address=43892,
     count=294,
+    model_id=65037,
     fields=(
         RawField("off_grid_start_time1", 2, "uint32"),
         RawField("off_grid_time1", 4, "uint32"),
@@ -5141,6 +5174,7 @@ SENSORS_65004 = (
         key="fox_energy_battery_voltage",
         unit="V",
         diagnostic=True,
+        enabled_by_default=False,
     ),
     RawSensor(
         block="fox_energy",
@@ -5148,6 +5182,7 @@ SENSORS_65004 = (
         key="fox_energy_battery_current",
         unit="A",
         diagnostic=True,
+        enabled_by_default=False,
     ),
     RawSensor(
         block="fox_energy",
@@ -5270,7 +5305,6 @@ SENSORS_65004 = (
         device_class="energy",
         state_class="total_increasing",
         diagnostic=True,
-        enabled_by_default=False,
     ),
     RawSensor(
         block="fox_energy",
@@ -5423,7 +5457,6 @@ SENSORS_65004 = (
         device_class="energy",
         state_class="total_increasing",
         diagnostic=True,
-        enabled_by_default=False,
     ),
     RawSensor(
         block="fox_energy",

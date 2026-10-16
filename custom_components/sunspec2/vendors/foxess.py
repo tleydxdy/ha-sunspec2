@@ -64,6 +64,7 @@ RAW_BLOCKS: tuple[RawBlock, ...] = (
         key="fox_der_info",
         address=DER_INFO_ADDRESS,
         count=DER_INFO_COUNT,
+        model_id=65000,
         fields=(
             RawField("running_state", 2, "uint16"),
             RawField("alarm_code", 3, "uint16"),
@@ -93,6 +94,7 @@ RAW_BLOCKS: tuple[RawBlock, ...] = (
         key="fox_battery",
         address=BATTERY_ADDRESS,
         count=BATTERY_COUNT,
+        model_id=65006,
         fields=(
             RawField("charge_cutoff_voltage", 2, "uint16", scale=0.1),
             RawField("discharge_cutoff_voltage", 3, "uint16", scale=0.1),
@@ -394,5 +396,11 @@ FOXESS = VendorProfile(
     model_relabels=MODEL_RELABELS,
     raw_blocks=RAW_BLOCKS + CATALOG_BLOCKS,
     raw_sensors=RAW_SENSORS + CATALOG_SENSORS,
-    default_model_ids=frozenset({64201, 64213}),
+    default_model_ids=frozenset({64201, 64213, 65000, 65004, 65006, 65012}),
 )
+
+# The FoxESS models whose private blocks the entry polls behind the
+# multi-select. The migration in ``__init__.py`` folds these into the
+# saved model ticks, so installs that existed before raw blocks became
+# tick-gated keep their FoxESS data on the update.
+FOX_MIRROR_MODEL_IDS: frozenset[int] = frozenset({65000, 65004, 65006, 65012})

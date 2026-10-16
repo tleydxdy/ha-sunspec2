@@ -14,6 +14,7 @@ from pathlib import Path
 
 import pytest
 
+from custom_components.sunspec2 import raw_blocks_for_cycle
 from custom_components.sunspec2.api import SunSpecApiClient
 from custom_components.sunspec2.raw_blocks import decode_block
 from custom_components.sunspec2.vendors import default_models_for_profile
@@ -21,6 +22,8 @@ from custom_components.sunspec2.vendors import profile_for
 from custom_components.sunspec2.vendors.foxess import FOXESS
 from custom_components.sunspec2.vendors.foxess_catalog import CATALOG_BLOCKS
 from custom_components.sunspec2.vendors.foxess_catalog import CATALOG_SENSORS
+from custom_components.sunspec2.vendors.profile import RawBlock
+from custom_components.sunspec2.vendors.profile import RawField
 
 from .fake_unit import FakeConnection
 from .fake_unit import FakeUnit
@@ -91,11 +94,39 @@ async def test_the_vendor_profile_is_picked_from_the_manufacturer():
 
 def test_default_models_for_profile_pre_ticks_what_the_device_carries():
     profile = FOXESS
-    assert default_models_for_profile(profile, {1, 64201, 64213}) == {64201, 64213}
+    available = {1, 64201, 64213, 65000, 65001, 65004, 65006, 65012, 65041}
+    assert default_models_for_profile(profile, available) == {
+        64201,
+        64213,
+        65000,
+        65004,
+        65006,
+        65012,
+    }
     # The pre-tick list stays behind what the device reports.
     assert default_models_for_profile(profile, {1}) == set()
     # A generic device with no profile pre-ticks nothing extra.
     assert default_models_for_profile(None, {1, 64201}) == set()
+
+
+def test_every_fox_block_is_tethered_to_its_model():
+    """Tick-gating only works if the blocks carry their model id."""
+    curated = [block for block in FOXESS.raw_blocks if block.key in ("fox_der_info", "fox_battery")]
+    assert [block.model_id for block in curated] == [65000, 65006]
+    for block in CATALOG_BLOCKS:
+        assert block.model_id is not None, block.key
+
+
+def test_raw_blocks_for_cycle_gates_on_the_ticked_models():
+    free = RawBlock(key="free", address=1, count=1, fields=(RawField("f", 0, "uint16"),))
+    mirror = RawBlock(
+        key="mirror", address=2, count=1, model_id=65004, fields=(RawField("f", 0, "uint16"),)
+    )
+    # The untethered block is read every cycle; the mirror block only
+    # while 65004 is ticked (and served, which the caller pre-filters).
+    assert raw_blocks_for_cycle((free, mirror), {64201, 65004}) == (free, mirror)
+    assert raw_blocks_for_cycle((free, mirror), {64201}) == (free,)
+    assert raw_blocks_for_cycle((free, mirror), set()) == (free,)
 
 
 async def test_the_fox_layouts_relabel_the_blocks_they_describe(hass):
