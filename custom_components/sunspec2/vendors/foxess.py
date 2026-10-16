@@ -336,6 +336,56 @@ RAW_SENSORS: tuple[RawSensor, ...] = (
 #: gated (see number.build_specs).
 
 
+#: The FoxESS private model names, straight from the datalogger's own
+#: frontend field catalog (the same map the raw block fields are sourced
+#: from). SunSpec reserves the 65000 range for vendor models, so these
+#: ids mean FoxESS blocks everywhere they appear. The blocks the
+#: frontend does not name (this firmware serves 65041, 65043, 65045,
+#: 65049, 65052 as parameter and log data with no catalog entry) keep
+#: the generic "Model <id>" fallback rather than a guess.
+FOXESS_MODEL_LABELS: dict[int, str] = {
+    65000: "DER info",
+    65001: "DER Debug info",
+    65002: "Param",
+    65003: "DbgParam",
+    65004: "DER Storage Capacity info",
+    65005: "DER property info",
+    65006: "Battery info",
+    65007: "Param2",
+    65008: "DER info2",
+    65009: "R&D(BatteryInfo)",
+    65010: "EMS-TOU",
+    65011: "Smart Circuit",
+    65012: "Time & Country",
+    65013: "Advanced(Grid Imbalance Protection)",
+    65014: "Advanced(Protect Recovery)",
+    65015: "Advanced(Ileak & DCI)",
+    65016: "Advanced(Islanding Parameters)",
+    65017: "Advanced(SVG & PID)",
+    65018: "Advanced(String &PE Monitoring)",
+    65019: "R&D(FaultMasking)",
+    65020: "Advanced(GlobalMPPTScaning)",
+    65021: "Advanced(Others)",
+    65022: "Advanced(Active Power)",
+    65023: "ExportLimit",
+    65024: "Advanced(OPU &UPU)",
+    65025: "Advanced(Reactive PFP)",
+    65026: "EMS",
+    65027: "R&D(Others)",
+    65028: "Advanced(MasterSlaveParam)",
+    65029: "R&D(DebugParam)",
+    65030: "R&D(MeterDebug)",
+    65031: "R&D(HubInfo)",
+    65032: "ParallelParam",
+    65033: "AC-Couple",
+    65034: "EMS-Manual",
+    65035: "Advanced(SlaveAddress)",
+    65036: "EMS-ExportCompensation",
+    65037: "OffGrid-Time",
+    65038: "ODM-Info",
+    65039: "Generator",
+}
+
 FOXESS = VendorProfile(
     slug="foxess",
     manufacturer_prefixes=("BFOX", "FoxESS", "FOX"),

@@ -20,6 +20,8 @@ from functools import lru_cache
 from pathlib import Path
 from typing import Any
 
+from .vendors.foxess import FOXESS_MODEL_LABELS
+
 _LOGGER = logging.getLogger(__name__)
 
 # The model definitions ship inside the integration with the embedded
@@ -105,6 +107,14 @@ def sunspec_model_label(model_id: int) -> str:
     'Model 99999'
     """
     fallback = f"Model {model_id}"
+    # FoxESS's private ids (the 65000 vendor range) have no model
+    # definitions to read; the vendor module carries the datalogger's
+    # own names for them.
+    if model_id >= 65000 and model_id <= 65535:
+        fox_label = FOXESS_MODEL_LABELS.get(model_id)
+        if fox_label is not None:
+            return f"{fox_label} ({model_id})"
+        return fallback
     for directory in (_MODEL_DIR, _FOX_MODEL_DIR):
         resource = directory / f"model_{model_id}.json"
         if resource.is_file():
