@@ -1,0 +1,337 @@
+{
+    "id": 64201,
+    "source_model": 701,
+    "label": "FoxESS AC Measurement",
+    "name": "FoxESSACMeasurement",
+    "length": 153,
+    "group": {
+        "name": "FoxESSACMeasurement",
+        "label": "FoxESS AC Measurement",
+        "group_type": "single",
+        "group_len": 153,
+        "points": [
+            {
+                "name": "ID",
+                "label": "ID",
+                "size": 1,
+                "type": "uint16",
+                "mandatory": "M"
+            },
+            {
+                "name": "L",
+                "label": "L",
+                "size": 1,
+                "type": "uint16",
+                "mandatory": "M"
+            },
+            {
+                "name": "ACType",
+                "label": "AC Wiring Type",
+                "size": 1,
+                "type": "enum16",
+                "symbols": [
+                    {
+                        "label": "Single Phase",
+                        "name": "SINGLE_PHASE",
+                        "value": 0
+                    },
+                    {
+                        "label": "Split Phase",
+                        "name": "SPLIT_PHASE",
+                        "value": 1
+                    },
+                    {
+                        "label": "Three Phase",
+                        "name": "THREE_PHASE",
+                        "value": 2
+                    }
+                ]
+            },
+            {
+                "name": "St",
+                "label": "Operating State",
+                "size": 1,
+                "type": "enum16",
+                "symbols": [
+                    {
+                        "label": "Off",
+                        "name": "OFF",
+                        "value": 0
+                    },
+                    {
+                        "label": "On",
+                        "name": "ON",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "InvSt",
+                "label": "Inverter State",
+                "size": 1,
+                "type": "enum16",
+                "symbols": [
+                    {
+                        "label": "OFF",
+                        "name": "OFF",
+                        "value": 0
+                    },
+                    {
+                        "label": "SLEEPING",
+                        "name": "SLEEPING",
+                        "value": 1
+                    },
+                    {
+                        "label": "STARTING",
+                        "name": "STARTING",
+                        "value": 2
+                    },
+                    {
+                        "label": "RUNNING",
+                        "name": "RUNNING",
+                        "value": 3
+                    },
+                    {
+                        "label": "THROTTLED",
+                        "name": "THROTTLED",
+                        "value": 4
+                    },
+                    {
+                        "label": "SHUTTING_DOWN",
+                        "name": "SHUTTING_DOWN",
+                        "value": 5
+                    },
+                    {
+                        "label": "FAULT",
+                        "name": "FAULT",
+                        "value": 6
+                    },
+                    {
+                        "label": "STANDBY",
+                        "name": "STANDBY",
+                        "value": 7
+                    }
+                ]
+            },
+            {
+                "name": "ConnSt",
+                "label": "Grid Connection State",
+                "size": 1,
+                "type": "enum16",
+                "symbols": [
+                    {
+                        "label": "Disconnected",
+                        "name": "DISCONNECTED",
+                        "value": 0
+                    },
+                    {
+                        "label": "Connected",
+                        "name": "CONNECTED",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "Alrm",
+                "label": "Alarm Bitfield",
+                "size": 2,
+                "type": "bitfield32"
+            },
+            {
+                "name": "W",
+                "label": "Active Power",
+                "size": 1,
+                "type": "int16",
+                "units": "W",
+                "sf": "W_SF"
+            },
+            {
+                "name": "VA",
+                "label": "Apparent Power",
+                "size": 1,
+                "type": "int16",
+                "units": "VA",
+                "sf": "VA_SF"
+            },
+            {
+                "name": "Var",
+                "label": "Reactive Power",
+                "size": 1,
+                "type": "int16",
+                "units": "Var",
+                "sf": "Var_SF"
+            },
+            {
+                "name": "PF",
+                "label": "Power Factor",
+                "size": 1,
+                "type": "int16",
+                "units": "PF",
+                "sf": "PF_SF"
+            },
+            {
+                "name": "Hz",
+                "label": "Frequency",
+                "size": 2,
+                "type": "uint32",
+                "units": "Hz",
+                "sf": "Hz_SF"
+            },
+            {
+                "name": "TotWhInj",
+                "label": "Total Energy Injected",
+                "size": 4,
+                "type": "uint64",
+                "units": "Wh",
+                "sf": "TotWh_SF"
+            },
+            {
+                "name": "TmpSnk",
+                "label": "Heat Sink Temperature",
+                "size": 1,
+                "type": "int16",
+                "units": "C",
+                "sf": "Tmp_SF"
+            },
+            {
+                "name": "AL1",
+                "label": "Amps L1",
+                "size": 1,
+                "type": "int16",
+                "units": "A",
+                "sf": "A_SF"
+            },
+            {
+                "name": "VL1L2",
+                "label": "Phase Voltage L1-L2",
+                "size": 1,
+                "type": "uint16",
+                "units": "V",
+                "sf": "V_SF"
+            },
+            {
+                "name": "VL1",
+                "label": "Phase Voltage L1-N",
+                "size": 1,
+                "type": "uint16",
+                "units": "V",
+                "sf": "V_SF"
+            },
+            {
+                "name": "AL2",
+                "label": "Current L2",
+                "size": 1,
+                "type": "int16",
+                "units": "A",
+                "sf": "A_SF"
+            },
+            {
+                "name": "VL2L3",
+                "label": "Phase voltage L2-L3",
+                "size": 1,
+                "type": "uint16",
+                "units": "V",
+                "sf": "V_SF"
+            },
+            {
+                "name": "VL2",
+                "label": "Phase voltage L2-N",
+                "size": 1,
+                "type": "uint16",
+                "units": "V",
+                "sf": "V_SF"
+            },
+            {
+                "name": "AL3",
+                "label": "Current L3",
+                "size": 1,
+                "type": "int16",
+                "units": "A",
+                "sf": "A_SF"
+            },
+            {
+                "name": "VL3L1",
+                "label": "Phase voltage L3-L1",
+                "size": 1,
+                "type": "uint16",
+                "units": "V",
+                "sf": "V_SF"
+            },
+            {
+                "name": "VL3",
+                "label": "Phase voltage L3-N",
+                "size": 1,
+                "type": "uint16",
+                "units": "V",
+                "sf": "V_SF"
+            },
+            {
+                "name": "A_SF",
+                "label": "A_SF",
+                "size": 1,
+                "type": "sunssf"
+            },
+            {
+                "name": "V_SF",
+                "label": "V_SF",
+                "size": 1,
+                "type": "sunssf"
+            },
+            {
+                "name": "Hz_SF",
+                "label": "Hz_SF",
+                "size": 1,
+                "type": "sunssf"
+            },
+            {
+                "name": "W_SF",
+                "label": "W_SF",
+                "size": 1,
+                "type": "sunssf"
+            },
+            {
+                "name": "PF_SF",
+                "label": "PF_SF",
+                "size": 1,
+                "type": "sunssf"
+            },
+            {
+                "name": "VA_SF",
+                "label": "VA_SF",
+                "size": 1,
+                "type": "sunssf"
+            },
+            {
+                "name": "Var_SF",
+                "label": "Var_SF",
+                "size": 1,
+                "type": "sunssf"
+            },
+            {
+                "name": "TotWh_SF",
+                "label": "TotWh_SF",
+                "size": 1,
+                "type": "sunssf"
+            },
+            {
+                "name": "Tmp_SF",
+                "label": "Tmp_SF",
+                "size": 1,
+                "type": "sunssf"
+            },
+            {
+                "name": "StorConnSt",
+                "label": "StorConnectStatus",
+                "size": 1,
+                "type": "uint16"
+            },
+            {
+                "name": "Pad",
+                "size": 117,
+                "type": "pad"
+            }
+        ],
+        "comments": [],
+        "theoretical_len": 0
+    }
+}

@@ -17,7 +17,7 @@ ACCESS_REGION_REGS = 123
 models_dir = os.path.join(os.path.dirname(__file__), 'models')
 
 model_defs_path = ['.', models_dir]
-model_path_options = ['.', 'json']
+model_path_options = ['.', 'json', 'foxess']
 model_defs_cache = {}
 # ha-sunspec2: True once preload_model_defs has read every bundled
 # definition, after which get_model_def answers from the cache alone.
@@ -45,15 +45,16 @@ def preload_model_defs():
     global model_defs_preloaded
     if model_defs_preloaded:
         return
-    json_dir = os.path.join(models_dir, 'json')
-    for name in sorted(os.listdir(json_dir)):
-        if not name.startswith('model_') or not name.endswith('.json'):
-            continue
-        try:
-            model_id = int(name[len('model_'):-len('.json')])
-        except ValueError:
-            continue
-        get_model_def(model_id)
+    for subdir in ('json', 'foxess'):
+        defs_dir = os.path.join(models_dir, subdir)
+        for name in sorted(os.listdir(defs_dir)):
+            if not name.startswith('model_') or not name.endswith('.json'):
+                continue
+            try:
+                model_id = int(name[len('model_'):-len('.json')])
+            except ValueError:
+                continue
+            get_model_def(model_id)
     model_defs_preloaded = True
 
 

@@ -833,6 +833,75 @@
       },
       "apsystems_dc_power_8": {
         "name": "DC power input 8"
+      },
+      "fox_running_state": {
+        "name": "Inverter running state"
+      },
+      "fox_alarm_code": {
+        "name": "Alarm code"
+      },
+      "fox_daily_generation": {
+        "name": "Energy generated today"
+      },
+      "fox_monthly_generation": {
+        "name": "Energy generated this month"
+      },
+      "fox_annual_generation": {
+        "name": "Energy generated this year"
+      },
+      "fox_total_on_grid_time": {
+        "name": "Time on grid"
+      },
+      "fox_on_grid_voltage_ab": {
+        "name": "Grid voltage A-B"
+      },
+      "fox_on_grid_voltage_bc": {
+        "name": "Grid voltage B-C"
+      },
+      "fox_off_grid_voltage_ab": {
+        "name": "Off-grid voltage A-B"
+      },
+      "fox_off_grid_voltage_bc": {
+        "name": "Off-grid voltage B-C"
+      },
+      "fox_module_temperature_1": {
+        "name": "Module temperature 1"
+      },
+      "fox_module_temperature_2": {
+        "name": "Module temperature 2"
+      },
+      "fox_bus_voltage": {
+        "name": "DC bus voltage"
+      },
+      "fox_array_insulation": {
+        "name": "Array insulation resistance"
+      },
+      "fox_battery_soc": {
+        "name": "Battery state of charge"
+      },
+      "fox_battery_voltage": {
+        "name": "Battery voltage"
+      },
+      "fox_battery_current": {
+        "name": "Battery current"
+      },
+      "fox_battery_cell_voltage_max": {
+        "name": "Battery cell voltage, highest"
+      },
+      "fox_battery_cell_voltage_min": {
+        "name": "Battery cell voltage, lowest"
+      },
+      "fox_battery_temperature_max": {
+        "name": "Battery temperature, highest"
+      },
+      "fox_battery_temperature_min": {
+        "name": "Battery temperature, lowest"
+      },
+      "fox_battery_cycle_count": {
+        "name": "Battery cycles"
+      },
+      "fox_battery_energy_throughput": {
+        "name": "Battery energy throughput"
       }
     }
   },

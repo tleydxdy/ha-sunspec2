@@ -23,11 +23,28 @@ firmware serves.
 
 ## What you get
 
-The datalogger exposes the SunSpec image of the device behind it: common
-model 1 (manufacturer, model, serial), the DER measurement models 701
-through 713, and FoxESS's private models starting at 65000. Sensors from
-the standard models work straight away; the private models are FoxESS
-specific and are not decoded yet.
+The vendor profile (picked from the `BFOX`/`FOX` manufacturer string in
+common model 1) pre-ticks the FoxESS model ids and reads the private
+blocks, so a configured device offers:
+
+* the inverter's AC data from **model 64201** (FoxESS's own layout of
+  the DER AC measurement block: active/apparent/reactive power, power
+  factor, frequency, phase voltages and currents, heat sink
+  temperature, alarm bitfield, lifetime energy injected),
+* the storage data from **model 64213** (state of charge and health,
+  energy rating and available energy, off-grid backup SoC), and
+* the generation counters and battery detail over the private models,
+  read from fixed addresses: daily / monthly / annual generation,
+  on-grid and off-grid phase voltages, module temperatures, DC bus
+  voltage, battery SoC, rack voltage and current, cell voltages,
+  battery temperatures, cycle count and energy throughput.
+
+The private blocks live at two fixed addresses (the DER info block at
+40958, the battery block at 41891 in this capture). The field meanings
+were recovered from the datalogger's own frontend and checked against
+live readings, but no SunSpec spec documents them: treat the
+private-field values as FoxESS-specific readings a firmware could still
+change.
 
 ## What this transport is
 

@@ -833,6 +833,75 @@
       },
       "apsystems_dc_power_8": {
         "name": "DC-Leistung Eingang 8"
+      },
+      "fox_running_state": {
+        "name": "Wechselrichter-Laufzustand"
+      },
+      "fox_alarm_code": {
+        "name": "Alarmcode"
+      },
+      "fox_daily_generation": {
+        "name": "Heute erzeugte Energie"
+      },
+      "fox_monthly_generation": {
+        "name": "Diesen Monat erzeugte Energie"
+      },
+      "fox_annual_generation": {
+        "name": "Dieses Jahr erzeugte Energie"
+      },
+      "fox_total_on_grid_time": {
+        "name": "Zeit am Netz"
+      },
+      "fox_on_grid_voltage_ab": {
+        "name": "Netzspannung A-B"
+      },
+      "fox_on_grid_voltage_bc": {
+        "name": "Netzspannung B-C"
+      },
+      "fox_off_grid_voltage_ab": {
+        "name": "Inselspannung A-B"
+      },
+      "fox_off_grid_voltage_bc": {
+        "name": "Inselspannung B-C"
+      },
+      "fox_module_temperature_1": {
+        "name": "Modultemperatur 1"
+      },
+      "fox_module_temperature_2": {
+        "name": "Modultemperatur 2"
+      },
+      "fox_bus_voltage": {
+        "name": "DC-Busspannung"
+      },
+      "fox_array_insulation": {
+        "name": "Isolationswiderstand des Arrays"
+      },
+      "fox_battery_soc": {
+        "name": "Batterieladezustand"
+      },
+      "fox_battery_voltage": {
+        "name": "Batteriespannung"
+      },
+      "fox_battery_current": {
+        "name": "Batteriestrom"
+      },
+      "fox_battery_cell_voltage_max": {
+        "name": "Batteriezellenspannung, höchste"
+      },
+      "fox_battery_cell_voltage_min": {
+        "name": "Batteriezellenspannung, niedrigste"
+      },
+      "fox_battery_temperature_max": {
+        "name": "Batterietemperatur, höchste"
+      },
+      "fox_battery_temperature_min": {
+        "name": "Batterietemperatur, niedrigste"
+      },
+      "fox_battery_cycle_count": {
+        "name": "Batteriezyklen"
+      },
+      "fox_battery_energy_throughput": {
+        "name": "Batteriedurchsatz"
       }
     }
   },

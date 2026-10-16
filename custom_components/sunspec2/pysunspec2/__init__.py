@@ -42,6 +42,11 @@ Changes against upstream:
   that no longer fits a register, instead of walking on. An APsystems
   ECU-R declares its last model longer than it is, lands on blank memory
   and read zero headers up to register 65535 (#109).
+* Model definitions also load from ``models/foxess/``, a directory the
+  models-sync workflow does not wipe (``models/json`` is regenerated from
+  ``sunspec/models`` every second month). It holds the FoxESS datalogger's
+  own layouts, whose register map does not follow the SunSpec standard
+  ones; see ``vendors/foxess.py``. ``preload_model_defs`` walks it too.
 
 Why a fork rather than the pip package: the integration needs the model
 layer to await an asyncio transport, and upstream accepts changes slowly

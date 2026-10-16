@@ -13,6 +13,7 @@ and its sources.
 from __future__ import annotations
 
 from .apsystems import APSYSTEMS
+from .foxess import FOXESS
 from .fronius import FRONIUS
 from .fronius_datamanager import FRONIUS_DATAMANAGER
 from .kostal import KOSTAL
@@ -32,6 +33,7 @@ PROFILES: tuple[VendorProfile, ...] = (
     SMA,
     KOSTAL,
     APSYSTEMS,
+    FOXESS,
 )
 
 
@@ -58,4 +60,27 @@ def profile_for(
     return None
 
 
-__all__ = ["PROFILES", "ModuleRole", "VendorProfile", "WriteStep", "plan_write", "profile_for"]
+def default_models_for_profile(profile: VendorProfile | None, available: set[int]) -> set[int]:
+    """The ids of ``profile`` that pre-tick on top of the standard set.
+
+    Args:
+        profile (VendorProfile|None): The device's profile, or None.
+        available (set[int]): The model ids the device reports.
+
+    Returns:
+        set[int]: The profile's default ids the device actually has.
+    """
+    if profile is None:
+        return set()
+    return set(profile.default_model_ids & available)
+
+
+__all__ = [
+    "PROFILES",
+    "ModuleRole",
+    "VendorProfile",
+    "WriteStep",
+    "default_models_for_profile",
+    "plan_write",
+    "profile_for",
+]

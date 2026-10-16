@@ -1,0 +1,78 @@
+{
+    "id": 64213,
+    "source_model": 713,
+    "label": "FoxESS Storage Capacity",
+    "name": "FoxESSStorageCapacity",
+    "length": 7,
+    "group": {
+        "name": "FoxESSStorageCapacity",
+        "label": "FoxESS Storage Capacity",
+        "group_type": "single",
+        "group_len": 7,
+        "points": [
+            {
+                "name": "ID",
+                "label": "ID",
+                "size": 1,
+                "type": "uint16",
+                "mandatory": "M"
+            },
+            {
+                "name": "L",
+                "label": "L",
+                "size": 1,
+                "type": "uint16",
+                "mandatory": "M"
+            },
+            {
+                "name": "WHRtg",
+                "label": "Energy Rating",
+                "size": 1,
+                "type": "uint16",
+                "units": "Wh"
+            },
+            {
+                "name": "WHAvail",
+                "label": "Energy Availabel",
+                "size": 1,
+                "type": "uint16",
+                "units": "Wh"
+            },
+            {
+                "name": "StateOfCharge",
+                "label": "State of Charge",
+                "size": 1,
+                "type": "uint16",
+                "units": "%"
+            },
+            {
+                "name": "StateOfHealth",
+                "label": "State of Health",
+                "size": 1,
+                "type": "uint16",
+                "units": "%"
+            },
+            {
+                "name": "Sta",
+                "label": "Status",
+                "size": 1,
+                "type": "uint16"
+            },
+            {
+                "name": "WH_SF",
+                "label": "Energy Scale Factor",
+                "size": 1,
+                "type": "int16"
+            },
+            {
+                "name": "BackupSOCOffgrid",
+                "label": "Bat Backup SOC Offgrid",
+                "size": 1,
+                "type": "uint16",
+                "units": "%"
+            }
+        ],
+        "comments": [],
+        "theoretical_len": 0
+    }
+}

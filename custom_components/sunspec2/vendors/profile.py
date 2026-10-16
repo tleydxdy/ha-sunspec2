@@ -445,6 +445,12 @@ class VendorProfile:
             count one day and start again at zero, where SunSpec says
             lifetime. They are plain sensors, without the guards of a
             lifetime counter.
+        default_model_ids (frozenset[int]): Model ids pre-ticked in the
+            model-selection forms on top of the standard set, for ids
+            this profile relabels into (a device mostly reads raw
+            blocks does not need one). The config flow only ticks ids
+            the device reports, so a relabelled id that did not appear
+            stays unticked.
     """
 
     slug: str
@@ -468,6 +474,7 @@ class VendorProfile:
     ascii_flag_points: frozenset[str] = frozenset()
     control_steps: Mapping[str, float] = field(default_factory=dict)
     daily_energy_points: frozenset[str] = frozenset()
+    default_model_ids: frozenset[int] = frozenset()
 
     def raw_block(self, key: str) -> RawBlock | None:
         """The raw block named ``key``, or None."""

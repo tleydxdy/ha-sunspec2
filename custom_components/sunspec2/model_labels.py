@@ -26,6 +26,10 @@ _LOGGER = logging.getLogger(__name__)
 # pysunspec2 fork, so a plain path is enough; there is no site-packages
 # lookup to go through any more.
 _MODEL_DIR = Path(__file__).parent / "pysunspec2" / "models" / "json"
+# The FoxESS vendor's own layouts (see vendors/foxess.py) live in their
+# own directory next to the bundled ones; a models-sync run regenerates
+# _MODEL_DIR from upstream and would drop anything put inside it.
+_FOX_MODEL_DIR = Path(__file__).parent / "pysunspec2" / "models" / "foxess"
 
 # Curated short names for SunSpec models whose official group label is
 # too unwieldy to sit inside a device name (issue #33). With
@@ -101,8 +105,11 @@ def sunspec_model_label(model_id: int) -> str:
     'Model 99999'
     """
     fallback = f"Model {model_id}"
-    resource = _MODEL_DIR / f"model_{model_id}.json"
-    if not resource.is_file():
+    for directory in (_MODEL_DIR, _FOX_MODEL_DIR):
+        resource = directory / f"model_{model_id}.json"
+        if resource.is_file():
+            break
+    else:
         return fallback
     try:
         with resource.open(encoding="utf-8") as fh:

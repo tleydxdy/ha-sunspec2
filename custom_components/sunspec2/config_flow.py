@@ -66,6 +66,9 @@ from .fronius_web import FroniusWebAuthError
 from .fronius_web import FroniusWebError
 from .fronius_web import async_mint_token
 from .model_labels import sunspec_model_labels
+from .vendors import default_models_for_profile
+from .vendors import profile_for
+from .vendors.profile import VendorProfile
 from .vendors.sma import SUNSPEC_UNIT_ID as SMA_SUNSPEC_UNIT_ID
 
 #: SMA Solar Technology's MAC prefix, the one DHCP discovery matches on.
@@ -749,6 +752,16 @@ class SunSpecFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
         # values are technically there. Sorted list = stable order
         # in the UI and reliable pre-selection.
         default_enabled = sorted(str(model) for model in default_models_for(models))
+        # The probe found the device's vendor: a profile with its own
+        # model ids (the FoxESS relabelled ones, say) pre-ticks them on
+        # top of the standard set, because the device does not fill the
+        # standard blocks those ids stand in for.
+        profile = await self._probe_profile()
+        extra = default_models_for_profile(profile, models)
+        if extra:
+            default_enabled = sorted(
+                {str(model) for model in default_enabled} | {str(m) for m in extra}
+            )
         # Preserve the user's previous picks across re-entry into the
         # settings step (e.g. when we bounce them back with the
         # no_models_selected error). Falling back to default_enabled
@@ -783,6 +796,27 @@ class SunSpecFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
             data_schema=_form_schema(schema),
             errors=self._errors,
         )
+
+    async def _probe_profile(self) -> VendorProfile | None:
+        """The profile for the probe client's device, or None.
+
+        Reads ``Mn`` off the common block the earlier probe cached. This
+        is only about which of the vendor's own model ids pre-tick; the
+        coordinator re-picks the profile on its first cycle anyway.
+        Non-Fox vendors whose profiles carry no default ids see no
+        change.
+        """
+        if self.client is None:
+            return None
+        try:
+            device_info = await self.client.async_get_device_info()
+        except Exception:  # noqa: BLE001 - the probe answered earlier and is gone
+            return None
+        try:
+            manufacturer = device_info.getValue("Mn")
+        except (AttributeError, KeyError):
+            return None
+        return profile_for(str(manufacturer) if manufacturer else None)
 
     async def _probe_nameplate(self, available_models: set[int]) -> float | None:
         """Read SunSpec model 120 / 121 from the probe client, best-effort.
@@ -1132,6 +1166,18 @@ class SunSpecOptionsFlowHandler(config_entries.OptionsFlow):
             # _show_settings_form for why this matters for the
             # frontend's pre-selection logic.
             default_enabled = sorted(str(m) for m in default_models_for(models))
+            # The real coordinator carries the device's profile: a vendor
+            # with its own relabelled model ids pre-ticks them on top of
+            # the standard set, subject to what the device reports. The
+            # test stub and an entry that never finished setup carry no
+            # vendor.
+            coordinator = self.coordinator
+            vendor = getattr(coordinator, "vendor", None) if coordinator is not None else None
+            extra = default_models_for_profile(vendor, models)
+            if extra:
+                default_enabled = sorted(
+                    {str(m) for m in default_enabled} | {str(m) for m in extra}
+                )
             persisted = self.config_entry.options.get(CONF_ENABLED_MODELS, default_enabled)
             default_models = sorted(str(m) for m in persisted if int(m) in models)
             # If the persisted selection is empty (e.g. corrupted by the
