@@ -414,377 +414,8 @@
       "amps_l3": {
         "name": "AC current L3"
       },
-      "phase_voltage_l1_l2": {
-        "name": "Phase voltage L1-L2"
-      },
-      "phase_voltage_l2_l3": {
-        "name": "Phase voltage L2-L3"
-      },
-      "phase_voltage_l3_l1": {
-        "name": "Phase voltage L3-L1"
-      },
-      "phase_voltage_l1_n": {
-        "name": "Phase voltage L1-N"
-      },
-      "phase_voltage_l2_n": {
-        "name": "Phase voltage L2-N"
-      },
-      "phase_voltage_l3_n": {
-        "name": "Phase voltage L3-N"
-      },
-      "watts": {
-        "name": "AC power"
-      },
-      "frequency": {
-        "name": "AC frequency"
-      },
       "apparent_power": {
         "name": "Apparent power"
-      },
-      "reactive_power": {
-        "name": "Reactive power"
-      },
-      "power_factor": {
-        "name": "Power factor"
-      },
-      "lifetime_energy": {
-        "name": "Lifetime energy produced"
-      },
-      "daily_energy": {
-        "name": "Energy produced today"
-      },
-      "counted_lifetime_energy": {
-        "name": "Lifetime energy produced (counted)"
-      },
-      "dc_current": {
-        "name": "DC current"
-      },
-      "dc_voltage": {
-        "name": "DC voltage"
-      },
-      "dc_power": {
-        "name": "DC power"
-      },
-      "cabinet_temperature": {
-        "name": "Cabinet temperature"
-      },
-      "heat_sink_temperature": {
-        "name": "Heat sink temperature"
-      },
-      "transformer_temperature": {
-        "name": "Transformer temperature"
-      },
-      "other_temperature": {
-        "name": "Other temperature"
-      },
-      "operating_state": {
-        "name": "Operating state"
-      },
-      "vendor_operating_state": {
-        "name": "Vendor operating state"
-      },
-      "events_1": {
-        "name": "Events"
-      },
-      "events_2": {
-        "name": "Events 2"
-      },
-      "vendor_events_1": {
-        "name": "Vendor events 1"
-      },
-      "vendor_events_2": {
-        "name": "Vendor events 2"
-      },
-      "vendor_events_3": {
-        "name": "Vendor events 3"
-      },
-      "vendor_events_4": {
-        "name": "Vendor events 4"
-      },
-      "rated_power": {
-        "name": "Rated AC power"
-      },
-      "rated_apparent_power": {
-        "name": "Rated apparent power"
-      },
-      "rated_current": {
-        "name": "Rated AC current"
-      },
-      "rated_lifetime_energy": {
-        "name": "Rated lifetime energy"
-      },
-      "max_power_setting": {
-        "name": "Configured max power"
-      },
-      "voltage_reference": {
-        "name": "Voltage reference"
-      },
-      "battery_charge_power": {
-        "name": "Battery charge power"
-      },
-      "battery_discharge_power": {
-        "name": "Battery discharge power"
-      },
-      "battery_charged_energy": {
-        "name": "Battery charged energy"
-      },
-      "battery_discharged_energy": {
-        "name": "Battery discharged energy"
-      },
-      "pv_power": {
-        "name": "PV power"
-      },
-      "inverter_temperature": {
-        "name": "Inverter temperature"
-      },
-      "battery_cell_temperature": {
-        "name": "Battery cell temperature"
-      },
-      "smart_meter_location": {
-        "name": "Smart meter location",
-        "state": {
-          "feed_in_point": "Feed-in point",
-          "consumption_path": "Consumption path"
-        }
-      },
-      "grid_status": {
-        "name": "Grid status",
-        "state": {
-          "on_grid": "On grid",
-          "off_grid": "Off grid"
-        }
-      },
-      "status_vendor4": {
-        "name": "Vendor status code"
-      },
-      "rrcr_state": {
-        "name": "RRCR input state"
-      },
-      "register_writes": {
-        "name": "Register writes"
-      },
-      "sma_device_class": {
-        "name": "Device class",
-        "state": {
-          "pv_inverter": "PV inverter",
-          "wind_inverter": "Wind inverter",
-          "battery_inverter": "Battery inverter",
-          "load": "Load",
-          "sensor": "Sensor",
-          "energy_meter": "Energy meter",
-          "communication": "Communication product"
-        }
-      },
-      "sma_device_type": {
-        "name": "Device type code"
-      },
-      "sma_operating_status": {
-        "name": "Operating status",
-        "state": {
-          "fault": "Fault",
-          "off": "Off",
-          "ok": "Ok",
-          "warning": "Warning"
-        }
-      },
-      "sma_active_power_mode": {
-        "name": "Active power operating mode",
-        "state": {
-          "off": "Off",
-          "watts": "Watts",
-          "percent": "Percent",
-          "external_setpoint": "External setpoint"
-        }
-      },
-      "sma_setpoint_timeout": {
-        "name": "External setpoint timeout"
-      },
-      "battery_state_of_charge": {
-        "name": "Battery state of charge"
-      },
-      "battery_capacity_pct": {
-        "name": "Battery capacity"
-      },
-      "battery_status_code": {
-        "name": "Battery status code"
-      },
-      "battery_state_of_energy": {
-        "name": "State of energy"
-      },
-      "battery_state_of_health": {
-        "name": "State of health"
-      },
-      "battery_temperature": {
-        "name": "Temperature"
-      },
-      "battery_temperature_max": {
-        "name": "Maximum temperature"
-      },
-      "battery_voltage": {
-        "name": "Voltage"
-      },
-      "battery_current": {
-        "name": "Current"
-      },
-      "battery_power": {
-        "name": "Power"
-      },
-      "battery_energy_discharged": {
-        "name": "Energy discharged"
-      },
-      "battery_energy_charged": {
-        "name": "Energy charged"
-      },
-      "battery_energy_available": {
-        "name": "Available energy"
-      },
-      "battery_energy_max": {
-        "name": "Maximum energy"
-      },
-      "battery_rated_energy": {
-        "name": "Rated energy"
-      },
-      "battery_max_charge_power": {
-        "name": "Maximum charge power"
-      },
-      "battery_max_discharge_power": {
-        "name": "Maximum discharge power"
-      },
-      "battery_status": {
-        "name": "Status",
-        "state": {
-          "off": "Off",
-          "standby": "Standby",
-          "init": "Initialising",
-          "charge": "Charging",
-          "discharge": "Discharging",
-          "fault": "Fault",
-          "preserve_charge": "Preserving charge",
-          "idle": "Idle",
-          "power_saving": "Power saving"
-        }
-      },
-      "home_consumption_pv": {
-        "name": "House consumption from PV"
-      },
-      "home_consumption_battery": {
-        "name": "House consumption from battery"
-      },
-      "home_consumption_grid": {
-        "name": "House consumption from grid"
-      },
-      "home_consumption_pv_total": {
-        "name": "House consumption from PV, total"
-      },
-      "home_consumption_battery_total": {
-        "name": "House consumption from battery, total"
-      },
-      "home_consumption_grid_total": {
-        "name": "House consumption from grid, total"
-      },
-      "home_consumption_total": {
-        "name": "House consumption, total"
-      },
-      "total_dc_power": {
-        "name": "DC power"
-      },
-      "energy_manager_state": {
-        "name": "Energy manager",
-        "state": {
-          "idle": "Idle",
-          "emergency_battery_charge": "Emergency battery charge",
-          "winter_mode_step_1": "Winter mode, step 1",
-          "winter_mode_step_2": "Winter mode, step 2"
-        }
-      },
-      "controller_temperature": {
-        "name": "Controller board temperature"
-      },
-      "isolation_resistance": {
-        "name": "Insulation resistance"
-      },
-      "power_limit_evu": {
-        "name": "Grid operator power limit"
-      },
-      "energy_meter_type": {
-        "name": "Energy meter",
-        "state": {
-          "sdm630": "SDM 630",
-          "b_control_em300lr": "B-control EM-300 LR",
-          "ksem": "KOSTAL Smart Energy Meter",
-          "kem_c": "KOSTAL Energy Meter, series C",
-          "kem_p": "KOSTAL Energy Meter, series P",
-          "kem_mp_p": "KOSTAL Energy Meter MP, series P",
-          "none": "None"
-        }
-      },
-      "energy_to_grid": {
-        "name": "Energy fed into the grid"
-      },
-      "pssb_fuse_state": {
-        "name": "String fuse board",
-        "state": {
-          "fuse_fail": "Fuse failed",
-          "fuse_ok": "Fuse OK",
-          "unchecked": "Unchecked"
-        }
-      },
-      "battery_ready": {
-        "name": "Ready",
-        "state": {
-          "not_ready": "Not ready",
-          "ready": "Ready"
-        }
-      },
-      "battery_dc_charge_energy": {
-        "name": "Charged, DC side"
-      },
-      "battery_dc_discharge_energy": {
-        "name": "Discharged, DC side"
-      },
-      "battery_ac_charge_energy": {
-        "name": "Charged, AC side"
-      },
-      "battery_ac_discharge_energy": {
-        "name": "Discharged to grid"
-      },
-      "battery_ac_charge_energy_grid": {
-        "name": "Charged from grid"
-      },
-      "battery_work_capacity": {
-        "name": "Work capacity"
-      },
-      "battery_management_mode": {
-        "name": "External management",
-        "state": {
-          "none": "Off",
-          "digital_io": "Digital I/O",
-          "modbus": "Modbus"
-        }
-      },
-      "apsystems_dc_voltage_1": {
-        "name": "DC voltage input 1"
-      },
-      "apsystems_dc_voltage_2": {
-        "name": "DC voltage input 2"
-      },
-      "apsystems_dc_voltage_3": {
-        "name": "DC voltage input 3"
-      },
-      "apsystems_dc_voltage_4": {
-        "name": "DC voltage input 4"
-      },
-      "apsystems_dc_voltage_5": {
-        "name": "DC voltage input 5"
-      },
-      "apsystems_dc_voltage_6": {
-        "name": "DC voltage input 6"
-      },
-      "apsystems_dc_voltage_7": {
-        "name": "DC voltage input 7"
-      },
-      "apsystems_dc_voltage_8": {
-        "name": "DC voltage input 8"
       },
       "apsystems_dc_current_1": {
         "name": "DC current input 1"
@@ -834,56 +465,250 @@
       "apsystems_dc_power_8": {
         "name": "DC power input 8"
       },
-      "fox_running_state": {
-        "name": "Inverter running state"
+      "apsystems_dc_voltage_1": {
+        "name": "DC voltage input 1"
+      },
+      "apsystems_dc_voltage_2": {
+        "name": "DC voltage input 2"
+      },
+      "apsystems_dc_voltage_3": {
+        "name": "DC voltage input 3"
+      },
+      "apsystems_dc_voltage_4": {
+        "name": "DC voltage input 4"
+      },
+      "apsystems_dc_voltage_5": {
+        "name": "DC voltage input 5"
+      },
+      "apsystems_dc_voltage_6": {
+        "name": "DC voltage input 6"
+      },
+      "apsystems_dc_voltage_7": {
+        "name": "DC voltage input 7"
+      },
+      "apsystems_dc_voltage_8": {
+        "name": "DC voltage input 8"
+      },
+      "battery_ac_charge_energy": {
+        "name": "Charged, AC side"
+      },
+      "battery_ac_charge_energy_grid": {
+        "name": "Charged from grid"
+      },
+      "battery_ac_discharge_energy": {
+        "name": "Discharged to grid"
+      },
+      "battery_capacity_pct": {
+        "name": "Battery capacity"
+      },
+      "battery_cell_temperature": {
+        "name": "Battery cell temperature"
+      },
+      "battery_charge_power": {
+        "name": "Battery charge power"
+      },
+      "battery_charged_energy": {
+        "name": "Battery charged energy"
+      },
+      "battery_current": {
+        "name": "Current"
+      },
+      "battery_dc_charge_energy": {
+        "name": "Charged, DC side"
+      },
+      "battery_dc_discharge_energy": {
+        "name": "Discharged, DC side"
+      },
+      "battery_discharge_power": {
+        "name": "Battery discharge power"
+      },
+      "battery_discharged_energy": {
+        "name": "Battery discharged energy"
+      },
+      "battery_energy_available": {
+        "name": "Available energy"
+      },
+      "battery_energy_charged": {
+        "name": "Energy charged"
+      },
+      "battery_energy_discharged": {
+        "name": "Energy discharged"
+      },
+      "battery_energy_max": {
+        "name": "Maximum energy"
+      },
+      "battery_management_mode": {
+        "name": "External management",
+        "state": {
+          "none": "Off",
+          "digital_io": "Digital I/O",
+          "modbus": "Modbus"
+        }
+      },
+      "battery_max_charge_power": {
+        "name": "Maximum charge power"
+      },
+      "battery_max_discharge_power": {
+        "name": "Maximum discharge power"
+      },
+      "battery_power": {
+        "name": "Power"
+      },
+      "battery_rated_energy": {
+        "name": "Rated energy"
+      },
+      "battery_ready": {
+        "name": "Ready",
+        "state": {
+          "not_ready": "Not ready",
+          "ready": "Ready"
+        }
+      },
+      "battery_state_of_charge": {
+        "name": "Battery state of charge"
+      },
+      "battery_state_of_energy": {
+        "name": "State of energy"
+      },
+      "battery_state_of_health": {
+        "name": "State of health"
+      },
+      "battery_status": {
+        "name": "Status",
+        "state": {
+          "off": "Off",
+          "standby": "Standby",
+          "init": "Initialising",
+          "charge": "Charging",
+          "discharge": "Discharging",
+          "fault": "Fault",
+          "preserve_charge": "Preserving charge",
+          "idle": "Idle",
+          "power_saving": "Power saving"
+        }
+      },
+      "battery_status_code": {
+        "name": "Battery status code"
+      },
+      "battery_temperature": {
+        "name": "Temperature"
+      },
+      "battery_temperature_max": {
+        "name": "Maximum temperature"
+      },
+      "battery_voltage": {
+        "name": "Voltage"
+      },
+      "battery_work_capacity": {
+        "name": "Work capacity"
+      },
+      "cabinet_temperature": {
+        "name": "Cabinet temperature"
+      },
+      "controller_temperature": {
+        "name": "Controller board temperature"
+      },
+      "counted_lifetime_energy": {
+        "name": "Lifetime energy produced (counted)"
+      },
+      "daily_energy": {
+        "name": "Energy produced today"
+      },
+      "dc_current": {
+        "name": "DC current"
+      },
+      "dc_power": {
+        "name": "DC power"
+      },
+      "dc_voltage": {
+        "name": "DC voltage"
+      },
+      "energy_manager_state": {
+        "name": "Energy manager",
+        "state": {
+          "idle": "Idle",
+          "emergency_battery_charge": "Emergency battery charge",
+          "winter_mode_step_1": "Winter mode, step 1",
+          "winter_mode_step_2": "Winter mode, step 2"
+        }
+      },
+      "energy_meter_type": {
+        "name": "Energy meter",
+        "state": {
+          "sdm630": "SDM 630",
+          "b_control_em300lr": "B-control EM-300 LR",
+          "ksem": "KOSTAL Smart Energy Meter",
+          "kem_c": "KOSTAL Energy Meter, series C",
+          "kem_p": "KOSTAL Energy Meter, series P",
+          "kem_mp_p": "KOSTAL Energy Meter MP, series P",
+          "none": "None"
+        }
+      },
+      "energy_to_grid": {
+        "name": "Energy fed into the grid"
+      },
+      "events_1": {
+        "name": "Events"
+      },
+      "events_2": {
+        "name": "Events 2"
+      },
+      "fox_advother_cumulative_energy_genaration_correction": {
+        "name": "Cumulative Energy Genaration Correction"
+      },
+      "fox_advother_fault_recovery_time": {
+        "name": "Fault Recovery Time"
+      },
+      "fox_advother_italy_grid_cloud": {
+        "name": "Italy Grid Cloud"
+      },
+      "fox_advother_italy_spilocal": {
+        "name": "Italy SPI Local"
+      },
+      "fox_advother_mpptaccess_mode": {
+        "name": "MPPT Access Mode"
+      },
+      "fox_advother_standby_time": {
+        "name": "Standby Time"
+      },
+      "fox_advpow_active_power_falling_ratio_setting": {
+        "name": "Active Power Falling Ratio Setting"
+      },
+      "fox_advpow_active_power_ratio_control_enable": {
+        "name": "Active Power Ratio Control Enable"
+      },
+      "fox_advpow_active_power_rising_ratio_setting": {
+        "name": "Active Power Rising Ratio Setting"
+      },
+      "fox_advpow_active_power_setting_retention": {
+        "name": "Active Power Setting Retention"
+      },
+      "fox_advpow_active_power_soft_start_after_fault_enable": {
+        "name": "Active Power Soft Start After Fault Enable"
+      },
+      "fox_advpow_active_power_soft_start_enable": {
+        "name": "Active Power Soft Start Enable"
+      },
+      "fox_advpow_active_power_soft_start_ratio_setting": {
+        "name": "Active Power Soft Start Ratio Setting"
+      },
+      "fox_advpow_active_power_soft_start_time_after_fault": {
+        "name": "Active Power Soft Start Time After Fault"
+      },
+      "fox_advpow_drm": {
+        "name": "DRM"
+      },
+      "fox_advpow_ripple_control": {
+        "name": "Ripple Control"
       },
       "fox_alarm_code": {
         "name": "Alarm code"
       },
-      "fox_daily_generation": {
-        "name": "Energy generated today"
-      },
-      "fox_monthly_generation": {
-        "name": "Energy generated this month"
-      },
       "fox_annual_generation": {
         "name": "Energy generated this year"
       },
-      "fox_total_on_grid_time": {
-        "name": "Time on grid"
-      },
-      "fox_on_grid_voltage_ab": {
-        "name": "Grid voltage A-B"
-      },
-      "fox_on_grid_voltage_bc": {
-        "name": "Grid voltage B-C"
-      },
-      "fox_off_grid_voltage_ab": {
-        "name": "Off-grid voltage A-B"
-      },
-      "fox_off_grid_voltage_bc": {
-        "name": "Off-grid voltage B-C"
-      },
-      "fox_module_temperature_1": {
-        "name": "Module temperature 1"
-      },
-      "fox_module_temperature_2": {
-        "name": "Module temperature 2"
-      },
-      "fox_bus_voltage": {
-        "name": "DC bus voltage"
-      },
       "fox_array_insulation": {
         "name": "Array insulation resistance"
-      },
-      "fox_battery_soc": {
-        "name": "Battery state of charge"
-      },
-      "fox_battery_voltage": {
-        "name": "Battery voltage"
-      },
-      "fox_battery_current": {
-        "name": "Battery current"
       },
       "fox_battery_cell_voltage_max": {
         "name": "Battery cell voltage, highest"
@@ -891,17 +716,4047 @@
       "fox_battery_cell_voltage_min": {
         "name": "Battery cell voltage, lowest"
       },
-      "fox_battery_temperature_max": {
-        "name": "Battery temperature, highest"
-      },
-      "fox_battery_temperature_min": {
-        "name": "Battery temperature, lowest"
+      "fox_battery_current": {
+        "name": "Battery current"
       },
       "fox_battery_cycle_count": {
         "name": "Battery cycles"
       },
       "fox_battery_energy_throughput": {
         "name": "Battery energy throughput"
+      },
+      "fox_battery_soc": {
+        "name": "Battery state of charge"
+      },
+      "fox_battery_temperature_max": {
+        "name": "Battery temperature, highest"
+      },
+      "fox_battery_temperature_min": {
+        "name": "Battery temperature, lowest"
+      },
+      "fox_battery_voltage": {
+        "name": "Battery voltage"
+      },
+      "fox_bms_info_bcuswversion": {
+        "name": "BCU SW Version"
+      },
+      "fox_bms_info_bmu1_swversion": {
+        "name": "BMU1 SW Version"
+      },
+      "fox_bms_info_bmu2_swversion": {
+        "name": "BMU2 SW Version"
+      },
+      "fox_bms_info_bmu3_swversion": {
+        "name": "BMU3 SW Version"
+      },
+      "fox_bms_info_bmu4_swversion": {
+        "name": "BMU4 SW Version"
+      },
+      "fox_bms_info_bmu5_swversion": {
+        "name": "BMU5 SW Version"
+      },
+      "fox_bms_info_bmu6_swversion": {
+        "name": "BMU6 SW Version"
+      },
+      "fox_bms_info_bmu7_swversion": {
+        "name": "BMU7 SW Version"
+      },
+      "fox_bms_info_bmu8_swversion": {
+        "name": "BMU8 SW Version"
+      },
+      "fox_bms_info_cell_type1": {
+        "name": "CellType1"
+      },
+      "fox_bms_info_cell_type2": {
+        "name": "CellType2"
+      },
+      "fox_bms_info_cell_type3": {
+        "name": "CellType3"
+      },
+      "fox_bms_info_cell_type4": {
+        "name": "CellType4"
+      },
+      "fox_bms_info_cell_type5": {
+        "name": "CellType5"
+      },
+      "fox_bms_info_cell_type6": {
+        "name": "CellType6"
+      },
+      "fox_bms_info_cell_type7": {
+        "name": "CellType7"
+      },
+      "fox_bms_info_cell_type8": {
+        "name": "CellType8"
+      },
+      "fox_bms_info_family_type": {
+        "name": "FamilyType"
+      },
+      "fox_bms_info_ivuswversion": {
+        "name": "IVU SW Version"
+      },
+      "fox_bms_info_master_sn": {
+        "name": "Master SN"
+      },
+      "fox_bms_info_module_type1": {
+        "name": "ModuleType1"
+      },
+      "fox_bms_info_module_type2": {
+        "name": "ModuleType2"
+      },
+      "fox_bms_info_module_type3": {
+        "name": "ModuleType3"
+      },
+      "fox_bms_info_module_type4": {
+        "name": "ModuleType4"
+      },
+      "fox_bms_info_module_type5": {
+        "name": "ModuleType5"
+      },
+      "fox_bms_info_module_type6": {
+        "name": "ModuleType6"
+      },
+      "fox_bms_info_module_type7": {
+        "name": "ModuleType7"
+      },
+      "fox_bms_info_module_type8": {
+        "name": "ModuleType8"
+      },
+      "fox_bms_info_slave1_sn": {
+        "name": "Slave1 SN"
+      },
+      "fox_bms_info_slave2_sn": {
+        "name": "Slave2 SN"
+      },
+      "fox_bms_info_slave3_sn": {
+        "name": "Slave3 SN"
+      },
+      "fox_bms_info_slave4_sn": {
+        "name": "Slave4 SN"
+      },
+      "fox_bms_info_slave5_sn": {
+        "name": "Slave5 SN"
+      },
+      "fox_bms_info_slave6_sn": {
+        "name": "Slave6 SN"
+      },
+      "fox_bms_info_slave7_sn": {
+        "name": "Slave7 SN"
+      },
+      "fox_bms_info_slave8_sn": {
+        "name": "Slave8 SN"
+      },
+      "fox_bus_voltage": {
+        "name": "DC bus voltage"
+      },
+      "fox_circuit_circult1_enable": {
+        "name": "Circult1 Enable"
+      },
+      "fox_circuit_circult2_enable": {
+        "name": "Circult2 Enable"
+      },
+      "fox_circuit_circult3_enable": {
+        "name": "Circult3 Enable"
+      },
+      "fox_circuit_circult_merge_enable": {
+        "name": "Circult Merge Enable"
+      },
+      "fox_circuit_cycle_interval_circult1": {
+        "name": "Cycle Interval"
+      },
+      "fox_circuit_cycle_interval_circult2": {
+        "name": "Cycle Interval"
+      },
+      "fox_circuit_cycle_interval_circult3": {
+        "name": "Cycle Interval"
+      },
+      "fox_circuit_end_time1_hour_circult1": {
+        "name": "End time 1:Hour"
+      },
+      "fox_circuit_end_time1_hour_circult2": {
+        "name": "End time 1:Hour"
+      },
+      "fox_circuit_end_time1_hour_circult3": {
+        "name": "End time 1:Hour"
+      },
+      "fox_circuit_end_time1_min_circult1": {
+        "name": "End time 1:Min"
+      },
+      "fox_circuit_end_time1_min_circult2": {
+        "name": "End time 1:Min"
+      },
+      "fox_circuit_end_time1_min_circult3": {
+        "name": "End time 1:Min"
+      },
+      "fox_circuit_end_time2_hour_circult1": {
+        "name": "End time 2:Hour"
+      },
+      "fox_circuit_end_time2_hour_circult2": {
+        "name": "End time 2:Hour"
+      },
+      "fox_circuit_end_time2_hour_circult3": {
+        "name": "End time 2:Hour"
+      },
+      "fox_circuit_end_time2_min_circult1": {
+        "name": "End time 2:Min"
+      },
+      "fox_circuit_end_time2_min_circult2": {
+        "name": "End time 2:Min"
+      },
+      "fox_circuit_end_time2_min_circult3": {
+        "name": "End time 2:Min"
+      },
+      "fox_circuit_end_time3_hour_circult1": {
+        "name": "End time 3:Hour"
+      },
+      "fox_circuit_end_time3_hour_circult2": {
+        "name": "End time 3:Hour"
+      },
+      "fox_circuit_end_time3_hour_circult3": {
+        "name": "End time 3:Hour"
+      },
+      "fox_circuit_end_time3_min_circult1": {
+        "name": "End time 3:Min"
+      },
+      "fox_circuit_end_time3_min_circult2": {
+        "name": "End time 3:Min"
+      },
+      "fox_circuit_end_time3_min_circult3": {
+        "name": "End time 3:Min"
+      },
+      "fox_circuit_hysteresis_soccircult1": {
+        "name": "Hysteresis SOC(Circuit1)"
+      },
+      "fox_circuit_hysteresis_soccircult2": {
+        "name": "Hysteresis SOC(Circuit2)"
+      },
+      "fox_circuit_hysteresis_soccircult3": {
+        "name": "Hysteresis SOC(Circuit3)"
+      },
+      "fox_circuit_smart_mode_circult1": {
+        "name": "Smart Mode(Circult1)"
+      },
+      "fox_circuit_smart_mode_circult2": {
+        "name": "Smart Mode(Circult2)"
+      },
+      "fox_circuit_smart_mode_circult3": {
+        "name": "Smart Mode(Circult3)"
+      },
+      "fox_circuit_socthreshold_circult1": {
+        "name": "SOC Threshold(Circult1)"
+      },
+      "fox_circuit_socthreshold_circult2": {
+        "name": "SOC Threshold(Circult2)"
+      },
+      "fox_circuit_socthreshold_circult3": {
+        "name": "SOC Threshold(Circult3)"
+      },
+      "fox_circuit_start_time1_hour_circult1": {
+        "name": "Start time 1:Hour"
+      },
+      "fox_circuit_start_time1_hour_circult2": {
+        "name": "Start time 1:Hour"
+      },
+      "fox_circuit_start_time1_hour_circult3": {
+        "name": "Start time 1:Hour"
+      },
+      "fox_circuit_start_time1_min_circult1": {
+        "name": "Start time 1:Min"
+      },
+      "fox_circuit_start_time1_min_circult2": {
+        "name": "Start time 1:Min"
+      },
+      "fox_circuit_start_time1_min_circult3": {
+        "name": "Start time 1:Min"
+      },
+      "fox_circuit_start_time2_hour_circult1": {
+        "name": "Start time 2:Hour"
+      },
+      "fox_circuit_start_time2_hour_circult2": {
+        "name": "Start time 2:Hour"
+      },
+      "fox_circuit_start_time2_hour_circult3": {
+        "name": "Start time 2:Hour"
+      },
+      "fox_circuit_start_time2_min_circult1": {
+        "name": "Start time 2:Min"
+      },
+      "fox_circuit_start_time2_min_circult2": {
+        "name": "Start time 2:Min"
+      },
+      "fox_circuit_start_time2_min_circult3": {
+        "name": "Start time 2:Min"
+      },
+      "fox_circuit_start_time3_hour_circult1": {
+        "name": "Start time 3:Hour"
+      },
+      "fox_circuit_start_time3_hour_circult2": {
+        "name": "Start time 3:Hour"
+      },
+      "fox_circuit_start_time3_hour_circult3": {
+        "name": "Start time 3:Hour"
+      },
+      "fox_circuit_start_time3_min_circult1": {
+        "name": "Start time 3:Min"
+      },
+      "fox_circuit_start_time3_min_circult2": {
+        "name": "Start time 3:Min"
+      },
+      "fox_circuit_start_time3_min_circult3": {
+        "name": "Start time 3:Min"
+      },
+      "fox_circuit_timing_enable_circult1": {
+        "name": "Timing Enable"
+      },
+      "fox_circuit_timing_enable_circult2": {
+        "name": "Timing Enable"
+      },
+      "fox_circuit_timing_enable_circult3": {
+        "name": "Timing Enable"
+      },
+      "fox_clock_boot_shutdown": {
+        "name": "Boot/Shutdown"
+      },
+      "fox_clock_country_region": {
+        "name": "Country/Region"
+      },
+      "fox_clock_day": {
+        "name": "System Clock: Day"
+      },
+      "fox_clock_hour": {
+        "name": "System Clock: Hour"
+      },
+      "fox_clock_minute": {
+        "name": "System Clock: Minute"
+      },
+      "fox_clock_month": {
+        "name": "System Clock: Month"
+      },
+      "fox_clock_second": {
+        "name": "System Clock: Second"
+      },
+      "fox_clock_year": {
+        "name": "System Clock: Year"
+      },
+      "fox_daily_generation": {
+        "name": "Energy generated today"
+      },
+      "fox_dbg_active_overload_rate": {
+        "name": "Active Overload Rate"
+      },
+      "fox_dbg_debug_info1": {
+        "name": "Debug information1"
+      },
+      "fox_dbg_debug_info2": {
+        "name": "Debug information2"
+      },
+      "fox_dbg_debug_info3": {
+        "name": "Debug information3"
+      },
+      "fox_dbg_debug_info4": {
+        "name": "Debug information4"
+      },
+      "fox_dbg_debug_info5": {
+        "name": "Debug information5"
+      },
+      "fox_dbg_debug_info6": {
+        "name": "Debug information6"
+      },
+      "fox_dbg_debug_info7": {
+        "name": "Debug information7"
+      },
+      "fox_dbg_debug_info8": {
+        "name": "Debug information8"
+      },
+      "fox_dbg_display_info1": {
+        "name": "Display information 1"
+      },
+      "fox_dbg_display_info10": {
+        "name": "Display information 10"
+      },
+      "fox_dbg_display_info11": {
+        "name": "Display information 11"
+      },
+      "fox_dbg_display_info12": {
+        "name": "Display information 12"
+      },
+      "fox_dbg_display_info13": {
+        "name": "Display information 13"
+      },
+      "fox_dbg_display_info14": {
+        "name": "Display information 14"
+      },
+      "fox_dbg_display_info15": {
+        "name": "Display information 15"
+      },
+      "fox_dbg_display_info16": {
+        "name": "Display information 16"
+      },
+      "fox_dbg_display_info17": {
+        "name": "Display information 17"
+      },
+      "fox_dbg_display_info18": {
+        "name": "Display information 18"
+      },
+      "fox_dbg_display_info19": {
+        "name": "Display information 19"
+      },
+      "fox_dbg_display_info2": {
+        "name": "Display information 2"
+      },
+      "fox_dbg_display_info20": {
+        "name": "Display information 20"
+      },
+      "fox_dbg_display_info21": {
+        "name": "Display information 21"
+      },
+      "fox_dbg_display_info22": {
+        "name": "Display information 22"
+      },
+      "fox_dbg_display_info23": {
+        "name": "Display information 23"
+      },
+      "fox_dbg_display_info24": {
+        "name": "Display information 24"
+      },
+      "fox_dbg_display_info25": {
+        "name": "Display information 25"
+      },
+      "fox_dbg_display_info26": {
+        "name": "Display information 26"
+      },
+      "fox_dbg_display_info27": {
+        "name": "Display information 27"
+      },
+      "fox_dbg_display_info28": {
+        "name": "Display information 28"
+      },
+      "fox_dbg_display_info29": {
+        "name": "Display information 29"
+      },
+      "fox_dbg_display_info3": {
+        "name": "Display information 3"
+      },
+      "fox_dbg_display_info30": {
+        "name": "Display information 30"
+      },
+      "fox_dbg_display_info31": {
+        "name": "Display information 31"
+      },
+      "fox_dbg_display_info32": {
+        "name": "Display information 32"
+      },
+      "fox_dbg_display_info4": {
+        "name": "Display information 4"
+      },
+      "fox_dbg_display_info5": {
+        "name": "Display information 5"
+      },
+      "fox_dbg_display_info6": {
+        "name": "Display information 6"
+      },
+      "fox_dbg_display_info7": {
+        "name": "Display information 7"
+      },
+      "fox_dbg_display_info8": {
+        "name": "Display information 8"
+      },
+      "fox_dbg_display_info9": {
+        "name": "Display information 9"
+      },
+      "fox_dbg_hub_comm_state": {
+        "name": "HubCommState"
+      },
+      "fox_dbg_initial_state": {
+        "name": "Initial State"
+      },
+      "fox_dbg_inverter_type": {
+        "name": "Inverter Type"
+      },
+      "fox_dbg_manager_inner_ver": {
+        "name": "ManagerInnerVer"
+      },
+      "fox_dbg_master_inner_ver": {
+        "name": "MasterInnerVer"
+      },
+      "fox_dbg_module1_temperature": {
+        "name": "Module1 Temperture"
+      },
+      "fox_dbg_module2_temperature": {
+        "name": "Module2 Temperture"
+      },
+      "fox_dbg_module3_temperature": {
+        "name": "Module3 Temperture"
+      },
+      "fox_dbg_module4_temperature": {
+        "name": "Module4 Temperture"
+      },
+      "fox_dbg_module5_temperature": {
+        "name": "Module5 Temperture"
+      },
+      "fox_dbg_module6_temperature": {
+        "name": "Module6 Temperture"
+      },
+      "fox_dbg_mppt10_mode": {
+        "name": "MPPT10 Mode"
+      },
+      "fox_dbg_mppt11_mode": {
+        "name": "MPPT11 Mode"
+      },
+      "fox_dbg_mppt12_mode": {
+        "name": "MPPT12 Mode"
+      },
+      "fox_dbg_mppt13_mode": {
+        "name": "MPPT13 Mode"
+      },
+      "fox_dbg_mppt14_mode": {
+        "name": "MPPT14 Mode"
+      },
+      "fox_dbg_mppt15_mode": {
+        "name": "MPPT15 Mode"
+      },
+      "fox_dbg_mppt16_mode": {
+        "name": "MPPT16 Mode"
+      },
+      "fox_dbg_mppt17_mode": {
+        "name": "MPPT17 Mode"
+      },
+      "fox_dbg_mppt18_mode": {
+        "name": "MPPT18 Mode"
+      },
+      "fox_dbg_mppt19_mode": {
+        "name": "MPPT19 Mode"
+      },
+      "fox_dbg_mppt1_mode": {
+        "name": "MPPT1 Mode"
+      },
+      "fox_dbg_mppt20_mode": {
+        "name": "MPPT20 Mode"
+      },
+      "fox_dbg_mppt2_mode": {
+        "name": "MPPT2 Mode"
+      },
+      "fox_dbg_mppt3_mode": {
+        "name": "MPPT3 Mode"
+      },
+      "fox_dbg_mppt4_mode": {
+        "name": "MPPT4 Mode"
+      },
+      "fox_dbg_mppt5_mode": {
+        "name": "MPPT5 Mode"
+      },
+      "fox_dbg_mppt6_mode": {
+        "name": "MPPT6 Mode"
+      },
+      "fox_dbg_mppt7_mode": {
+        "name": "MPPT7 Mode"
+      },
+      "fox_dbg_mppt8_mode": {
+        "name": "MPPT8 Mode"
+      },
+      "fox_dbg_mppt9_mode": {
+        "name": "MPPT9 Mode"
+      },
+      "fox_dbg_negative_bus_voltage": {
+        "name": "Negative Bus voltage"
+      },
+      "fox_dbg_no_mpptinputs": {
+        "name": "No. Of MPPT Inputs"
+      },
+      "fox_dbg_no_string_branches": {
+        "name": "No. Of String Branches"
+      },
+      "fox_dbg_positive_bus_voltage": {
+        "name": "Positive Bus Voltage"
+      },
+      "fox_dbg_rated_grid_frequency": {
+        "name": "Rated Grid Frequency"
+      },
+      "fox_dbg_rated_grid_voltage": {
+        "name": "Rated Grid Voltage"
+      },
+      "fox_dbg_residual_current": {
+        "name": "Residual Current"
+      },
+      "fox_dbg_slave_inner_ver": {
+        "name": "SlaveInnerVer"
+      },
+      "fox_dbg_state_of_fans": {
+        "name": "States of Fans"
+      },
+      "fox_dbgparam_access_mode_judgment": {
+        "name": "Access Mode Judgment"
+      },
+      "fox_dbgparam_accuracy_adjustment_parameter1": {
+        "name": "Accuracy Adjustment Parameter 1"
+      },
+      "fox_dbgparam_accuracy_adjustment_parameter2": {
+        "name": "Accuracy Adjustment Parameter 2"
+      },
+      "fox_dbgparam_active_detection_of_meter_reverse_connection": {
+        "name": "Active detection of meter reverse connection"
+      },
+      "fox_dbgparam_active_islanding": {
+        "name": "Active Islanding"
+      },
+      "fox_dbgparam_afd_detection_threshold": {
+        "name": "AFD(Detection) Threshold"
+      },
+      "fox_dbgparam_afdtthreshold": {
+        "name": "AFD T Threshold"
+      },
+      "fox_dbgparam_arc_fault_clear": {
+        "name": "ARC_FAULT_CLEAR"
+      },
+      "fox_dbgparam_auxiliary_dspprotection_function": {
+        "name": "Auxiliary DSP Protection Function"
+      },
+      "fox_dbgparam_battery_awaken": {
+        "name": "Battery Awaken"
+      },
+      "fox_dbgparam_battery_capacity": {
+        "name": "Battery capacity"
+      },
+      "fox_dbgparam_battery_get_energy_from_grid_enable": {
+        "name": "Battery Get Energy From Grid Enable"
+      },
+      "fox_dbgparam_battery_identification_method": {
+        "name": "Battery identification method"
+      },
+      "fox_dbgparam_battery_maintenance": {
+        "name": "Battery maintenance"
+      },
+      "fox_dbgparam_battery_over_temperature_protection_value": {
+        "name": "Battery over temperature protection value"
+      },
+      "fox_dbgparam_battery_overvoltage_protection_value": {
+        "name": "Battery overvoltage protection value"
+      },
+      "fox_dbgparam_battery_type": {
+        "name": "Battery type"
+      },
+      "fox_dbgparam_battery_under_temperature_protection_value": {
+        "name": "Battery under temperature protection value"
+      },
+      "fox_dbgparam_battery_undervoltage_protection_value": {
+        "name": "Battery undervoltage protection value"
+      },
+      "fox_dbgparam_boosttemperature_unbalance_detection_threshold": {
+        "name": "BOOST temperature Unbalance Detection Threshold"
+      },
+      "fox_dbgparam_bus_midpoint_offset_correction": {
+        "name": "Bus Midpoint Offset Correction"
+      },
+      "fox_dbgparam_bus_offset_grid_voltage": {
+        "name": "Bus Offset Grid Voltage"
+      },
+      "fox_dbgparam_charge_and_discharge_command": {
+        "name": "Charge and discharge command"
+      },
+      "fox_dbgparam_charge_and_discharge_power": {
+        "name": "Charge and discharge power"
+      },
+      "fox_dbgparam_clear_the_meter_reverse_connection_alarm": {
+        "name": "Clear the meter reverse connection alarm"
+      },
+      "fox_dbgparam_common_mode_rejection": {
+        "name": "Common Mode Rejection"
+      },
+      "fox_dbgparam_configure_the_number_of_battery_packs": {
+        "name": "Configure the number of battery packs"
+      },
+      "fox_dbgparam_constant_voltage_charging_cutoff_current": {
+        "name": "Constant voltage charging cutoff current"
+      },
+      "fox_dbgparam_constant_voltage_charging_time": {
+        "name": "Constant voltage charging time"
+      },
+      "fox_dbgparam_constant_voltage_charging_voltage": {
+        "name": "Constant voltage charging voltage"
+      },
+      "fox_dbgparam_controlmode": {
+        "name": "Control mode"
+      },
+      "fox_dbgparam_ctreverse_gen_meter": {
+        "name": "CT Reverse(Gen Meter)"
+      },
+      "fox_dbgparam_ctreverse_grid_meter": {
+        "name": "CT Reverse(Grid Meter)"
+      },
+      "fox_dbgparam_ctreverse_solar_meter": {
+        "name": "CT Reverse(Solar Meter)"
+      },
+      "fox_dbgparam_dc_component_coefficient_protection_time": {
+        "name": "DC component coefficient protection time"
+      },
+      "fox_dbgparam_dc_component_protection_coefficient": {
+        "name": "DC component protection coefficient"
+      },
+      "fox_dbgparam_dccomponent_protection": {
+        "name": "DC Component Protection"
+      },
+      "fox_dbgparam_dccomponent_protection_tripping_time": {
+        "name": "DC Component Protection Tripping Time"
+      },
+      "fox_dbgparam_dccomponent_protection_value": {
+        "name": "DC Component Protection Value"
+      },
+      "fox_dbgparam_dccomponent_suppression": {
+        "name": "DC Component Suppression"
+      },
+      "fox_dbgparam_dcinjectionprotectionmode": {
+        "name": "DC injection protection mode"
+      },
+      "fox_dbgparam_dcsource_mode": {
+        "name": "DC Source Mode"
+      },
+      "fox_dbgparam_diemergency_stop_function": {
+        "name": "DI Emergency Stop Function"
+      },
+      "fox_dbgparam_discharge_cutoff_voltage": {
+        "name": "Discharge cutoff voltage"
+      },
+      "fox_dbgparam_displayof_derating_status": {
+        "name": "Display of Derating Status"
+      },
+      "fox_dbgparam_do_function_configuration": {
+        "name": "Do function configuration"
+      },
+      "fox_dbgparam_dspprogram_selection": {
+        "name": "DSP Program Selection"
+      },
+      "fox_dbgparam_effective_time_of_forced_charging": {
+        "name": "Effective time of forced charging"
+      },
+      "fox_dbgparam_effective_time_of_forced_discharging": {
+        "name": "Effective time of forced Discharging"
+      },
+      "fox_dbgparam_emergency_charging_current": {
+        "name": "Emergency charging current"
+      },
+      "fox_dbgparam_end_time_of_battery_use_on_non_working_days_1_hour": {
+        "name": "End time of battery use on non working days: 1: hour"
+      },
+      "fox_dbgparam_end_time_of_battery_use_on_non_working_days_1_min": {
+        "name": "End time of battery use on non working days: 1: Min"
+      },
+      "fox_dbgparam_end_time_of_battery_use_on_non_working_days_2_hour": {
+        "name": "End time of battery use on non working days: 2: hour"
+      },
+      "fox_dbgparam_end_time_of_battery_use_on_non_working_days_2_min": {
+        "name": "End time of battery use on non working days: 2: Min"
+      },
+      "fox_dbgparam_end_time_of_battery_use_on_weekdays_2_00": {
+        "name": "End time of battery use on weekdays: 2:00"
+      },
+      "fox_dbgparam_end_time_of_forced_charging_1_hour": {
+        "name": "End time of forced charging: 1: hour"
+      },
+      "fox_dbgparam_end_time_of_forced_charging_1_min": {
+        "name": "End time of forced charging: 1: Min"
+      },
+      "fox_dbgparam_end_time_of_forced_charging_2_h": {
+        "name": "End time of forced charging: 2: H"
+      },
+      "fox_dbgparam_end_time_of_forced_charging_2_min": {
+        "name": "End time of forced charging: 2: Min"
+      },
+      "fox_dbgparam_end_time_of_forced_charging_3_h": {
+        "name": "End time of forced charging: 3: H"
+      },
+      "fox_dbgparam_end_time_of_forced_charging_3_min": {
+        "name": "End time of forced charging: 3: Min"
+      },
+      "fox_dbgparam_end_time_of_forced_discharging_1_hour": {
+        "name": "End time of forced Discharging: 1: hour"
+      },
+      "fox_dbgparam_end_time_of_forced_discharging_1_min": {
+        "name": "End time of forced Discharging: 1: Min"
+      },
+      "fox_dbgparam_end_time_of_forced_discharging_2_h": {
+        "name": "End time of forced Discharging: 2: H"
+      },
+      "fox_dbgparam_end_time_of_forced_discharging_2_min": {
+        "name": "End time of forced Discharging: 2: Min"
+      },
+      "fox_dbgparam_end_time_of_forced_discharging_3_h": {
+        "name": "End time of forced Discharging: 3: H"
+      },
+      "fox_dbgparam_end_time_of_forced_discharging_3_min": {
+        "name": "End time of forced Discharging: 3: Min"
+      },
+      "fox_dbgparam_end_time_of_load_1_intelligent_mode_min": {
+        "name": "End time of load 1 intelligent mode: Min"
+      },
+      "fox_dbgparam_energy_management_mode": {
+        "name": "Energy management mode"
+      },
+      "fox_dbgparam_equipmentto_restart": {
+        "name": "Equipment to Restart"
+      },
+      "fox_dbgparam_field_dispatching": {
+        "name": "Field Dispatching"
+      },
+      "fox_dbgparam_forced_ac_bypass": {
+        "name": "Forced AC bypass"
+      },
+      "fox_dbgparam_forced_charging": {
+        "name": "Forced charging"
+      },
+      "fox_dbgparam_forced_charging_start_time_1_hour": {
+        "name": "Forced charging start time: 1: hour"
+      },
+      "fox_dbgparam_forced_charging_start_time_2_h": {
+        "name": "Forced charging start time: 2: H"
+      },
+      "fox_dbgparam_forced_charging_start_time_3_h": {
+        "name": "Forced charging start time: 3: H"
+      },
+      "fox_dbgparam_forced_charging_target_power1": {
+        "name": "Forced charging target Power1"
+      },
+      "fox_dbgparam_forced_charging_target_power2": {
+        "name": "Forced charging target Power2"
+      },
+      "fox_dbgparam_forced_charging_target_power3": {
+        "name": "Forced charging target Power3"
+      },
+      "fox_dbgparam_forced_charging_target_soc_1": {
+        "name": "Forced charging target SOC 1"
+      },
+      "fox_dbgparam_forced_charging_target_soc_2": {
+        "name": "Forced charging target SOC 2"
+      },
+      "fox_dbgparam_forced_charging_target_soc_3": {
+        "name": "Forced charging target SOC 3"
+      },
+      "fox_dbgparam_forced_discharging": {
+        "name": "Forced Discharging"
+      },
+      "fox_dbgparam_forced_discharging_start_time_1_hour": {
+        "name": "Forced Discharging start time: 1: hour"
+      },
+      "fox_dbgparam_forced_discharging_start_time_2_h": {
+        "name": "Forced Discharging start time: 2: H"
+      },
+      "fox_dbgparam_forced_discharging_start_time_3_h": {
+        "name": "Forced Discharging start time: 3: H"
+      },
+      "fox_dbgparam_forced_discharging_target_power1": {
+        "name": "Forced Discharging target Power1"
+      },
+      "fox_dbgparam_forced_discharging_target_power2": {
+        "name": "Forced Discharging target Power2"
+      },
+      "fox_dbgparam_forced_discharging_target_power3": {
+        "name": "Forced Discharging target Power3"
+      },
+      "fox_dbgparam_forced_discharging_target_soc_1": {
+        "name": "Forced Discharging target SOC 1"
+      },
+      "fox_dbgparam_forced_discharging_target_soc_2": {
+        "name": "Forced Discharging target SOC 2"
+      },
+      "fox_dbgparam_forced_discharging_target_soc_3": {
+        "name": "Forced Discharging target SOC 3"
+      },
+      "fox_dbgparam_frequency_conversion_mode": {
+        "name": "Frequency Conversion Mode"
+      },
+      "fox_dbgparam_frequency_fast_protection_function": {
+        "name": "Frequency Fast Protection Function"
+      },
+      "fox_dbgparam_full_charge_cutoff_current": {
+        "name": "Full charge cutoff current"
+      },
+      "fox_dbgparam_full_charge_time": {
+        "name": "Full charge time"
+      },
+      "fox_dbgparam_full_connetedof_pvterminal": {
+        "name": "Full Conneted of PV Terminal"
+      },
+      "fox_dbgparam_grid_low_derating": {
+        "name": "Grid Low Derating"
+      },
+      "fox_dbgparam_grid_overvoltage_transient_protection": {
+        "name": "Grid Overvoltage Transient Protection"
+      },
+      "fox_dbgparam_grid_overvoltage_transient_protection_2": {
+        "name": "Grid Overvoltage Transient Protection"
+      },
+      "fox_dbgparam_grid_overvoltage_transient_protection_times": {
+        "name": "Grid Overvoltage Transient Protection Times"
+      },
+      "fox_dbgparam_grid_reconnection_voltage": {
+        "name": "Grid Reconnection Voltage"
+      },
+      "fox_dbgparam_grid_undervoltage_transient_protection": {
+        "name": "Grid Undervoltage Transient Protection"
+      },
+      "fox_dbgparam_grid_undervoltage_transient_protection_enable": {
+        "name": "Grid Undervoltage Transient Protection Enable"
+      },
+      "fox_dbgparam_grid_undervoltage_transient_protection_time": {
+        "name": "Grid Undervoltage Transient Protection Time"
+      },
+      "fox_dbgparam_gridfeedforwardcoefficient": {
+        "name": "Grid feedforward coefficient"
+      },
+      "fox_dbgparam_gridfeedforwardpercentage": {
+        "name": "Grid feedforward percentage"
+      },
+      "fox_dbgparam_grounding_mode_recognition_threshold_after_grid_connection": {
+        "name": "Grounding Mode Recognition Threshold (After Grid-connection)"
+      },
+      "fox_dbgparam_grounding_mode_recognition_threshold_before_grid_connection": {
+        "name": "Grounding Mode Recognition Threshold (Before Grid-connection)"
+      },
+      "fox_dbgparam_harmonic_intensity_first_order_switching_threshold": {
+        "name": "Harmonic Intensity First-order Switching Threshold"
+      },
+      "fox_dbgparam_harmonic_intensity_percentage": {
+        "name": "Harmonic Intensity Percentage"
+      },
+      "fox_dbgparam_harmonic_intensity_secondary_switching_threshold": {
+        "name": "Harmonic Intensity Secondary Switching Threshold"
+      },
+      "fox_dbgparam_historical_record_storage_period": {
+        "name": "Historical Record Storage Period"
+      },
+      "fox_dbgparam_igbtmodule_temperature_unbalance_detection": {
+        "name": "IGBT Module Temperature Unbalance Detection"
+      },
+      "fox_dbgparam_ileak15": {
+        "name": "Ileak 15"
+      },
+      "fox_dbgparam_ileak15_value": {
+        "name": "Ileak15 Value"
+      },
+      "fox_dbgparam_ileak3": {
+        "name": "Ileak 3"
+      },
+      "fox_dbgparam_ileak3_value": {
+        "name": "Ileak3 Value"
+      },
+      "fox_dbgparam_ileak6": {
+        "name": "Ileak 6"
+      },
+      "fox_dbgparam_ileak6_value": {
+        "name": "Ileak6 Value"
+      },
+      "fox_dbgparam_ileak_control": {
+        "name": "Ileak Control"
+      },
+      "fox_dbgparam_ileak_mode": {
+        "name": "Ileak Mode"
+      },
+      "fox_dbgparam_ileak_self_check": {
+        "name": "Ileak Self Check"
+      },
+      "fox_dbgparam_ileak_value": {
+        "name": "Ileak Value"
+      },
+      "fox_dbgparam_invtemperature_unbalance_detection_threshold": {
+        "name": "INV Temperature Unbalance Detection Threshold"
+      },
+      "fox_dbgparam_isoenable": {
+        "name": "ISO Enable"
+      },
+      "fox_dbgparam_isoprotection_point": {
+        "name": "ISO Protection Point"
+      },
+      "fox_dbgparam_leakage_current_dynamic_protection_coefficient": {
+        "name": "Leakage current dynamic protection coefficient"
+      },
+      "fox_dbgparam_leakage_current_protection_time": {
+        "name": "Leakage current protection time"
+      },
+      "fox_dbgparam_limitpoweruponultra_lowvoltage": {
+        "name": "Limit power upon ultra-low voltage"
+      },
+      "fox_dbgparam_load_1_intelligent_mode_end_time_h": {
+        "name": "Load 1 intelligent mode end time: H"
+      },
+      "fox_dbgparam_load_1_regulation_mode": {
+        "name": "Load 1 regulation mode"
+      },
+      "fox_dbgparam_load_1_switch_mode": {
+        "name": "Load 1 switch mode"
+      },
+      "fox_dbgparam_load_1_timing_end_time_1_hour": {
+        "name": "Load 1 timing end time 1: hour"
+      },
+      "fox_dbgparam_load_1_timing_end_time_1_min": {
+        "name": "Load 1 timing end time 1: Min"
+      },
+      "fox_dbgparam_load_1_timing_end_time_2_hour": {
+        "name": "Load 1 timing end time 2: hour"
+      },
+      "fox_dbgparam_load_1_timing_end_time_2_min": {
+        "name": "Load 1 timing end time 2: Min"
+      },
+      "fox_dbgparam_load_1_timing_start_time_1_hour": {
+        "name": "Load 1 timing start time 1: hour"
+      },
+      "fox_dbgparam_load_1_timing_start_time_1_min": {
+        "name": "Load 1 timing start time 1: Min"
+      },
+      "fox_dbgparam_load_1_timing_start_time_2_hour": {
+        "name": "Load 1 timing start time 2: hour"
+      },
+      "fox_dbgparam_load_1_timing_start_time_2_min": {
+        "name": "Load 1 timing start time 2: Min"
+      },
+      "fox_dbgparam_loading_mode": {
+        "name": "Loading Mode"
+      },
+      "fox_dbgparam_local_remote_control": {
+        "name": "Local/Remote Control"
+      },
+      "fox_dbgparam_low_current_determining_tolerance": {
+        "name": "Low Current Determining Tolerance"
+      },
+      "fox_dbgparam_master_slave_operation_mode": {
+        "name": "Master slave operation mode"
+      },
+      "fox_dbgparam_master_slave_settings": {
+        "name": "Master slave settings"
+      },
+      "fox_dbgparam_maximum_charging_current": {
+        "name": "Maximum charging current"
+      },
+      "fox_dbgparam_maximum_discharge_current": {
+        "name": "Maximum discharge current"
+      },
+      "fox_dbgparam_meter_communication_detection": {
+        "name": "Meter communication detection"
+      },
+      "fox_dbgparam_minimum_bus_voltage_limit": {
+        "name": "Minimum Bus Voltage Limit"
+      },
+      "fox_dbgparam_minimum_bus_voltage_limit_ratio": {
+        "name": "Minimum Bus Voltage Limit Ratio"
+      },
+      "fox_dbgparam_misconnection_detection": {
+        "name": "Misconnection Detection"
+      },
+      "fox_dbgparam_negative_current_protection": {
+        "name": "Negative Current Protection"
+      },
+      "fox_dbgparam_negative_current_protection_detection_cycle": {
+        "name": "Negative Current Protection Detection Cycle"
+      },
+      "fox_dbgparam_negative_sequence_current": {
+        "name": "Negative Sequence Current"
+      },
+      "fox_dbgparam_negativesequencevoltagemutationenable": {
+        "name": "Negative sequence voltage mutation enable"
+      },
+      "fox_dbgparam_non_working_day_battery_use": {
+        "name": "Non working day battery use"
+      },
+      "fox_dbgparam_number_of_master_and_slave_machines": {
+        "name": "Number of master and slave machines"
+      },
+      "fox_dbgparam_numberofpulse_by_pulse_protection": {
+        "name": "Number of pulse-by-pulse Protection"
+      },
+      "fox_dbgparam_off_grid_battery_reserve": {
+        "name": "Off grid battery reserve"
+      },
+      "fox_dbgparam_off_grid_mode": {
+        "name": "Off grid mode"
+      },
+      "fox_dbgparam_on_grid_power_limit_enable": {
+        "name": "OnGridPowerLimit Enable"
+      },
+      "fox_dbgparam_on_grid_power_limit_percent": {
+        "name": "On Grid Power Limit Percent"
+      },
+      "fox_dbgparam_on_grid_power_limit_value": {
+        "name": "OnGridPowerLimit Value"
+      },
+      "fox_dbgparam_online_fault_recording": {
+        "name": "Online Fault Recording"
+      },
+      "fox_dbgparam_optimizepoweraccuracy": {
+        "name": "Optimize power accuracy"
+      },
+      "fox_dbgparam_output_capacitor_capacitance_detection": {
+        "name": "Output Capacitor Capacitance Detection"
+      },
+      "fox_dbgparam_output_capacitor_temperature_detection": {
+        "name": "Output Capacitor Temperature Detection"
+      },
+      "fox_dbgparam_overcurrent_protection_through_software": {
+        "name": "Overcurrent Protection Through Software"
+      },
+      "fox_dbgparam_overcurrentlevel_1trippingthreshold": {
+        "name": "Overcurrent level-1 tripping threshold"
+      },
+      "fox_dbgparam_overcurrentlevel_2trippingthreshold": {
+        "name": "Overcurrent level-2 tripping threshold"
+      },
+      "fox_dbgparam_overcurrentlevel_3trippingthreshold": {
+        "name": "Overcurrent level-3 tripping threshold"
+      },
+      "fox_dbgparam_overcurrentlevel_4trippingthreshold": {
+        "name": "Overcurrent level-4 tripping threshold"
+      },
+      "fox_dbgparam_percentage_of_negative_current_protection_cycle": {
+        "name": "Percentage Of Negative Current Protection Cycle"
+      },
+      "fox_dbgparam_pfmode": {
+        "name": "PF Mode"
+      },
+      "fox_dbgparam_phase_frequency_difference_island": {
+        "name": "Phase Frequency Difference Island"
+      },
+      "fox_dbgparam_phase_frequency_difference_protection_time": {
+        "name": "Phase Frequency Difference Protection Time"
+      },
+      "fox_dbgparam_phase_frequency_difference_protection_value": {
+        "name": "Phase Frequency Difference Protection Value"
+      },
+      "fox_dbgparam_phase_to_phase_short_circuit_protection": {
+        "name": "Phase-to-phase Short Circuit Protection"
+      },
+      "fox_dbgparam_pidrecovery_target_voltage": {
+        "name": "PID  Recovery Target Voltage"
+      },
+      "fox_dbgparam_plcnetwork_id": {
+        "name": "PLC network ID"
+      },
+      "fox_dbgparam_power_generation_coefficient": {
+        "name": "Power Generation Coefficient"
+      },
+      "fox_dbgparam_power_grid_undervoltage_active_power_regulation": {
+        "name": "Power grid undervoltage active power regulation"
+      },
+      "fox_dbgparam_power_of_other_sys_gen": {
+        "name": "Power Of Other SysGen"
+      },
+      "fox_dbgparam_prevent_hiccupsthrough_software": {
+        "name": "Prevent Hiccups through Software"
+      },
+      "fox_dbgparam_protectionpriority": {
+        "name": "Protection priority"
+      },
+      "fox_dbgparam_pulse_by_pulse_protection": {
+        "name": "Pulse-by-pulse Protection"
+      },
+      "fox_dbgparam_pv_ground_voltage_of_accomponent_protection_value": {
+        "name": "PV-Ground Voltage of AC Component Protection Value"
+      },
+      "fox_dbgparam_pvvoltage": {
+        "name": "PV Voltage"
+      },
+      "fox_dbgparam_q1_q6_voltage_protection_value": {
+        "name": "Q1Q6 Voltage Protection Value"
+      },
+      "fox_dbgparam_quickgriddispatchmode": {
+        "name": "Quick grid dispatch mode"
+      },
+      "fox_dbgparam_rapid_dcvoltage_discharge": {
+        "name": "Rapid DC Voltage Discharge"
+      },
+      "fox_dbgparam_rapid_protectionfor_under_gridvoltage": {
+        "name": "Rapid Protection for Under Gridvoltage"
+      },
+      "fox_dbgparam_rated_power_of_load_1": {
+        "name": "Rated power of load 1"
+      },
+      "fox_dbgparam_rated_voltage_of_battery": {
+        "name": "Rated voltage of battery"
+      },
+      "fox_dbgparam_reactive_power_superpostionof_active_anti_island": {
+        "name": "Reactive Power Superpostion of Active Anti-island"
+      },
+      "fox_dbgparam_reactiveclosed_loopadjustmentstep": {
+        "name": "Reactive closed-loop adjustment step"
+      },
+      "fox_dbgparam_reactivepowerfull_loadoperation": {
+        "name": "Reactive power full-load operation"
+      },
+      "fox_dbgparam_recordsofpowerregulationparameters": {
+        "name": "Records of power regulation parameters"
+      },
+      "fox_dbgparam_reset_all_settings": {
+        "name": "Reset All Settings"
+      },
+      "fox_dbgparam_reverse_current_samples": {
+        "name": "Reverse Current Samples"
+      },
+      "fox_dbgparam_rise_time_of_grid_undervoltage": {
+        "name": "Rise time of grid undervoltage"
+      },
+      "fox_dbgparam_set_debug_information_value1": {
+        "name": "Set debug information value 1"
+      },
+      "fox_dbgparam_set_debug_information_value2": {
+        "name": "Set debug information value 2"
+      },
+      "fox_dbgparam_set_debug_information_value3": {
+        "name": "Set debug information value 3"
+      },
+      "fox_dbgparam_set_debug_information_value4": {
+        "name": "Set debug information value 4"
+      },
+      "fox_dbgparam_set_debug_information_value5": {
+        "name": "Set debug information value 5"
+      },
+      "fox_dbgparam_set_debug_information_value6": {
+        "name": "Set debug information value 6"
+      },
+      "fox_dbgparam_short_circuitquickprotection": {
+        "name": "Short-circuit quick protection"
+      },
+      "fox_dbgparam_single_phase_frequency_reactive_disturb": {
+        "name": "Single-phase Frequency Reactive Disturb"
+      },
+      "fox_dbgparam_single_phase_island_nprotection2nd_threshold": {
+        "name": "Single-phase Island Nprotection 2nd Threshold"
+      },
+      "fox_dbgparam_single_phase_island_protection": {
+        "name": "Single-phase Island Protection"
+      },
+      "fox_dbgparam_single_phase_island_protection1st_threshold": {
+        "name": "Single-phase Island Protection 1st Threshold"
+      },
+      "fox_dbgparam_soc_lower_limit": {
+        "name": "SOC lower limit"
+      },
+      "fox_dbgparam_soc_upper_limit": {
+        "name": "SOC upper limit"
+      },
+      "fox_dbgparam_solar_meter_communication_detection": {
+        "name": "Solar meter communication detection"
+      },
+      "fox_dbgparam_standby_power_threshold": {
+        "name": "Standby Power Threshold"
+      },
+      "fox_dbgparam_start_charging_threshold": {
+        "name": "Start charging threshold"
+      },
+      "fox_dbgparam_start_discharge_threshold": {
+        "name": "Start discharge threshold"
+      },
+      "fox_dbgparam_start_time_of_battery_use_on_non_working_days_1_hour": {
+        "name": "Start time of battery use on non working days: 1: hour"
+      },
+      "fox_dbgparam_start_time_of_battery_use_on_non_working_days_1_min": {
+        "name": "Start time of battery use on non working days: 1: Min"
+      },
+      "fox_dbgparam_start_time_of_battery_use_on_non_working_days_2_h": {
+        "name": "Start time of battery use on non working days: 2: H"
+      },
+      "fox_dbgparam_start_time_of_forced_charging_1_min": {
+        "name": "Start time of forced charging: 1: Min"
+      },
+      "fox_dbgparam_start_time_of_forced_charging_2_min": {
+        "name": "Start time of forced charging: 2: Min"
+      },
+      "fox_dbgparam_start_time_of_forced_charging_3_min": {
+        "name": "Start time of forced charging: 3: Min"
+      },
+      "fox_dbgparam_start_time_of_forced_discharging_1_min": {
+        "name": "Start time of forced Discharging: 1: Min"
+      },
+      "fox_dbgparam_start_time_of_forced_discharging_2_min": {
+        "name": "Start time of forced Discharging: 2: Min"
+      },
+      "fox_dbgparam_start_time_of_forced_discharging_3_min": {
+        "name": "Start time of forced Discharging: 3: Min"
+      },
+      "fox_dbgparam_start_time_of_load_1_intelligent_mode_h": {
+        "name": "Start time of load 1 intelligent mode: H"
+      },
+      "fox_dbgparam_start_time_of_load_1_intelligent_mode_min": {
+        "name": "Start time of load 1 intelligent mode: Min"
+      },
+      "fox_dbgparam_starting_time_of_battery_use_on_non_working_days_2_min": {
+        "name": "Starting time of battery use on non working days: 2: Min"
+      },
+      "fox_dbgparam_starting_time_of_battery_use_on_weekdays_1_hour": {
+        "name": "Starting time of battery use on weekdays: 1: hour"
+      },
+      "fox_dbgparam_starting_time_of_battery_use_on_weekdays_1_min": {
+        "name": "Starting time of battery use on weekdays: 1: Min"
+      },
+      "fox_dbgparam_starting_time_of_battery_use_on_weekdays_2_hour": {
+        "name": "Starting time of battery use on weekdays: 2: hour"
+      },
+      "fox_dbgparam_starting_time_of_battery_use_on_weekdays_2_min": {
+        "name": "Starting time of battery use on weekdays: 2: Min"
+      },
+      "fox_dbgparam_string_misconnection_detection": {
+        "name": "String Misconnection Detection"
+      },
+      "fox_dbgparam_string_misconnection_detection_fault_reset": {
+        "name": "String Misconnection Detection Fault Reset"
+      },
+      "fox_dbgparam_string_misconnection_detection_threshold1": {
+        "name": "String Misconnection Detection Threshold1"
+      },
+      "fox_dbgparam_string_misconnection_detection_threshold2": {
+        "name": "String Misconnection Detection Threshold2"
+      },
+      "fox_dbgparam_string_misconnection_detection_threshold3": {
+        "name": "String Misconnection Detection Threshold3"
+      },
+      "fox_dbgparam_swiftgriddispatchmode": {
+        "name": "Swift grid dispatch mode"
+      },
+      "fox_dbgparam_system_grounding_mode": {
+        "name": "System Grounding Mode"
+      },
+      "fox_dbgparam_thresholdfor_phase_to_phase_short_circuit_protection": {
+        "name": "Threshold for Phase-to-phase Short Circuit Protection"
+      },
+      "fox_dbgparam_unconditional_recording_activation": {
+        "name": "Unconditional Recording Activation"
+      },
+      "fox_dbgparam_upu_p1": {
+        "name": "UPU_P1"
+      },
+      "fox_dbgparam_upu_p2": {
+        "name": "UPU_P2"
+      },
+      "fox_dbgparam_upu_p3": {
+        "name": "UPU_P3"
+      },
+      "fox_dbgparam_upu_p4": {
+        "name": "UPU_P4"
+      },
+      "fox_dbgparam_upu_v1": {
+        "name": "UPU_V1"
+      },
+      "fox_dbgparam_upu_v2": {
+        "name": "UPU_V2"
+      },
+      "fox_dbgparam_upu_v3": {
+        "name": "UPU_V3"
+      },
+      "fox_dbgparam_upu_v4": {
+        "name": "UPU_V4"
+      },
+      "fox_dbgparam_voltage_fast_protection_function": {
+        "name": "Voltage Fast Protection Function"
+      },
+      "fox_dbgparam_working_day_battery_usage_end_time_1_hour": {
+        "name": "Working day battery usage end time: 1: hour"
+      },
+      "fox_dbgparam_working_day_battery_usage_end_time_1_min": {
+        "name": "Working day battery usage end time: 1: Min"
+      },
+      "fox_dbgparam_working_day_battery_usage_end_time_2_min": {
+        "name": "Working day battery usage end time: 2: Min"
+      },
+      "fox_dbgparam_x11th_harmonic": {
+        "name": "11th Harmonic"
+      },
+      "fox_dbgparam_x13th_harmonic": {
+        "name": "13th Harmonic"
+      },
+      "fox_dbgparam_x5th_harmonic": {
+        "name": "5th Harmonic"
+      },
+      "fox_dbgparam_x7th_harmonic": {
+        "name": "7th Harmonic"
+      },
+      "fox_ems_bat_backup_socoffgrid": {
+        "name": "Bat Backup SOC Offgrid"
+      },
+      "fox_ems_charge_by_grid_enable": {
+        "name": "Charge By Grid Enable"
+      },
+      "fox_ems_charge_by_grid_value": {
+        "name": "Charge By Grid Value"
+      },
+      "fox_ems_charge_discharge_cmd": {
+        "name": "Charge/Discharge CMD"
+      },
+      "fox_ems_charge_discharge_power": {
+        "name": "Charge/Discharge Power"
+      },
+      "fox_ems_emsmode": {
+        "name": "EMS Mode"
+      },
+      "fox_ems_forced_offgrid": {
+        "name": "Forced Offgrid"
+      },
+      "fox_ems_offgrid_mode": {
+        "name": "Offgrid Mode"
+      },
+      "fox_ems_soclower_limit": {
+        "name": "SOC Lower Limit"
+      },
+      "fox_ems_socupper_limit": {
+        "name": "SOC Upper Limit"
+      },
+      "fox_emsmanual_effective_time_of_forced_charging": {
+        "name": "Effective time of forced charging"
+      },
+      "fox_emsmanual_effective_time_of_forced_discharging": {
+        "name": "Effective time of forced Discharging"
+      },
+      "fox_emsmanual_forced_charging": {
+        "name": "Forced charging"
+      },
+      "fox_emsmanual_forced_charging_end_time_1_hour": {
+        "name": "Forced charging end time 1: Hour"
+      },
+      "fox_emsmanual_forced_charging_end_time_1_min": {
+        "name": "Forced charging end time 1: Min"
+      },
+      "fox_emsmanual_forced_charging_end_time_2_hour": {
+        "name": "Forced charging end time 2: Hour"
+      },
+      "fox_emsmanual_forced_charging_end_time_2_min": {
+        "name": "Forced charging end time 2: Min"
+      },
+      "fox_emsmanual_forced_charging_end_time_3_hour": {
+        "name": "Forced charging end time 3: Hour"
+      },
+      "fox_emsmanual_forced_charging_end_time_3_min": {
+        "name": "Forced charging end time 3: Min"
+      },
+      "fox_emsmanual_forced_charging_start_time_1_hour": {
+        "name": "Forced charging start time 1: Hour"
+      },
+      "fox_emsmanual_forced_charging_start_time_1_min": {
+        "name": "Forced charging start time 1: Min"
+      },
+      "fox_emsmanual_forced_charging_start_time_2_hour": {
+        "name": "Forced charging start time 2: Hour"
+      },
+      "fox_emsmanual_forced_charging_start_time_2_min": {
+        "name": "Forced charging start time 2: Min"
+      },
+      "fox_emsmanual_forced_charging_start_time_3_hour": {
+        "name": "Forced charging start time 3: Hour"
+      },
+      "fox_emsmanual_forced_charging_start_time_3_min": {
+        "name": "Forced charging start time 3: Min"
+      },
+      "fox_emsmanual_forced_charging_target_power_1": {
+        "name": "Forced charging target Power 1"
+      },
+      "fox_emsmanual_forced_charging_target_power_2": {
+        "name": "Forced charging target Power 2"
+      },
+      "fox_emsmanual_forced_charging_target_power_3": {
+        "name": "Forced charging target Power 3"
+      },
+      "fox_emsmanual_forced_charging_target_soc_1": {
+        "name": "Forced charging target SOC 1"
+      },
+      "fox_emsmanual_forced_charging_target_soc_2": {
+        "name": "Forced charging target SOC 2"
+      },
+      "fox_emsmanual_forced_charging_target_soc_3": {
+        "name": "Forced charging target SOC 3"
+      },
+      "fox_emsmanual_forced_discharging": {
+        "name": "Forced Discharging"
+      },
+      "fox_emsmanual_forced_discharging_end_time_1_hour": {
+        "name": "Forced Discharging end time 1: Hour"
+      },
+      "fox_emsmanual_forced_discharging_end_time_1_min": {
+        "name": "Forced Discharging end time 1: Min"
+      },
+      "fox_emsmanual_forced_discharging_end_time_2_hour": {
+        "name": "Forced Discharging end time 2: Hour"
+      },
+      "fox_emsmanual_forced_discharging_end_time_2_min": {
+        "name": "Forced Discharging end time 2: Min"
+      },
+      "fox_emsmanual_forced_discharging_end_time_3_hour": {
+        "name": "Forced Discharging end time 3: Hour"
+      },
+      "fox_emsmanual_forced_discharging_end_time_3_min": {
+        "name": "Forced Discharging end time 3: Min"
+      },
+      "fox_emsmanual_forced_discharging_start_time_1_hour": {
+        "name": "Forced Discharging start time 1: Hour"
+      },
+      "fox_emsmanual_forced_discharging_start_time_1_min": {
+        "name": "Forced Discharging start time 1: Min"
+      },
+      "fox_emsmanual_forced_discharging_start_time_2_hour": {
+        "name": "Forced Discharging start time 2: Hour"
+      },
+      "fox_emsmanual_forced_discharging_start_time_2_min": {
+        "name": "Forced Discharging start time 2: Min"
+      },
+      "fox_emsmanual_forced_discharging_start_time_3_hour": {
+        "name": "Forced Discharging start time 3: Hour"
+      },
+      "fox_emsmanual_forced_discharging_start_time_3_min": {
+        "name": "Forced Discharging start time 3: Min"
+      },
+      "fox_emsmanual_forced_discharging_target_power_1": {
+        "name": "Forced Discharging target Power 1"
+      },
+      "fox_emsmanual_forced_discharging_target_power_2": {
+        "name": "Forced Discharging target Power 2"
+      },
+      "fox_emsmanual_forced_discharging_target_power_3": {
+        "name": "Forced Discharging target Power 3"
+      },
+      "fox_emsmanual_forced_discharging_target_soc_1": {
+        "name": "Forced Discharging target SOC 1"
+      },
+      "fox_emsmanual_forced_discharging_target_soc_2": {
+        "name": "Forced Discharging target SOC 2"
+      },
+      "fox_emsmanual_forced_discharging_target_soc_3": {
+        "name": "Forced Discharging target SOC 3"
+      },
+      "fox_emsmanual_p_sf": {
+        "name": "P_SF"
+      },
+      "fox_energy_battery_current": {
+        "name": "Battery current"
+      },
+      "fox_energy_battery_power": {
+        "name": "BatteryPower"
+      },
+      "fox_energy_battery_temperature": {
+        "name": "Battery temperature"
+      },
+      "fox_energy_battery_voltage": {
+        "name": "Battery voltage"
+      },
+      "fox_energy_current_battery_type": {
+        "name": "Current battery type"
+      },
+      "fox_energy_daily_acinput_power_intake": {
+        "name": "Daily AC input power intake"
+      },
+      "fox_energy_daily_acoutput_power_generation": {
+        "name": "Daily AC output power generation"
+      },
+      "fox_energy_daily_battery_charge": {
+        "name": "Daily battery charge"
+      },
+      "fox_energy_daily_battery_discharge": {
+        "name": "Daily battery discharge"
+      },
+      "fox_energy_daily_pvbattery_charging_capacity": {
+        "name": "Daily PV battery charging capacity"
+      },
+      "fox_energy_daily_pvfeed_grid_energy": {
+        "name": "Daily PV feed grid energy"
+      },
+      "fox_energy_daily_pvgeneration": {
+        "name": "Daily PV generation"
+      },
+      "fox_energy_daily_self_use_rate": {
+        "name": "Daily self use rate"
+      },
+      "fox_energy_device_config_info": {
+        "name": "DeviceConfigInfo"
+      },
+      "fox_energy_generation_power": {
+        "name": "GenerationPower"
+      },
+      "fox_energy_grid_frequency": {
+        "name": "Grid Frequency"
+      },
+      "fox_energy_grid_meter_export_total_energy": {
+        "name": "Grid Meter export total energy"
+      },
+      "fox_energy_grid_meter_import_total_energy": {
+        "name": "Grid Meter import total energy"
+      },
+      "fox_energy_load_total_energy": {
+        "name": "LoadTotal Energy"
+      },
+      "fox_energy_maximum_charging_current_bms": {
+        "name": "Maximum charging current (BMS)"
+      },
+      "fox_energy_maximum_discharge_current_bms": {
+        "name": "Maximum discharge current (BMS)"
+      },
+      "fox_energy_rgmactive_power": {
+        "name": "RGM active power"
+      },
+      "fox_energy_rgmdaily_grid_power": {
+        "name": "RGM daily Grid power"
+      },
+      "fox_energy_rgmdaily_grid_power_consumption": {
+        "name": "RGM daily Grid power consumption"
+      },
+      "fox_energy_rgmphase_aactive_power": {
+        "name": "RGM phase A active power"
+      },
+      "fox_energy_rgmphase_bactive_power": {
+        "name": "RGM phase B active power"
+      },
+      "fox_energy_rgmphase_cactive_power": {
+        "name": "RGM phase C active power"
+      },
+      "fox_energy_rgmtotal_grid_power": {
+        "name": "RGM total Grid power"
+      },
+      "fox_energy_rgmtotal_grid_power_intake": {
+        "name": "RGM total Grid power intake"
+      },
+      "fox_energy_soc": {
+        "name": "SOC"
+      },
+      "fox_energy_soh": {
+        "name": "SOH"
+      },
+      "fox_energy_total_acinput_power": {
+        "name": "Total AC input power"
+      },
+      "fox_energy_total_acoutput": {
+        "name": "Total AC output"
+      },
+      "fox_energy_total_active_power_of_grid": {
+        "name": "Total active power of Grid"
+      },
+      "fox_energy_total_active_power_of_load": {
+        "name": "Total active power of load"
+      },
+      "fox_energy_total_battery_charge": {
+        "name": "Total battery charge"
+      },
+      "fox_energy_total_battery_discharge": {
+        "name": "Total battery discharge"
+      },
+      "fox_energy_total_battery_discharge_bms": {
+        "name": "Total battery discharge (BMS)"
+      },
+      "fox_energy_total_dcpower": {
+        "name": "Total DC power"
+      },
+      "fox_energy_total_pvcell_charge": {
+        "name": "Total PV cell charge"
+      },
+      "fox_energy_total_pvgeneration": {
+        "name": "Total PV generation"
+      },
+      "fox_energy_total_pvgrid_power": {
+        "name": "Total PV grid power"
+      },
+      "fox_energy_total_pvpower": {
+        "name": "Total PV Power"
+      },
+      "fox_exportcomp_end_month": {
+        "name": "End Month"
+      },
+      "fox_exportcomp_end_time_of_forced_charge_hour": {
+        "name": "End Time Of Forced Charge: Hour"
+      },
+      "fox_exportcomp_end_time_of_forced_charge_min": {
+        "name": "End Time Of Forced Charge: Min"
+      },
+      "fox_exportcomp_end_time_of_forced_discharge_hour": {
+        "name": "End Time Of Forced Discharge: Hour"
+      },
+      "fox_exportcomp_end_time_of_forced_discharge_min": {
+        "name": "End Time Of Forced Discharge: Min"
+      },
+      "fox_exportcomp_export_compensation_mode": {
+        "name": "ExportCompensationMode"
+      },
+      "fox_exportcomp_forced_charge_enable": {
+        "name": "Forced Charge Enable"
+      },
+      "fox_exportcomp_forced_discharge_enable": {
+        "name": "Forced Discharge Enable"
+      },
+      "fox_exportcomp_period": {
+        "name": "Period"
+      },
+      "fox_exportcomp_power_of_forced_charge": {
+        "name": "Power Of Forced Charge"
+      },
+      "fox_exportcomp_power_of_forced_discharge": {
+        "name": "Power Of Forced Discharge"
+      },
+      "fox_exportcomp_start_month": {
+        "name": "Start Month"
+      },
+      "fox_exportcomp_start_time_of_forced_charge_hour": {
+        "name": "Start Time Of Forced Charge: Hour"
+      },
+      "fox_exportcomp_start_time_of_forced_charge_min": {
+        "name": "Start Time Of Forced Charge: Min"
+      },
+      "fox_exportcomp_start_time_of_forced_discharge_hour": {
+        "name": "Start Time Of Forced Discharge: Hour"
+      },
+      "fox_exportcomp_start_time_of_forced_discharge_min": {
+        "name": "Start Time Of Forced Discharge: Min"
+      },
+      "fox_exportcomp_start_year": {
+        "name": "Start Year"
+      },
+      "fox_exportcomp_target_socof_forced_charge": {
+        "name": "Target SOC Of Forced Charge"
+      },
+      "fox_exportcomp_target_socof_forced_discharge": {
+        "name": "Target SOC Of Forced Discharge"
+      },
+      "fox_exportlimit_active_power_limit": {
+        "name": "Active Power Limit"
+      },
+      "fox_exportlimit_apparent_power_limit": {
+        "name": "Apparent Power Limit"
+      },
+      "fox_exportlimit_overload_active_power_enble": {
+        "name": "Overload Active Power Enble"
+      },
+      "fox_exportlimit_overload_apparent_power_enble": {
+        "name": "Overload Apparent Power Enble"
+      },
+      "fox_exportlimit_power_limit_mode_of_grid_feeding": {
+        "name": "Power Limit Mode Of Grid Feeding"
+      },
+      "fox_exportlimit_power_limit_of_grid_feeding": {
+        "name": "Power Limit Of Grid Feeding"
+      },
+      "fox_exportlimit_power_limit_precent_of_grid_feeding": {
+        "name": "Power Limit Precent Of Grid Feeding"
+      },
+      "fox_exportlimit_x100_dispatching_active_power_overload": {
+        "name": "100% Dispatching Active Power Overload"
+      },
+      "fox_faultmask_automatic_fault_recovery": {
+        "name": "Automatic Fault Recovery"
+      },
+      "fox_faultmask_dcifault_masking": {
+        "name": "DCI Fault Masking"
+      },
+      "fox_faultmask_dcpower_off_fault_retention": {
+        "name": "DC Power-off Fault Retention"
+      },
+      "fox_faultmask_dcpower_off_shutdown_state_retention": {
+        "name": "DC Power-off Shutdown State Retention"
+      },
+      "fox_faultmask_emergency_stop_manual_recovery": {
+        "name": "Emergency Stop Manual Recovery"
+      },
+      "fox_faultmask_fault_clearing": {
+        "name": "Fault Clearing"
+      },
+      "fox_faultmask_grid_overfrequency_fault_masking": {
+        "name": "Grid Overfrequency Fault Masking"
+      },
+      "fox_faultmask_grid_overvoltage_fault_masking": {
+        "name": "Grid Overvoltage Fault Masking"
+      },
+      "fox_faultmask_grid_protection_manual_recovery": {
+        "name": "Grid Protection Manual Recovery"
+      },
+      "fox_faultmask_grid_underfrequency_fault_masking": {
+        "name": "Grid Underfrequency Fault Masking"
+      },
+      "fox_faultmask_grid_undervoltage_fault_masking": {
+        "name": "Grid Undervoltage Fault Masking"
+      },
+      "fox_faultmask_passive_islanding_manual_recovery": {
+        "name": "Passive Islanding Manual Recovery"
+      },
+      "fox_fw_certified_ver_1": {
+        "name": "CertifiedFirmwareVersion1"
+      },
+      "fox_fw_certified_ver_2": {
+        "name": "CertifiedFirmwareVersion2"
+      },
+      "fox_fw_certified_ver_3": {
+        "name": "CertifiedFirmwareVersion3"
+      },
+      "fox_fw_firmware_num": {
+        "name": "Number of Firmware Versions"
+      },
+      "fox_fw_mcu_ver_1": {
+        "name": "MCU Firmware Version 1"
+      },
+      "fox_fw_mcu_ver_2": {
+        "name": "MCU Firmware Version 2"
+      },
+      "fox_fw_mcu_ver_3": {
+        "name": "MCU Firmware Version 3"
+      },
+      "fox_fw_mcu_ver_4": {
+        "name": "MCU Firmware Version 4"
+      },
+      "fox_fw_mcu_ver_5": {
+        "name": "MCU Firmware Version 5"
+      },
+      "fox_fw_mcu_ver_6": {
+        "name": "MCU Firmware Version 6"
+      },
+      "fox_fw_mcu_ver_7": {
+        "name": "MCU Firmware Version 7"
+      },
+      "fox_fw_mcu_ver_8": {
+        "name": "MCU Firmware Version 8"
+      },
+      "fox_fw_protocol_ver": {
+        "name": "SunspecProtocolVersion"
+      },
+      "fox_gip_grid_imbalance_protection": {
+        "name": "Grid Imbalance Protection"
+      },
+      "fox_gip_grid_imbalance_protection_time": {
+        "name": "Grid Imbalance Protection Time"
+      },
+      "fox_gip_grid_imbalance_protection_value": {
+        "name": "Grid Imbalance Protection Value"
+      },
+      "fox_gip_x10min_over_voltage_protect_enable": {
+        "name": "10min Over Voltage Protect Enable"
+      },
+      "fox_gip_x10min_over_voltage_protect_protection_value": {
+        "name": "10min Over Voltage Protection Value"
+      },
+      "fox_gip_x10min_over_voltage_recovery_value": {
+        "name": "10min Over Voltage Recovery Value"
+      },
+      "fox_gip_x10min_over_voltage_time": {
+        "name": "10min Over Voltage Time"
+      },
+      "fox_hub_battery_power": {
+        "name": "System BatteryPower"
+      },
+      "fox_hub_gen_active_power": {
+        "name": "Gen active power"
+      },
+      "fox_hub_gen_daily_grid_power": {
+        "name": "Gen daily Grid power"
+      },
+      "fox_hub_gen_daily_grid_power_consumption": {
+        "name": "Gen daily Grid power consumption"
+      },
+      "fox_hub_gen_phase_a_active_power": {
+        "name": "Gen phase A active power"
+      },
+      "fox_hub_gen_phase_b_active_power": {
+        "name": "Gen phase B active power"
+      },
+      "fox_hub_gen_phase_c_active_power": {
+        "name": "Gen phase C active power"
+      },
+      "fox_hub_gen_total_grid_power": {
+        "name": "Gen total Grid power"
+      },
+      "fox_hub_gen_total_grid_power_consumption": {
+        "name": "Gen total Grid power consumption"
+      },
+      "fox_hub_generator_current": {
+        "name": "Generator Current"
+      },
+      "fox_hub_generator_frequency": {
+        "name": "Generator Frequency"
+      },
+      "fox_hub_generator_power": {
+        "name": "Generator Power"
+      },
+      "fox_hub_generator_voltage": {
+        "name": "Generator Voltage"
+      },
+      "fox_hub_grid_active_power": {
+        "name": "Grid active power"
+      },
+      "fox_hub_grid_daily_grid_energy": {
+        "name": "Grid daily Grid Energy"
+      },
+      "fox_hub_grid_daily_grid_energy_consumption": {
+        "name": "Grid daily Grid Energy consumption"
+      },
+      "fox_hub_grid_daily_grid_power": {
+        "name": "Grid daily Grid power"
+      },
+      "fox_hub_grid_daily_grid_power_consumption": {
+        "name": "Grid daily Grid power consumption"
+      },
+      "fox_hub_grid_phase_a_active_power": {
+        "name": "Grid phase A active power"
+      },
+      "fox_hub_grid_phase_b_active_power": {
+        "name": "Grid phase B active power"
+      },
+      "fox_hub_grid_phase_c_active_power": {
+        "name": "Grid phase C active power"
+      },
+      "fox_hub_grid_total_grid_energy": {
+        "name": "Grid total Grid Energy"
+      },
+      "fox_hub_grid_total_grid_energy_consumption": {
+        "name": "Grid total Grid Energy consumption"
+      },
+      "fox_hub_grid_total_grid_power": {
+        "name": "Grid total Grid power"
+      },
+      "fox_hub_grid_total_grid_power_consumption": {
+        "name": "Grid total Grid power consumption"
+      },
+      "fox_hub_hub_ctrl_mode": {
+        "name": "Hub Ctrl Mode"
+      },
+      "fox_hub_hub_fault_bytes1": {
+        "name": "HubFaultBytes1"
+      },
+      "fox_hub_hub_fault_bytes2": {
+        "name": "HubFaultBytes2"
+      },
+      "fox_hub_hub_hardware_ver": {
+        "name": "Hub Hardware Ver."
+      },
+      "fox_hub_hub_inner_version": {
+        "name": "Hub Inner Version"
+      },
+      "fox_hub_hub_online_status": {
+        "name": "Hub Online Status"
+      },
+      "fox_hub_hub_presence": {
+        "name": "Hub With"
+      },
+      "fox_hub_hub_reserv1": {
+        "name": "HubReserv1"
+      },
+      "fox_hub_hub_status_info": {
+        "name": "Hub Status Info"
+      },
+      "fox_hub_invert_on_off_by_hub": {
+        "name": "Invert On/Off By Hub"
+      },
+      "fox_hub_off_grid_state": {
+        "name": "OffGrid State"
+      },
+      "fox_hub_slave1_battery_power": {
+        "name": "Slave 1 Battery Power"
+      },
+      "fox_hub_slave1_dc_power": {
+        "name": "Slave 1 Dc Power"
+      },
+      "fox_hub_slave2_battery_power": {
+        "name": "Slave 2 Battery Power"
+      },
+      "fox_hub_slave2_dc_power": {
+        "name": "Slave 2 Dc Power"
+      },
+      "fox_hub_slave3_battery_power": {
+        "name": "Slave 3 Battery Power"
+      },
+      "fox_hub_slave3_dc_power": {
+        "name": "Slave 3 Dc Power"
+      },
+      "fox_hub_slave4_battery_power": {
+        "name": "Slave 4 Battery Power"
+      },
+      "fox_hub_slave4_dc_power": {
+        "name": "Slave 4 Dc Power"
+      },
+      "fox_hub_solar_active_power": {
+        "name": "Solar active power"
+      },
+      "fox_hub_solar_daily_grid_power": {
+        "name": "Solar daily Grid power"
+      },
+      "fox_hub_solar_daily_grid_power_consumption": {
+        "name": "Solar daily Grid power consumption"
+      },
+      "fox_hub_solar_phase_a_active_power": {
+        "name": "Solar phase A active power"
+      },
+      "fox_hub_solar_phase_b_active_power": {
+        "name": "Solar phase B active power"
+      },
+      "fox_hub_solar_phase_c_active_power": {
+        "name": "Solar phase C active power"
+      },
+      "fox_hub_solar_total_grid_power": {
+        "name": "Solar total Grid power"
+      },
+      "fox_hub_solar_total_grid_power_intake": {
+        "name": "Solar total Grid power intake"
+      },
+      "fox_hub_sys_total_dcpower": {
+        "name": "System Total DC power"
+      },
+      "fox_hub_total_active_power_of_grid": {
+        "name": "System Total active power of Grid"
+      },
+      "fox_hub_total_active_power_of_load": {
+        "name": "System Total active power of load"
+      },
+      "fox_ileak_dcicoefficient_protection_time": {
+        "name": "DCI Coefficient Protection Time"
+      },
+      "fox_ileak_dciprotection": {
+        "name": "DCI Protection"
+      },
+      "fox_ileak_dciprotection_coefficient": {
+        "name": "DCI Protection Coefficient"
+      },
+      "fox_ileak_dciprotection_value": {
+        "name": "DCI Protection Value"
+      },
+      "fox_ileak_dciprotection_value_time": {
+        "name": "DCI Protection Value Time"
+      },
+      "fox_ileak_dcirejection": {
+        "name": "DCI Rejection"
+      },
+      "fox_ileak_dynamic_protection_coefficient_of_ileak": {
+        "name": "Dynamic Protection Coefficient Of Ileak"
+      },
+      "fox_ileak_ileak1_value": {
+        "name": "Ileak 1 Value"
+      },
+      "fox_ileak_ileak2_value": {
+        "name": "Ileak 2 Value"
+      },
+      "fox_ileak_ileak3_value": {
+        "name": "Ileak 3 Value"
+      },
+      "fox_ileak_ileak3_value_2": {
+        "name": "Ileak Protection Time"
+      },
+      "fox_ileak_ileak_1": {
+        "name": "Ileak 1"
+      },
+      "fox_ileak_ileak_2": {
+        "name": "Ileak 2"
+      },
+      "fox_ileak_ileak_3": {
+        "name": "Ileak 3"
+      },
+      "fox_ileak_ileak_protection": {
+        "name": "Ileak Protection"
+      },
+      "fox_ileak_ileak_protection_value": {
+        "name": "Ileak Protection Value"
+      },
+      "fox_ileak_ileak_self_test": {
+        "name": "Ileak Self-test"
+      },
+      "fox_info2_afdself_check_results": {
+        "name": "AFD self check results"
+      },
+      "fox_info2_arc_fault_position": {
+        "name": "Arc fault position"
+      },
+      "fox_info2_arc_striking_function": {
+        "name": "Arc striking function"
+      },
+      "fox_info2_arcing_hardware_version_number": {
+        "name": "Arcing hardware version number"
+      },
+      "fox_info2_arm_hardware_version_number": {
+        "name": "Arm hardware version number"
+      },
+      "fox_info2_bitstatus_bit": {
+        "name": "BIT status bit"
+      },
+      "fox_info2_end_of_self_inspection": {
+        "name": "End of self inspection"
+      },
+      "fox_info2_low_noise_threshold": {
+        "name": "Low noise threshold"
+      },
+      "fox_info2_mdsphardware_version_number": {
+        "name": "MDSP hardware version number"
+      },
+      "fox_info2_pidvoltage": {
+        "name": "PID voltage"
+      },
+      "fox_island_anti_islanding_enable": {
+        "name": "Anti-Islanding Enable"
+      },
+      "fox_island_change_rate_of_islanding_frequency": {
+        "name": "Change Rate Of Islanding-Frequency"
+      },
+      "fox_island_island_protecting_time": {
+        "name": "Island Protecting Time"
+      },
+      "fox_island_islanding_judgment_standard": {
+        "name": "Islanding Judgment Standard"
+      },
+      "fox_island_islanding_phase_change": {
+        "name": "Islanding Phase Change"
+      },
+      "fox_island_passive_islanding_protecting": {
+        "name": "Passive Islanding Protecting"
+      },
+      "fox_island_passive_islanding_protecting_value": {
+        "name": "Passive Islanding Protecting Value"
+      },
+      "fox_module_temperature_1": {
+        "name": "Module temperature 1"
+      },
+      "fox_module_temperature_2": {
+        "name": "Module temperature 2"
+      },
+      "fox_monthly_generation": {
+        "name": "Energy generated this month"
+      },
+      "fox_mpptscan_global_mpptscan_enable": {
+        "name": "Global MPPT Scan Enable"
+      },
+      "fox_mpptscan_manual_mpptscan_enable": {
+        "name": "Manual MPPT Scan Enable"
+      },
+      "fox_mpptscan_periodic_mpptscan_enable": {
+        "name": "Periodic MPPT Scan Enable"
+      },
+      "fox_mpptscan_reverse_current_fault_threshold": {
+        "name": "Reverse Current Fault Threshold"
+      },
+      "fox_off_grid_voltage_ab": {
+        "name": "Off-grid voltage A-B"
+      },
+      "fox_off_grid_voltage_bc": {
+        "name": "Off-grid voltage B-C"
+      },
+      "fox_offgrid_off_grid_start_time1": {
+        "name": "OffGridStartTime1"
+      },
+      "fox_offgrid_off_grid_start_time10": {
+        "name": "OffGridStartTime10"
+      },
+      "fox_offgrid_off_grid_start_time11": {
+        "name": "OffGridStartTime11"
+      },
+      "fox_offgrid_off_grid_start_time12": {
+        "name": "OffGridStartTime12"
+      },
+      "fox_offgrid_off_grid_start_time13": {
+        "name": "OffGridStartTime13"
+      },
+      "fox_offgrid_off_grid_start_time14": {
+        "name": "OffGridStartTime14"
+      },
+      "fox_offgrid_off_grid_start_time15": {
+        "name": "OffGridStartTime15"
+      },
+      "fox_offgrid_off_grid_start_time16": {
+        "name": "OffGridStartTime16"
+      },
+      "fox_offgrid_off_grid_start_time17": {
+        "name": "OffGridStartTime17"
+      },
+      "fox_offgrid_off_grid_start_time18": {
+        "name": "OffGridStartTime18"
+      },
+      "fox_offgrid_off_grid_start_time19": {
+        "name": "OffGridStartTime19"
+      },
+      "fox_offgrid_off_grid_start_time2": {
+        "name": "OffGridStartTime2"
+      },
+      "fox_offgrid_off_grid_start_time20": {
+        "name": "OffGridStartTime20"
+      },
+      "fox_offgrid_off_grid_start_time3": {
+        "name": "OffGridStartTime3"
+      },
+      "fox_offgrid_off_grid_start_time4": {
+        "name": "OffGridStartTime4"
+      },
+      "fox_offgrid_off_grid_start_time5": {
+        "name": "OffGridStartTime5"
+      },
+      "fox_offgrid_off_grid_start_time6": {
+        "name": "OffGridStartTime6"
+      },
+      "fox_offgrid_off_grid_start_time7": {
+        "name": "OffGridStartTime7"
+      },
+      "fox_offgrid_off_grid_start_time8": {
+        "name": "OffGridStartTime8"
+      },
+      "fox_offgrid_off_grid_start_time9": {
+        "name": "OffGridStartTime9"
+      },
+      "fox_offgrid_off_grid_time1": {
+        "name": "OffGridTime1"
+      },
+      "fox_offgrid_off_grid_time10": {
+        "name": "OffGridTime10"
+      },
+      "fox_offgrid_off_grid_time11": {
+        "name": "OffGridTime11"
+      },
+      "fox_offgrid_off_grid_time12": {
+        "name": "OffGridTime12"
+      },
+      "fox_offgrid_off_grid_time13": {
+        "name": "OffGridTime13"
+      },
+      "fox_offgrid_off_grid_time14": {
+        "name": "OffGridTime14"
+      },
+      "fox_offgrid_off_grid_time15": {
+        "name": "OffGridTime15"
+      },
+      "fox_offgrid_off_grid_time16": {
+        "name": "OffGridTime16"
+      },
+      "fox_offgrid_off_grid_time17": {
+        "name": "OffGridTime17"
+      },
+      "fox_offgrid_off_grid_time18": {
+        "name": "OffGridTime18"
+      },
+      "fox_offgrid_off_grid_time19": {
+        "name": "OffGridTime19"
+      },
+      "fox_offgrid_off_grid_time2": {
+        "name": "OffGridTime2"
+      },
+      "fox_offgrid_off_grid_time20": {
+        "name": "OffGridTime20"
+      },
+      "fox_offgrid_off_grid_time3": {
+        "name": "OffGridTime3"
+      },
+      "fox_offgrid_off_grid_time4": {
+        "name": "OffGridTime4"
+      },
+      "fox_offgrid_off_grid_time5": {
+        "name": "OffGridTime5"
+      },
+      "fox_offgrid_off_grid_time6": {
+        "name": "OffGridTime6"
+      },
+      "fox_offgrid_off_grid_time7": {
+        "name": "OffGridTime7"
+      },
+      "fox_offgrid_off_grid_time8": {
+        "name": "OffGridTime8"
+      },
+      "fox_offgrid_off_grid_time9": {
+        "name": "OffGridTime9"
+      },
+      "fox_on_grid_voltage_ab": {
+        "name": "Grid voltage A-B"
+      },
+      "fox_on_grid_voltage_bc": {
+        "name": "Grid voltage B-C"
+      },
+      "fox_opuupu_grid_overvoltage_derating_time": {
+        "name": "Grid Overvoltage Derating Time"
+      },
+      "fox_opuupu_grid_undervoltage_escalation_time": {
+        "name": "Grid Undervoltage Escalation Time"
+      },
+      "fox_opuupu_opu_p1": {
+        "name": "OPU_P1"
+      },
+      "fox_opuupu_opu_p2": {
+        "name": "OPU_P2"
+      },
+      "fox_opuupu_opu_p3": {
+        "name": "OPU_P3"
+      },
+      "fox_opuupu_opu_p4": {
+        "name": "OPU_P4"
+      },
+      "fox_opuupu_opu_v1": {
+        "name": "OPU_V1"
+      },
+      "fox_opuupu_opu_v2": {
+        "name": "OPU_V2"
+      },
+      "fox_opuupu_opu_v3": {
+        "name": "OPU_V3"
+      },
+      "fox_opuupu_opu_v4": {
+        "name": "OPU_V4"
+      },
+      "fox_opuupu_power_limit_of_grid_feeding": {
+        "name": "Power Limit Of Grid Feeding"
+      },
+      "fox_opuupu_power_limit_of_grid_feeding_2": {
+        "name": "Power Limit Of Grid Feeding"
+      },
+      "fox_opuupu_upu_p1": {
+        "name": "UPU_P1"
+      },
+      "fox_opuupu_upu_p2": {
+        "name": "UPU_P2"
+      },
+      "fox_opuupu_upu_p3": {
+        "name": "UPU_P3"
+      },
+      "fox_opuupu_upu_p4": {
+        "name": "UPU_P4"
+      },
+      "fox_opuupu_upu_v1": {
+        "name": "UPU_V1"
+      },
+      "fox_opuupu_upu_v2": {
+        "name": "UPU_V2"
+      },
+      "fox_opuupu_upu_v3": {
+        "name": "UPU_V3"
+      },
+      "fox_opuupu_upu_v4": {
+        "name": "UPU_V4"
+      },
+      "fox_parallel_drmripper_control_power_control_percent": {
+        "name": "DRM RipperControl"
+      },
+      "fox_parallel_logger_parallel_power_control_enable": {
+        "name": "Logger Parallel Power Control Enable"
+      },
+      "fox_parallel_logger_parallel_power_difference": {
+        "name": "Logger Parallel Power Difference"
+      },
+      "fox_parallel_master_slave_mode": {
+        "name": "Master-Slave Mode"
+      },
+      "fox_parallel_master_slave_number": {
+        "name": "Master-Slave Number"
+      },
+      "fox_parallel_master_slave_setting": {
+        "name": "Master-Slave Setting"
+      },
+      "fox_parallel_master_slave_working_mode": {
+        "name": "Master-Slave Working Mode"
+      },
+      "fox_parallel_meter_total_power_consumption": {
+        "name": "Meter Total Power-Consumption"
+      },
+      "fox_parallel_meter_total_power_generation": {
+        "name": "Meter Total Power-Generation"
+      },
+      "fox_parallel_online_device_count": {
+        "name": "online device count"
+      },
+      "fox_parallel_parallel_system_e_total": {
+        "name": "Parallel System E_Total"
+      },
+      "fox_parallel_parallel_system_load_total_power": {
+        "name": "Parallel System Load Total Power"
+      },
+      "fox_parallel_parallel_system_meter_power": {
+        "name": "Parallel System Meter Power"
+      },
+      "fox_parallel_parallel_system_total_inverter_power": {
+        "name": "Parallel System Total Inverter Power"
+      },
+      "fox_parallel_system_load_total_energy": {
+        "name": "SystemLoadTotalEnergy"
+      },
+      "fox_parallel_system_total_dcpower": {
+        "name": "SystemTotalDCpower"
+      },
+      "fox_parallelmode_assigned_addr_status": {
+        "name": "assigned address status"
+      },
+      "fox_parallelmode_hub_reserv1": {
+        "name": "HubReserv1"
+      },
+      "fox_parallelmode_hub_run_status": {
+        "name": "HubRunStatus"
+      },
+      "fox_parallelmode_inv1_addr": {
+        "name": "Inveter1 ModbusAddr"
+      },
+      "fox_parallelmode_inv1_sn": {
+        "name": "Inveter1 Serial Number"
+      },
+      "fox_parallelmode_inv2_addr": {
+        "name": "Inveter2 ModbusAddr"
+      },
+      "fox_parallelmode_inv2_sn": {
+        "name": "Inveter2 Serial Number"
+      },
+      "fox_parallelmode_inv3_addr": {
+        "name": "Inveter3 ModbusAddr"
+      },
+      "fox_parallelmode_inv3_sn": {
+        "name": "Inveter3 Serial Number"
+      },
+      "fox_parallelmode_inv4_addr": {
+        "name": "Inveter4 ModbusAddr"
+      },
+      "fox_parallelmode_inv4_sn": {
+        "name": "Inveter4 Serial Number"
+      },
+      "fox_parallelmode_manual_assigned_address_enable": {
+        "name": "ManualAssignedAddress Enable"
+      },
+      "fox_parallelmode_num_inv": {
+        "name": "Number of parallel Machines"
+      },
+      "fox_parallelmode_online_device_num": {
+        "name": "OnlineDeviceNum"
+      },
+      "fox_parallelmode_parallel_mode": {
+        "name": "Parallel mode"
+      },
+      "fox_param_active_power_decline_speed": {
+        "name": "Active Power Decline Speed"
+      },
+      "fox_param_active_power_derating_set_point": {
+        "name": "Active Power Derating SetPoint"
+      },
+      "fox_param_active_power_rising_speed": {
+        "name": "Active Power Rising Speed"
+      },
+      "fox_param_active_power_setting_continously_active": {
+        "name": "Active Power Setting Continously Active"
+      },
+      "fox_param_active_power_soft_start": {
+        "name": "Active Power Soft Start"
+      },
+      "fox_param_active_speed_control": {
+        "name": "Active Speed Control"
+      },
+      "fox_param_afdactivation": {
+        "name": "AFD Activation"
+      },
+      "fox_param_afdself_test": {
+        "name": "AFD Self-test"
+      },
+      "fox_param_anti_pidenable": {
+        "name": "Anti-PID Enable"
+      },
+      "fox_param_auto_fault_recovery": {
+        "name": "Auto Fault Recovery"
+      },
+      "fox_param_baud_rate": {
+        "name": "Baud Rate"
+      },
+      "fox_param_boot_shutdown": {
+        "name": "Boot/Shutdown"
+      },
+      "fox_param_clear_afdalarm": {
+        "name": "Clear AFD Alarm"
+      },
+      "fox_param_clear_pidalarm": {
+        "name": "Clear PID Alarm"
+      },
+      "fox_param_closed_loop_reactive_power_regulation": {
+        "name": "Closed Loop Reactive Power Regulation"
+      },
+      "fox_param_communication_interruption_configuration": {
+        "name": "Communication Interruption Configuration"
+      },
+      "fox_param_communication_interruption_recovery_configuration": {
+        "name": "Communication Interruption Recovery Configuration"
+      },
+      "fox_param_communication_interruption_tripping_time": {
+        "name": "Communication Interruption Tripping Time"
+      },
+      "fox_param_communication_recovery_time": {
+        "name": "Communication Recovery Time"
+      },
+      "fox_param_connecting_time": {
+        "name": "Connecting Time"
+      },
+      "fox_param_country_region": {
+        "name": "Country/Region"
+      },
+      "fox_param_day": {
+        "name": "System Clock: Day"
+      },
+      "fox_param_drm": {
+        "name": "DRM"
+      },
+      "fox_param_even_odd_check": {
+        "name": "Even/Odd Check"
+      },
+      "fox_param_fan_spdself_test": {
+        "name": "Fan & SPD Self-test"
+      },
+      "fox_param_fault_recovery_active_soft_start": {
+        "name": "Fault Recovery ActivePower Soft Start"
+      },
+      "fox_param_fault_recovery_active_soft_start_time": {
+        "name": "Fault Recovery ActivePower Soft Start Time"
+      },
+      "fox_param_frequency_change_value": {
+        "name": "Frequency Change Ratio"
+      },
+      "fox_param_global_mpptscanning": {
+        "name": "Global MPPT Scanning"
+      },
+      "fox_param_grid_unbalance_protection": {
+        "name": "Grid Unbalance Protection"
+      },
+      "fox_param_grid_unbalance_protection_value": {
+        "name": "Grid Unbalance Protection Value"
+      },
+      "fox_param_grid_unbalance_tripping_time": {
+        "name": "Grid Unbalance Tripping Time"
+      },
+      "fox_param_grid_voltage_rising_suppression": {
+        "name": "Grid Voltage Rising Suppression"
+      },
+      "fox_param_grounding_detection": {
+        "name": "Grounding Detection"
+      },
+      "fox_param_grounding_detection_alarm_value": {
+        "name": "Grounding Detection Alarm Value"
+      },
+      "fox_param_hour": {
+        "name": "System Clock: Hour"
+      },
+      "fox_param_lower_reconnection_frequency_limit": {
+        "name": "Lower Reconnection Frequency Limit"
+      },
+      "fox_param_lower_reconnection_voltage_limit": {
+        "name": "Lower Reconnection Voltage Limit"
+      },
+      "fox_param_manual_scanning": {
+        "name": "Manual Scanning"
+      },
+      "fox_param_minute": {
+        "name": "System Clock: Minute"
+      },
+      "fox_param_modification_confirmation": {
+        "name": "Modification Confirmation"
+      },
+      "fox_param_month": {
+        "name": "System Clock: Month"
+      },
+      "fox_param_mpptconnection_mode": {
+        "name": "MPPT Connection Mode"
+      },
+      "fox_param_night_svgreactive_power_ratio": {
+        "name": "Night SVG Reactive Power Ratio"
+      },
+      "fox_param_night_svgswitch": {
+        "name": "Night SVG Switch"
+      },
+      "fox_param_over_voltage_protection": {
+        "name": "10-min Overvoltage Protection"
+      },
+      "fox_param_over_voltage_protection_value": {
+        "name": "10-min Overvoltage Protection Value"
+      },
+      "fox_param_over_voltage_recovery_value": {
+        "name": "10-min Overvoltage Recovery Value"
+      },
+      "fox_param_passive_island_detection": {
+        "name": "Passive Island Detection"
+      },
+      "fox_param_period_scanning": {
+        "name": "Period Scanning"
+      },
+      "fox_param_phase_change": {
+        "name": "Phase Change"
+      },
+      "fox_param_pidrepair": {
+        "name": "PID Repair"
+      },
+      "fox_param_pidscheme": {
+        "name": "PID Scheme"
+      },
+      "fox_param_power_limitingto0and_stop": {
+        "name": "Power Limiting to 0% and Stop"
+      },
+      "fox_param_power_recovery_time_delay_at_overfrequency": {
+        "name": "Power Recovery Time Delay at Overfrequency"
+      },
+      "fox_param_power_recovery_time_delay_at_underfrequency": {
+        "name": "Power Recovery Time Delay at Underfrequency"
+      },
+      "fox_param_power_response_time_at_overfrequency": {
+        "name": "Power Response Time at Overfrequency"
+      },
+      "fox_param_power_response_timeat_underfrequency": {
+        "name": "Power Response Time at Underfrequency"
+      },
+      "fox_param_power_soft_start_slope": {
+        "name": "Power Soft Start Slope"
+      },
+      "fox_param_preset_hysteresis_ratio": {
+        "name": "Preset Hysteresis Ratio"
+      },
+      "fox_param_preset_power_factor": {
+        "name": "Preset Power Factor"
+      },
+      "fox_param_preset_power_limit_ratio": {
+        "name": "Preset Power Limit Ratio"
+      },
+      "fox_param_preset_qp_enable_mode": {
+        "name": "Preset QP_EnableMode"
+      },
+      "fox_param_preset_qp_enter_voltage_ratio": {
+        "name": "Preset QP_EnterVoltageRatio"
+      },
+      "fox_param_preset_qp_enter_voltage_ratio_2": {
+        "name": "Preset QP_EnterVoltageRatio"
+      },
+      "fox_param_preset_qp_exit_power_ratio": {
+        "name": "Preset QP_ExitPowerRatio"
+      },
+      "fox_param_preset_qp_p1": {
+        "name": "Preset QP_P1"
+      },
+      "fox_param_preset_qp_p2": {
+        "name": "Preset QP_P2"
+      },
+      "fox_param_preset_qp_p3": {
+        "name": "Preset QP_P3"
+      },
+      "fox_param_preset_qp_q1": {
+        "name": "Preset QP_Q1"
+      },
+      "fox_param_preset_qp_q2": {
+        "name": "Preset QP_Q2"
+      },
+      "fox_param_preset_qp_q3": {
+        "name": "Preset QP_Q3"
+      },
+      "fox_param_preset_qpcurve": {
+        "name": "Preset Q(P) Curve"
+      },
+      "fox_param_preset_qu_enable_mode": {
+        "name": "Preset QU_EnableMode"
+      },
+      "fox_param_preset_qu_enter_power": {
+        "name": "Preset QU_EnterPower"
+      },
+      "fox_param_preset_qu_exit_power": {
+        "name": "Preset QU_ExitPower"
+      },
+      "fox_param_preset_qu_limited_pfvalue": {
+        "name": "Preset QU_Limited PF Value"
+      },
+      "fox_param_preset_qu_q1": {
+        "name": "Preset QU_Q1"
+      },
+      "fox_param_preset_qu_q2": {
+        "name": "Preset QU_Q2"
+      },
+      "fox_param_preset_qu_q3": {
+        "name": "Preset QU_Q3"
+      },
+      "fox_param_preset_qu_q4": {
+        "name": "Preset QU_V4"
+      },
+      "fox_param_preset_qu_v1": {
+        "name": "Preset QU_V1"
+      },
+      "fox_param_preset_qu_v2": {
+        "name": "Preset QU_V2"
+      },
+      "fox_param_preset_qu_v3": {
+        "name": "Preset QU_V3"
+      },
+      "fox_param_preset_qu_v4": {
+        "name": "Preset QU_V4"
+      },
+      "fox_param_preset_qucurve": {
+        "name": "Preset Q(U) Curve"
+      },
+      "fox_param_preset_reactive_power_ratio": {
+        "name": "Preset Reactive Power Ratio"
+      },
+      "fox_param_preset_reactive_power_regulation_mode": {
+        "name": "Preset Reactive Power Regulation Mode"
+      },
+      "fox_param_qp_enable_mode": {
+        "name": "QP_EnableMode"
+      },
+      "fox_param_qp_enter_voltage_ratio": {
+        "name": "QP_EnterVoltageRatio"
+      },
+      "fox_param_qp_exit_power_ratio": {
+        "name": "QP_ExitPowerRatio"
+      },
+      "fox_param_qp_exit_voltage_ratio": {
+        "name": "QP_ExitVoltageRatio"
+      },
+      "fox_param_qu_enable_mode": {
+        "name": "QU_EnableMode"
+      },
+      "fox_param_qu_enter_power": {
+        "name": "QU_EnterPower"
+      },
+      "fox_param_qu_exit_power": {
+        "name": "QU_ExitPower"
+      },
+      "fox_param_qu_limit_pfvalue": {
+        "name": "QU_LimitPFValue"
+      },
+      "fox_param_reactive_power_derating_set_point": {
+        "name": "Reactive Power Derating SetPoint"
+      },
+      "fox_param_reactive_power_setting_keeping": {
+        "name": "Reactive Power Setting Keeping"
+      },
+      "fox_param_reactive_response": {
+        "name": "Reactive Response"
+      },
+      "fox_param_reactive_response_time": {
+        "name": "Reactive Response Time"
+      },
+      "fox_param_reconnecting_time": {
+        "name": "Reconnecting Time"
+      },
+      "fox_param_relay_self_test": {
+        "name": "Relay Self-test"
+      },
+      "fox_param_restore_default": {
+        "name": "Restore Defaults"
+      },
+      "fox_param_reverse_string_alarm_current": {
+        "name": "Current reverse alarm threshold"
+      },
+      "fox_param_reverse_string_fault_current": {
+        "name": "Current reverse fault threshold"
+      },
+      "fox_param_rs485_port": {
+        "name": "RS485 Port"
+      },
+      "fox_param_scanning_period": {
+        "name": "Scanning Period"
+      },
+      "fox_param_schedulingto_achieve_active_overload": {
+        "name": "100% Scheduling to Achieve Active Overload"
+      },
+      "fox_param_second": {
+        "name": "System Clock: Second"
+      },
+      "fox_param_stop_bit": {
+        "name": "Stop Bit"
+      },
+      "fox_param_string_detection_activation": {
+        "name": "String Detection Activation"
+      },
+      "fox_param_string_detection_reset": {
+        "name": "String Detection Reset"
+      },
+      "fox_param_timing_scanning": {
+        "name": "Timing Scanning"
+      },
+      "fox_param_timing_scanning_hour": {
+        "name": "Timing Scanning Time: Hour"
+      },
+      "fox_param_timing_scanning_minute": {
+        "name": "Timing Scanning Time: Minute"
+      },
+      "fox_param_total_yield_adjustment": {
+        "name": "Total Yield Adjustment"
+      },
+      "fox_param_transparent_transmission_via_standby_rs485_port": {
+        "name": "Transparent Transmission Via Standby RS485 Port"
+      },
+      "fox_param_tripping_time": {
+        "name": "Island protection time"
+      },
+      "fox_param_upper_reconnection_frequency_limit": {
+        "name": "Upper Reconnection Frequency Limit"
+      },
+      "fox_param_upper_reconnection_voltage_limit": {
+        "name": "Upper Reconnection Voltage Limit"
+      },
+      "fox_param_year": {
+        "name": "System Clock: Year"
+      },
+      "fox_pemon_afcialarm_clearing": {
+        "name": "AFCI Alarm Clearing"
+      },
+      "fox_pemon_afcimonitoring_enable": {
+        "name": "AFCI Monitoring Enable"
+      },
+      "fox_pemon_afciself_test_enable": {
+        "name": "AFCI Self-test Enable"
+      },
+      "fox_pemon_arc_threshold_integral_value": {
+        "name": "Arc Threshold Integral Value"
+      },
+      "fox_pemon_arc_threshold_weighting_value": {
+        "name": "Arc Threshold Weighting Value"
+      },
+      "fox_pemon_insulation_resistance_detection_enable": {
+        "name": "Insulation Resistance Detection Enable"
+      },
+      "fox_pemon_insulation_resistance_threshold_setting": {
+        "name": "Insulation Resistance Threshold Setting"
+      },
+      "fox_pemon_low_current_monitoring": {
+        "name": "Low Current Monitoring"
+      },
+      "fox_pemon_pemonitoring_enable": {
+        "name": "PE Monitoring Enable"
+      },
+      "fox_pemon_pemonitoring_voltagevalue_setting": {
+        "name": "PE Monitoring Voltage value Setting"
+      },
+      "fox_pemon_reverse_current_alarm_threshold": {
+        "name": "Reverse Current Alarm Threshold"
+      },
+      "fox_pemon_reverse_current_fault_threshold": {
+        "name": "Reverse Current Fault Threshold"
+      },
+      "fox_pemon_string_monitoring_enable": {
+        "name": "String Monitoring Enable"
+      },
+      "fox_pemon_string_monitoring_reset": {
+        "name": "String Monitoring Reset"
+      },
+      "fox_pfp_pf_enter_voltage": {
+        "name": "PF_EnterVoltage"
+      },
+      "fox_pfp_pf_exit_voltage": {
+        "name": "PF_ExitVoltage"
+      },
+      "fox_pfp_pf_p1": {
+        "name": "PF_P1"
+      },
+      "fox_pfp_pf_p2": {
+        "name": "PF_P2"
+      },
+      "fox_pfp_pf_p3": {
+        "name": "PF_P3"
+      },
+      "fox_pfp_pf_pf1": {
+        "name": "PF_PF1"
+      },
+      "fox_pfp_pf_pf2": {
+        "name": "PF_PF2"
+      },
+      "fox_pfp_pf_pf3": {
+        "name": "PF_PF3"
+      },
+      "fox_pfp_pfp_enable": {
+        "name": "PFP_Enable"
+      },
+      "fox_rddebug_arm_date_1": {
+        "name": "ARM Date 1"
+      },
+      "fox_rddebug_arm_date_2": {
+        "name": "ARM Date 2"
+      },
+      "fox_rddebug_arm_date_3": {
+        "name": "ARM Date 3"
+      },
+      "fox_rddebug_arm_date_4": {
+        "name": "ARM Date 4"
+      },
+      "fox_rddebug_arm_date_5": {
+        "name": "ARM Date 5"
+      },
+      "fox_rddebug_high_address_1": {
+        "name": "High Address 1"
+      },
+      "fox_rddebug_high_address_2": {
+        "name": "High Address 2"
+      },
+      "fox_rddebug_high_address_3": {
+        "name": "High Address 3"
+      },
+      "fox_rddebug_high_address_4": {
+        "name": "High Address 4"
+      },
+      "fox_rddebug_high_address_5": {
+        "name": "High Address 5"
+      },
+      "fox_rddebug_low_address_1": {
+        "name": "Low Address 1"
+      },
+      "fox_rddebug_low_address_2": {
+        "name": "Low Address 2"
+      },
+      "fox_rddebug_low_address_3": {
+        "name": "Low Address 3"
+      },
+      "fox_rddebug_low_address_4": {
+        "name": "Low Address 4"
+      },
+      "fox_rddebug_low_address_5": {
+        "name": "Low Address 5"
+      },
+      "fox_rdmeter_gen_meter_ctreverse": {
+        "name": "GenMeterCTReverse"
+      },
+      "fox_rdmeter_grid_meter_ctreverse": {
+        "name": "GridMeterCTReverse"
+      },
+      "fox_rdmeter_solar_meter_ctreverse": {
+        "name": "SolarMeterCTReverse"
+      },
+      "fox_rdothers_active_power_derating_point": {
+        "name": "Active Power Derating Point"
+      },
+      "fox_rdothers_batwakeup": {
+        "name": "BAT Wakeup"
+      },
+      "fox_rdothers_clear_power_generation": {
+        "name": "Clear Power Generation"
+      },
+      "fox_rdothers_ctratio": {
+        "name": "CT Ratio"
+      },
+      "fox_rdothers_ctratio_enable": {
+        "name": "CT Ratio Enable"
+      },
+      "fox_rdothers_debug_info1": {
+        "name": "Debug Info1"
+      },
+      "fox_rdothers_debug_info2": {
+        "name": "Debug Info2"
+      },
+      "fox_rdothers_debug_info3": {
+        "name": "Debug Info3"
+      },
+      "fox_rdothers_debug_info4": {
+        "name": "Debug Info4"
+      },
+      "fox_rdothers_debug_info5": {
+        "name": "Debug Info5"
+      },
+      "fox_rdothers_debug_info6": {
+        "name": "Debug Info6"
+      },
+      "fox_rdothers_display_information_1": {
+        "name": "Display information 1"
+      },
+      "fox_rdothers_display_information_10": {
+        "name": "Display information 10"
+      },
+      "fox_rdothers_display_information_11": {
+        "name": "Display information 11"
+      },
+      "fox_rdothers_display_information_12": {
+        "name": "Display information 12"
+      },
+      "fox_rdothers_display_information_13": {
+        "name": "Display information 13"
+      },
+      "fox_rdothers_display_information_14": {
+        "name": "Display information 14"
+      },
+      "fox_rdothers_display_information_15": {
+        "name": "Display information 15"
+      },
+      "fox_rdothers_display_information_16": {
+        "name": "Display information 16"
+      },
+      "fox_rdothers_display_information_17": {
+        "name": "Display information 17"
+      },
+      "fox_rdothers_display_information_18": {
+        "name": "Display information 18"
+      },
+      "fox_rdothers_display_information_19": {
+        "name": "Display information 19"
+      },
+      "fox_rdothers_display_information_2": {
+        "name": "Display information 2"
+      },
+      "fox_rdothers_display_information_20": {
+        "name": "Display information 20"
+      },
+      "fox_rdothers_display_information_3": {
+        "name": "Display information 3"
+      },
+      "fox_rdothers_display_information_4": {
+        "name": "Display information 4"
+      },
+      "fox_rdothers_display_information_5": {
+        "name": "Display information 5"
+      },
+      "fox_rdothers_display_information_6": {
+        "name": "Display information 6"
+      },
+      "fox_rdothers_display_information_7": {
+        "name": "Display information 7"
+      },
+      "fox_rdothers_display_information_8": {
+        "name": "Display information 8"
+      },
+      "fox_rdothers_display_information_9": {
+        "name": "Display information 9"
+      },
+      "fox_rdothers_fan_check_enable": {
+        "name": "Fan Check Enable"
+      },
+      "fox_rdothers_fan_spdself_test": {
+        "name": "Fan & SPD Self-test"
+      },
+      "fox_rdothers_fault_record_clearing": {
+        "name": "Fault-Record Clearing"
+      },
+      "fox_rdothers_force_arm_restart": {
+        "name": "Force Arm Restart"
+      },
+      "fox_rdothers_force_datalogger_restart": {
+        "name": "Force Datalogger Restart"
+      },
+      "fox_rdothers_force_system_restart": {
+        "name": "Force System Restart"
+      },
+      "fox_rdothers_grid_meter_communication_check": {
+        "name": "Grid Meter Communication Check"
+      },
+      "fox_rdothers_harmoniccontrolparameters": {
+        "name": "Harmonic control parameters"
+      },
+      "fox_rdothers_ivscan_trig": {
+        "name": "IV Scan Trig"
+      },
+      "fox_rdothers_manaul_wave_recording": {
+        "name": "Manaul Wave Recording"
+      },
+      "fox_rdothers_meter_communication_check": {
+        "name": "Meter Communication Check"
+      },
+      "fox_rdothers_reactive_power_derating_point": {
+        "name": "Reactive Power Derating Point"
+      },
+      "fox_rdothers_relay_self_test": {
+        "name": "Relay Self-test"
+      },
+      "fox_rdothers_reset_all_settings": {
+        "name": "Reset All Settings"
+      },
+      "fox_rdothers_solar_meter_communication_check": {
+        "name": "Solar Meter Communication Check"
+      },
+      "fox_rdothers_spdenable": {
+        "name": "SPD Enable"
+      },
+      "fox_recover_over_frequency_recovery_value": {
+        "name": "Over Frequency Recovery Value"
+      },
+      "fox_recover_over_voltage_recovery_value": {
+        "name": "Over Voltage Recovery Value"
+      },
+      "fox_recover_under_frequency_recovery_value": {
+        "name": "Under Frequency Recovery Value"
+      },
+      "fox_recover_under_voltage_recovery_value": {
+        "name": "Under Voltage Recovery Value"
+      },
+      "fox_running_state": {
+        "name": "Inverter running state"
+      },
+      "fox_svg_pidalarm_clearing": {
+        "name": "PID Alarm Clearing"
+      },
+      "fox_svg_pidrecovery": {
+        "name": "PID Recovery"
+      },
+      "fox_svg_pidrecovery_function_enable": {
+        "name": "PID Recovery Function Enable"
+      },
+      "fox_svg_pidrecovery_impedance_setting": {
+        "name": "PID Recovery Impedance Setting"
+      },
+      "fox_svg_pidrecovery_voltage_setting": {
+        "name": "PID Recovery Voltage Setting"
+      },
+      "fox_svg_reactive_power_ratio_setting_of_svg": {
+        "name": "Reactive Power Ratio Setting Of SVG"
+      },
+      "fox_svg_reactive_power_retention_setting_of_svg": {
+        "name": "Reactive Power Retention Setting Of SVG"
+      },
+      "fox_svg_svgdelay_time_setting": {
+        "name": "SVG Delay Time Setting"
+      },
+      "fox_svg_svgfunction_enable": {
+        "name": "SVG Function Enable"
+      },
+      "fox_total_on_grid_time": {
+        "name": "Time on grid"
+      },
+      "fox_tou_electricity_price_select": {
+        "name": "Electricity Price  Select"
+      },
+      "fox_tou_off_peak_end_time1_hour_price1_summer_weekdays": {
+        "name": "Off Peak End time 1:Hour"
+      },
+      "fox_tou_off_peak_end_time1_hour_price1_summer_weekends": {
+        "name": "Off Peak End time 1:Hour"
+      },
+      "fox_tou_off_peak_end_time1_hour_price1_winter_weekdays": {
+        "name": "Off Peak End time 1:Hour"
+      },
+      "fox_tou_off_peak_end_time1_hour_price1_winter_weekends": {
+        "name": "Off Peak End time 1:Hour"
+      },
+      "fox_tou_off_peak_end_time1_hour_price2_summer_weekdays": {
+        "name": "Off Peak End time 1:Hour"
+      },
+      "fox_tou_off_peak_end_time1_hour_price2_summer_weekends": {
+        "name": "Off Peak End time 1:Hour"
+      },
+      "fox_tou_off_peak_end_time1_hour_price2_winter_weekdays": {
+        "name": "Off Peak End time 1:Hour"
+      },
+      "fox_tou_off_peak_end_time1_hour_price2_winter_weekends": {
+        "name": "Off Peak End time 1:Hour"
+      },
+      "fox_tou_off_peak_end_time1_hour_price3_summer_weekdays": {
+        "name": "Off Peak End time 1:Hour"
+      },
+      "fox_tou_off_peak_end_time1_hour_price3_summer_weekends": {
+        "name": "Off Peak End time 1:Hour"
+      },
+      "fox_tou_off_peak_end_time1_hour_price3_winter_weekdays": {
+        "name": "Off Peak End time 1:Hour"
+      },
+      "fox_tou_off_peak_end_time1_hour_price3_winter_weekends": {
+        "name": "Off Peak End time 1:Hour"
+      },
+      "fox_tou_off_peak_end_time1_hour_price4_summer_weekdays": {
+        "name": "Off Peak End time 1:Hour"
+      },
+      "fox_tou_off_peak_end_time1_hour_price4_summer_weekends": {
+        "name": "Off Peak End time 1:Hour"
+      },
+      "fox_tou_off_peak_end_time1_hour_price4_winter_weekdays": {
+        "name": "Off Peak End time 1:Hour"
+      },
+      "fox_tou_off_peak_end_time1_hour_price4_winter_weekends": {
+        "name": "Off Peak End time 1:Hour"
+      },
+      "fox_tou_off_peak_end_time1_min_price1_summer_weekdays": {
+        "name": "Off Peak End time 1:Min"
+      },
+      "fox_tou_off_peak_end_time1_min_price1_summer_weekends": {
+        "name": "Off Peak End time 1:Min"
+      },
+      "fox_tou_off_peak_end_time1_min_price1_winter_weekdays": {
+        "name": "Off Peak End time 1:Min"
+      },
+      "fox_tou_off_peak_end_time1_min_price1_winter_weekends": {
+        "name": "Off Peak End time 1:Min"
+      },
+      "fox_tou_off_peak_end_time1_min_price2_summer_weekdays": {
+        "name": "Off Peak End time 1:Min"
+      },
+      "fox_tou_off_peak_end_time1_min_price2_summer_weekends": {
+        "name": "Off Peak End time 1:Min"
+      },
+      "fox_tou_off_peak_end_time1_min_price2_winter_weekdays": {
+        "name": "Off Peak End time 1:Min"
+      },
+      "fox_tou_off_peak_end_time1_min_price2_winter_weekends": {
+        "name": "Off Peak End time 1:Min"
+      },
+      "fox_tou_off_peak_end_time1_min_price3_summer_weekdays": {
+        "name": "Off Peak End time 1:Min"
+      },
+      "fox_tou_off_peak_end_time1_min_price3_summer_weekends": {
+        "name": "Off Peak End time 1:Min"
+      },
+      "fox_tou_off_peak_end_time1_min_price3_winter_weekdays": {
+        "name": "Off Peak End time 1:Min"
+      },
+      "fox_tou_off_peak_end_time1_min_price3_winter_weekends": {
+        "name": "Off Peak End time 1:Min"
+      },
+      "fox_tou_off_peak_end_time1_min_price4_summer_weekdays": {
+        "name": "Off Peak End time 1:Min"
+      },
+      "fox_tou_off_peak_end_time1_min_price4_summer_weekends": {
+        "name": "Off Peak End time 1:Min"
+      },
+      "fox_tou_off_peak_end_time1_min_price4_winter_weekdays": {
+        "name": "Off Peak End time 1:Min"
+      },
+      "fox_tou_off_peak_end_time1_min_price4_winter_weekends": {
+        "name": "Off Peak End time 1:Min"
+      },
+      "fox_tou_off_peak_end_time2_hour_price1_summer_weekdays": {
+        "name": "Off Peak End time 2:Hour"
+      },
+      "fox_tou_off_peak_end_time2_hour_price1_summer_weekends": {
+        "name": "Off Peak End time 2:Hour"
+      },
+      "fox_tou_off_peak_end_time2_hour_price1_winter_weekdays": {
+        "name": "Off Peak End time 2:Hour"
+      },
+      "fox_tou_off_peak_end_time2_hour_price1_winter_weekends": {
+        "name": "Off Peak End time 2:Hour"
+      },
+      "fox_tou_off_peak_end_time2_hour_price2_summer_weekdays": {
+        "name": "Off Peak End time 2:Hour"
+      },
+      "fox_tou_off_peak_end_time2_hour_price2_summer_weekends": {
+        "name": "Off Peak End time 2:Hour"
+      },
+      "fox_tou_off_peak_end_time2_hour_price2_winter_weekdays": {
+        "name": "Off Peak End time 2:Hour"
+      },
+      "fox_tou_off_peak_end_time2_hour_price2_winter_weekends": {
+        "name": "Off Peak End time 2:Hour"
+      },
+      "fox_tou_off_peak_end_time2_hour_price3_summer_weekdays": {
+        "name": "Off Peak End time 2:Hour"
+      },
+      "fox_tou_off_peak_end_time2_hour_price3_summer_weekends": {
+        "name": "Off Peak End time 2:Hour"
+      },
+      "fox_tou_off_peak_end_time2_hour_price3_winter_weekdays": {
+        "name": "Off Peak End time 2:Hour"
+      },
+      "fox_tou_off_peak_end_time2_hour_price3_winter_weekends": {
+        "name": "Off Peak End time 2:Hour"
+      },
+      "fox_tou_off_peak_end_time2_hour_price4_summer_weekdays": {
+        "name": "Off Peak End time 2:Hour"
+      },
+      "fox_tou_off_peak_end_time2_hour_price4_summer_weekends": {
+        "name": "Off Peak End time 2:Hour"
+      },
+      "fox_tou_off_peak_end_time2_hour_price4_winter_weekdays": {
+        "name": "Off Peak End time 2:Hour"
+      },
+      "fox_tou_off_peak_end_time2_hour_price4_winter_weekends": {
+        "name": "Off Peak End time 2:Hour"
+      },
+      "fox_tou_off_peak_end_time2_min_price1_summer_weekdays": {
+        "name": "Off Peak End time 2:Min"
+      },
+      "fox_tou_off_peak_end_time2_min_price1_summer_weekends": {
+        "name": "Off Peak End time 2:Min"
+      },
+      "fox_tou_off_peak_end_time2_min_price1_winter_weekdays": {
+        "name": "Off Peak End time 2:Min"
+      },
+      "fox_tou_off_peak_end_time2_min_price1_winter_weekends": {
+        "name": "Off Peak End time 2:Min"
+      },
+      "fox_tou_off_peak_end_time2_min_price2_summer_weekdays": {
+        "name": "Off Peak End time 2:Min"
+      },
+      "fox_tou_off_peak_end_time2_min_price2_summer_weekends": {
+        "name": "Off Peak End time 2:Min"
+      },
+      "fox_tou_off_peak_end_time2_min_price2_winter_weekdays": {
+        "name": "Off Peak End time 2:Min"
+      },
+      "fox_tou_off_peak_end_time2_min_price2_winter_weekends": {
+        "name": "Off Peak End time 2:Min"
+      },
+      "fox_tou_off_peak_end_time2_min_price3_summer_weekdays": {
+        "name": "Off Peak End time 2:Min"
+      },
+      "fox_tou_off_peak_end_time2_min_price3_summer_weekends": {
+        "name": "Off Peak End time 2:Min"
+      },
+      "fox_tou_off_peak_end_time2_min_price3_winter_weekdays": {
+        "name": "Off Peak End time 2:Min"
+      },
+      "fox_tou_off_peak_end_time2_min_price3_winter_weekends": {
+        "name": "Off Peak End time 2:Min"
+      },
+      "fox_tou_off_peak_end_time2_min_price4_summer_weekdays": {
+        "name": "Off Peak End time 2:Min"
+      },
+      "fox_tou_off_peak_end_time2_min_price4_summer_weekends": {
+        "name": "Off Peak End time 2:Min"
+      },
+      "fox_tou_off_peak_end_time2_min_price4_winter_weekdays": {
+        "name": "Off Peak End time 2:Min"
+      },
+      "fox_tou_off_peak_end_time2_min_price4_winter_weekends": {
+        "name": "Off Peak End time 2:Min"
+      },
+      "fox_tou_off_peak_start_time1_hour_price1_summer_weekdays": {
+        "name": "Off Peak Start time 1:Hour Summer weekdays"
+      },
+      "fox_tou_off_peak_start_time1_hour_price1_summer_weekends": {
+        "name": "Off Peak Start time 1:Hour Summer Weekends"
+      },
+      "fox_tou_off_peak_start_time1_hour_price1_winter_weekdays": {
+        "name": "Off Peak Start time 1:Hour Winter weekdays"
+      },
+      "fox_tou_off_peak_start_time1_hour_price1_winter_weekends": {
+        "name": "Off Peak Start time 1:Hour Winter Weekends"
+      },
+      "fox_tou_off_peak_start_time1_hour_price2_summer_weekdays": {
+        "name": "Off Peak Start time 1:Hour Summer weekdays"
+      },
+      "fox_tou_off_peak_start_time1_hour_price2_summer_weekends": {
+        "name": "Off Peak Start time 1:Hour Summer Weekends"
+      },
+      "fox_tou_off_peak_start_time1_hour_price2_winter_weekdays": {
+        "name": "Off Peak Start time 1:Hour Winter weekdays"
+      },
+      "fox_tou_off_peak_start_time1_hour_price2_winter_weekends": {
+        "name": "Off Peak Start time 1:Hour Winter Weekends"
+      },
+      "fox_tou_off_peak_start_time1_hour_price3_summer_weekdays": {
+        "name": "Off Peak Start time 1:Hour Summer weekdays"
+      },
+      "fox_tou_off_peak_start_time1_hour_price3_summer_weekends": {
+        "name": "Off Peak Start time 1:Hour Summer Weekends"
+      },
+      "fox_tou_off_peak_start_time1_hour_price3_winter_weekdays": {
+        "name": "Off Peak Start time 1:Hour Winter weekdays"
+      },
+      "fox_tou_off_peak_start_time1_hour_price3_winter_weekends": {
+        "name": "Off Peak Start time 1:Hour Winter Weekends"
+      },
+      "fox_tou_off_peak_start_time1_hour_price4_summer_weekdays": {
+        "name": "Off Peak Start time 1:Hour Summer weekdays"
+      },
+      "fox_tou_off_peak_start_time1_hour_price4_summer_weekends": {
+        "name": "Off Peak Start time 1:Hour Summer Weekends"
+      },
+      "fox_tou_off_peak_start_time1_hour_price4_winter_weekdays": {
+        "name": "Off Peak Start time 1:Hour Winter weekdays"
+      },
+      "fox_tou_off_peak_start_time1_hour_price4_winter_weekends": {
+        "name": "Off Peak Start time 1:Hour Winter Weekends"
+      },
+      "fox_tou_off_peak_start_time1_min_price1_summer_weekdays": {
+        "name": "Off Peak Start time 1:Min"
+      },
+      "fox_tou_off_peak_start_time1_min_price1_summer_weekends": {
+        "name": "Off Peak Start time 1:Min"
+      },
+      "fox_tou_off_peak_start_time1_min_price1_winter_weekdays": {
+        "name": "Off Peak Start time 1:Min"
+      },
+      "fox_tou_off_peak_start_time1_min_price1_winter_weekends": {
+        "name": "Off Peak Start time 1:Min"
+      },
+      "fox_tou_off_peak_start_time1_min_price2_summer_weekdays": {
+        "name": "Off Peak Start time 1:Min"
+      },
+      "fox_tou_off_peak_start_time1_min_price2_summer_weekends": {
+        "name": "Off Peak Start time 1:Min"
+      },
+      "fox_tou_off_peak_start_time1_min_price2_winter_weekdays": {
+        "name": "Off Peak Start time 1:Min"
+      },
+      "fox_tou_off_peak_start_time1_min_price2_winter_weekends": {
+        "name": "Off Peak Start time 1:Min"
+      },
+      "fox_tou_off_peak_start_time1_min_price3_summer_weekdays": {
+        "name": "Off Peak Start time 1:Min"
+      },
+      "fox_tou_off_peak_start_time1_min_price3_summer_weekends": {
+        "name": "Off Peak Start time 1:Min"
+      },
+      "fox_tou_off_peak_start_time1_min_price3_winter_weekdays": {
+        "name": "Off Peak Start time 1:Min"
+      },
+      "fox_tou_off_peak_start_time1_min_price3_winter_weekends": {
+        "name": "Off Peak Start time 1:Min"
+      },
+      "fox_tou_off_peak_start_time1_min_price4_summer_weekdays": {
+        "name": "Off Peak Start time 1:Min"
+      },
+      "fox_tou_off_peak_start_time1_min_price4_summer_weekends": {
+        "name": "Off Peak Start time 1:Min"
+      },
+      "fox_tou_off_peak_start_time1_min_price4_winter_weekdays": {
+        "name": "Off Peak Start time 1:Min"
+      },
+      "fox_tou_off_peak_start_time1_min_price4_winter_weekends": {
+        "name": "Off Peak Start time 1:Min"
+      },
+      "fox_tou_off_peak_start_time2_hour_price1_summer_weekdays": {
+        "name": "Off Peak Start time 2:Hour"
+      },
+      "fox_tou_off_peak_start_time2_hour_price1_summer_weekends": {
+        "name": "Off Peak Start time 2:Hour"
+      },
+      "fox_tou_off_peak_start_time2_hour_price1_winter_weekdays": {
+        "name": "Off Peak Start time 2:Hour"
+      },
+      "fox_tou_off_peak_start_time2_hour_price1_winter_weekends": {
+        "name": "Off Peak Start time 2:Hour"
+      },
+      "fox_tou_off_peak_start_time2_hour_price2_summer_weekdays": {
+        "name": "Off Peak Start time 2:Hour"
+      },
+      "fox_tou_off_peak_start_time2_hour_price2_summer_weekends": {
+        "name": "Off Peak Start time 2:Hour"
+      },
+      "fox_tou_off_peak_start_time2_hour_price2_winter_weekdays": {
+        "name": "Off Peak Start time 2:Hour"
+      },
+      "fox_tou_off_peak_start_time2_hour_price2_winter_weekends": {
+        "name": "Off Peak Start time 2:Hour"
+      },
+      "fox_tou_off_peak_start_time2_hour_price3_summer_weekdays": {
+        "name": "Off Peak Start time 2:Hour"
+      },
+      "fox_tou_off_peak_start_time2_hour_price3_summer_weekends": {
+        "name": "Off Peak Start time 2:Hour"
+      },
+      "fox_tou_off_peak_start_time2_hour_price3_winter_weekdays": {
+        "name": "Off Peak Start time 2:Hour"
+      },
+      "fox_tou_off_peak_start_time2_hour_price3_winter_weekends": {
+        "name": "Off Peak Start time 2:Hour"
+      },
+      "fox_tou_off_peak_start_time2_hour_price4_summer_weekdays": {
+        "name": "Off Peak Start time 2:Hour"
+      },
+      "fox_tou_off_peak_start_time2_hour_price4_summer_weekends": {
+        "name": "Off Peak Start time 2:Hour"
+      },
+      "fox_tou_off_peak_start_time2_hour_price4_winter_weekdays": {
+        "name": "Off Peak Start time 2:Hour"
+      },
+      "fox_tou_off_peak_start_time2_hour_price4_winter_weekends": {
+        "name": "Off Peak Start time 2:Hour"
+      },
+      "fox_tou_off_peak_start_time2_min_price1_summer_weekdays": {
+        "name": "Off Peak Start time 2:Min"
+      },
+      "fox_tou_off_peak_start_time2_min_price1_summer_weekends": {
+        "name": "Off Peak Start time 2:Min"
+      },
+      "fox_tou_off_peak_start_time2_min_price1_winter_weekdays": {
+        "name": "Off Peak Start time 2:Min"
+      },
+      "fox_tou_off_peak_start_time2_min_price1_winter_weekends": {
+        "name": "Off Peak Start time 2:Min"
+      },
+      "fox_tou_off_peak_start_time2_min_price2_summer_weekdays": {
+        "name": "Off Peak Start time 2:Min"
+      },
+      "fox_tou_off_peak_start_time2_min_price2_summer_weekends": {
+        "name": "Off Peak Start time 2:Min"
+      },
+      "fox_tou_off_peak_start_time2_min_price2_winter_weekdays": {
+        "name": "Off Peak Start time 2:Min"
+      },
+      "fox_tou_off_peak_start_time2_min_price2_winter_weekends": {
+        "name": "Off Peak Start time 2:Min"
+      },
+      "fox_tou_off_peak_start_time2_min_price3_summer_weekdays": {
+        "name": "Off Peak Start time 2:Min"
+      },
+      "fox_tou_off_peak_start_time2_min_price3_summer_weekends": {
+        "name": "Off Peak Start time 2:Min"
+      },
+      "fox_tou_off_peak_start_time2_min_price3_winter_weekdays": {
+        "name": "Off Peak Start time 2:Min"
+      },
+      "fox_tou_off_peak_start_time2_min_price3_winter_weekends": {
+        "name": "Off Peak Start time 2:Min"
+      },
+      "fox_tou_off_peak_start_time2_min_price4_summer_weekdays": {
+        "name": "Off Peak Start time 2:Min"
+      },
+      "fox_tou_off_peak_start_time2_min_price4_summer_weekends": {
+        "name": "Off Peak Start time 2:Min"
+      },
+      "fox_tou_off_peak_start_time2_min_price4_winter_weekdays": {
+        "name": "Off Peak Start time 2:Min"
+      },
+      "fox_tou_off_peak_start_time2_min_price4_winter_weekends": {
+        "name": "Off Peak Start time 2:Min"
+      },
+      "fox_tou_on_peak_end_time1_hour_price1_summer_weekdays": {
+        "name": "On Peak End time 1:Hour"
+      },
+      "fox_tou_on_peak_end_time1_hour_price1_summer_weekends": {
+        "name": "On Peak End time 1:Hour"
+      },
+      "fox_tou_on_peak_end_time1_hour_price1_winter_weekdays": {
+        "name": "On Peak End time 1:Hour"
+      },
+      "fox_tou_on_peak_end_time1_hour_price1_winter_weekends": {
+        "name": "On Peak End time 1:Hour"
+      },
+      "fox_tou_on_peak_end_time1_hour_price2_summer_weekdays": {
+        "name": "On Peak End time 1:Hour"
+      },
+      "fox_tou_on_peak_end_time1_hour_price2_summer_weekends": {
+        "name": "On Peak End time 1:Hour"
+      },
+      "fox_tou_on_peak_end_time1_hour_price2_winter_weekdays": {
+        "name": "On Peak End time 1:Hour"
+      },
+      "fox_tou_on_peak_end_time1_hour_price2_winter_weekends": {
+        "name": "On Peak End time 1:Hour"
+      },
+      "fox_tou_on_peak_end_time1_hour_price3_summer_weekdays": {
+        "name": "On Peak End time 1:Hour"
+      },
+      "fox_tou_on_peak_end_time1_hour_price3_summer_weekends": {
+        "name": "On Peak End time 1:Hour"
+      },
+      "fox_tou_on_peak_end_time1_hour_price3_winter_weekdays": {
+        "name": "On Peak End time 1:Hour"
+      },
+      "fox_tou_on_peak_end_time1_hour_price3_winter_weekends": {
+        "name": "On Peak End time 1:Hour"
+      },
+      "fox_tou_on_peak_end_time1_hour_price4_summer_weekdays": {
+        "name": "On Peak End time 1:Hour"
+      },
+      "fox_tou_on_peak_end_time1_hour_price4_summer_weekends": {
+        "name": "On Peak End time 1:Hour"
+      },
+      "fox_tou_on_peak_end_time1_hour_price4_winter_weekdays": {
+        "name": "On Peak End time 1:Hour"
+      },
+      "fox_tou_on_peak_end_time1_hour_price4_winter_weekends": {
+        "name": "On Peak End time 1:Hour"
+      },
+      "fox_tou_on_peak_end_time1_min_price1_summer_weekdays": {
+        "name": "On Peak End time 1:Min"
+      },
+      "fox_tou_on_peak_end_time1_min_price1_summer_weekends": {
+        "name": "On Peak End time 1:Min"
+      },
+      "fox_tou_on_peak_end_time1_min_price1_winter_weekdays": {
+        "name": "On Peak End time 1:Min"
+      },
+      "fox_tou_on_peak_end_time1_min_price1_winter_weekends": {
+        "name": "On Peak End time 1:Min"
+      },
+      "fox_tou_on_peak_end_time1_min_price2_summer_weekdays": {
+        "name": "On Peak End time 1:Min"
+      },
+      "fox_tou_on_peak_end_time1_min_price2_summer_weekends": {
+        "name": "On Peak End time 1:Min"
+      },
+      "fox_tou_on_peak_end_time1_min_price2_winter_weekdays": {
+        "name": "On Peak End time 1:Min"
+      },
+      "fox_tou_on_peak_end_time1_min_price2_winter_weekends": {
+        "name": "On Peak End time 1:Min"
+      },
+      "fox_tou_on_peak_end_time1_min_price3_summer_weekdays": {
+        "name": "On Peak End time 1:Min"
+      },
+      "fox_tou_on_peak_end_time1_min_price3_summer_weekends": {
+        "name": "On Peak End time 1:Min"
+      },
+      "fox_tou_on_peak_end_time1_min_price3_winter_weekdays": {
+        "name": "On Peak End time 1:Min"
+      },
+      "fox_tou_on_peak_end_time1_min_price3_winter_weekends": {
+        "name": "On Peak End time 1:Min"
+      },
+      "fox_tou_on_peak_end_time1_min_price4_summer_weekdays": {
+        "name": "On Peak End time 1:Min"
+      },
+      "fox_tou_on_peak_end_time1_min_price4_summer_weekends": {
+        "name": "On Peak End time 1:Min"
+      },
+      "fox_tou_on_peak_end_time1_min_price4_winter_weekdays": {
+        "name": "On Peak End time 1:Min"
+      },
+      "fox_tou_on_peak_end_time1_min_price4_winter_weekends": {
+        "name": "On Peak End time 1:Min"
+      },
+      "fox_tou_on_peak_end_time2_hour_price1_summer_weekdays": {
+        "name": "On Peak End time 2:Hour"
+      },
+      "fox_tou_on_peak_end_time2_hour_price1_summer_weekends": {
+        "name": "On Peak End time 2:Hour"
+      },
+      "fox_tou_on_peak_end_time2_hour_price1_winter_weekdays": {
+        "name": "On Peak End time 2:Hour"
+      },
+      "fox_tou_on_peak_end_time2_hour_price1_winter_weekends": {
+        "name": "On Peak End time 2:Hour"
+      },
+      "fox_tou_on_peak_end_time2_hour_price2_summer_weekdays": {
+        "name": "On Peak End time 2:Hour"
+      },
+      "fox_tou_on_peak_end_time2_hour_price2_summer_weekends": {
+        "name": "On Peak End time 2:Hour"
+      },
+      "fox_tou_on_peak_end_time2_hour_price2_winter_weekdays": {
+        "name": "On Peak End time 2:Hour"
+      },
+      "fox_tou_on_peak_end_time2_hour_price2_winter_weekends": {
+        "name": "On Peak End time 2:Hour"
+      },
+      "fox_tou_on_peak_end_time2_hour_price3_summer_weekdays": {
+        "name": "On Peak End time 2:Hour"
+      },
+      "fox_tou_on_peak_end_time2_hour_price3_summer_weekends": {
+        "name": "On Peak End time 2:Hour"
+      },
+      "fox_tou_on_peak_end_time2_hour_price3_winter_weekdays": {
+        "name": "On Peak End time 2:Hour"
+      },
+      "fox_tou_on_peak_end_time2_hour_price3_winter_weekends": {
+        "name": "On Peak End time 2:Hour"
+      },
+      "fox_tou_on_peak_end_time2_hour_price4_summer_weekdays": {
+        "name": "On Peak End time 2:Hour"
+      },
+      "fox_tou_on_peak_end_time2_hour_price4_summer_weekends": {
+        "name": "On Peak End time 2:Hour"
+      },
+      "fox_tou_on_peak_end_time2_hour_price4_winter_weekdays": {
+        "name": "On Peak End time 2:Hour"
+      },
+      "fox_tou_on_peak_end_time2_hour_price4_winter_weekends": {
+        "name": "On Peak End time 2:Hour"
+      },
+      "fox_tou_on_peak_end_time2_min_price1_summer_weekdays": {
+        "name": "On Peak End time 2:Min"
+      },
+      "fox_tou_on_peak_end_time2_min_price1_summer_weekends": {
+        "name": "On Peak End time 2:Min"
+      },
+      "fox_tou_on_peak_end_time2_min_price1_winter_weekdays": {
+        "name": "On Peak End time 2:Min"
+      },
+      "fox_tou_on_peak_end_time2_min_price1_winter_weekends": {
+        "name": "On Peak End time 2:Min"
+      },
+      "fox_tou_on_peak_end_time2_min_price2_summer_weekdays": {
+        "name": "On Peak End time 2:Min"
+      },
+      "fox_tou_on_peak_end_time2_min_price2_summer_weekends": {
+        "name": "On Peak End time 2:Min"
+      },
+      "fox_tou_on_peak_end_time2_min_price2_winter_weekdays": {
+        "name": "On Peak End time 2:Min"
+      },
+      "fox_tou_on_peak_end_time2_min_price2_winter_weekends": {
+        "name": "On Peak End time 2:Min"
+      },
+      "fox_tou_on_peak_end_time2_min_price3_summer_weekdays": {
+        "name": "On Peak End time 2:Min"
+      },
+      "fox_tou_on_peak_end_time2_min_price3_summer_weekends": {
+        "name": "On Peak End time 2:Min"
+      },
+      "fox_tou_on_peak_end_time2_min_price3_winter_weekdays": {
+        "name": "On Peak End time 2:Min"
+      },
+      "fox_tou_on_peak_end_time2_min_price3_winter_weekends": {
+        "name": "On Peak End time 2:Min"
+      },
+      "fox_tou_on_peak_end_time2_min_price4_summer_weekdays": {
+        "name": "On Peak End time 2:Min"
+      },
+      "fox_tou_on_peak_end_time2_min_price4_summer_weekends": {
+        "name": "On Peak End time 2:Min"
+      },
+      "fox_tou_on_peak_end_time2_min_price4_winter_weekdays": {
+        "name": "On Peak End time 2:Min"
+      },
+      "fox_tou_on_peak_end_time2_min_price4_winter_weekends": {
+        "name": "On Peak End time 2:Min"
+      },
+      "fox_tou_on_peak_start_time1_hour_price1_summer_weekdays": {
+        "name": "On Peak Start time 1:Hour Summer weekdays"
+      },
+      "fox_tou_on_peak_start_time1_hour_price1_summer_weekends": {
+        "name": "On Peak Start time 1:Hour Summer Weekends"
+      },
+      "fox_tou_on_peak_start_time1_hour_price1_winter_weekdays": {
+        "name": "On Peak Start time 1:Hour Winter weekdays"
+      },
+      "fox_tou_on_peak_start_time1_hour_price1_winter_weekends": {
+        "name": "On Peak Start time 1:Hour Winter Weekends"
+      },
+      "fox_tou_on_peak_start_time1_hour_price2_summer_weekdays": {
+        "name": "On Peak Start time 1:Hour Summer weekdays"
+      },
+      "fox_tou_on_peak_start_time1_hour_price2_summer_weekends": {
+        "name": "On Peak Start time 1:Hour Summer Weekends"
+      },
+      "fox_tou_on_peak_start_time1_hour_price2_winter_weekdays": {
+        "name": "On Peak Start time 1:Hour Winter weekdays"
+      },
+      "fox_tou_on_peak_start_time1_hour_price2_winter_weekends": {
+        "name": "On Peak Start time 1:Hour Winter Weekends"
+      },
+      "fox_tou_on_peak_start_time1_hour_price3_summer_weekdays": {
+        "name": "On Peak Start time 1:Hour Summer weekdays"
+      },
+      "fox_tou_on_peak_start_time1_hour_price3_summer_weekends": {
+        "name": "On Peak Start time 1:Hour Summer Weekends"
+      },
+      "fox_tou_on_peak_start_time1_hour_price3_winter_weekdays": {
+        "name": "On Peak Start time 1:Hour Winter weekdays"
+      },
+      "fox_tou_on_peak_start_time1_hour_price3_winter_weekends": {
+        "name": "On Peak Start time 1:Hour Winter Weekends"
+      },
+      "fox_tou_on_peak_start_time1_hour_price4_summer_weekdays": {
+        "name": "On Peak Start time 1:Hour Summer weekdays"
+      },
+      "fox_tou_on_peak_start_time1_hour_price4_summer_weekends": {
+        "name": "On Peak Start time 1:Hour Summer Weekends"
+      },
+      "fox_tou_on_peak_start_time1_hour_price4_winter_weekdays": {
+        "name": "On Peak Start time 1:Hour Winter weekdays"
+      },
+      "fox_tou_on_peak_start_time1_hour_price4_winter_weekends": {
+        "name": "On Peak Start time 1:Hour Winter Weekends"
+      },
+      "fox_tou_on_peak_start_time1_min_price1_summer_weekdays": {
+        "name": "On Peak Start time 1:Min"
+      },
+      "fox_tou_on_peak_start_time1_min_price1_summer_weekends": {
+        "name": "On Peak Start time 1:Min"
+      },
+      "fox_tou_on_peak_start_time1_min_price1_winter_weekdays": {
+        "name": "On Peak Start time 1:Min"
+      },
+      "fox_tou_on_peak_start_time1_min_price1_winter_weekends": {
+        "name": "On Peak Start time 1:Min"
+      },
+      "fox_tou_on_peak_start_time1_min_price2_summer_weekdays": {
+        "name": "On Peak Start time 1:Min"
+      },
+      "fox_tou_on_peak_start_time1_min_price2_summer_weekends": {
+        "name": "On Peak Start time 1:Min"
+      },
+      "fox_tou_on_peak_start_time1_min_price2_winter_weekdays": {
+        "name": "On Peak Start time 1:Min"
+      },
+      "fox_tou_on_peak_start_time1_min_price2_winter_weekends": {
+        "name": "On Peak Start time 1:Min"
+      },
+      "fox_tou_on_peak_start_time1_min_price3_summer_weekdays": {
+        "name": "On Peak Start time 1:Min"
+      },
+      "fox_tou_on_peak_start_time1_min_price3_summer_weekends": {
+        "name": "On Peak Start time 1:Min"
+      },
+      "fox_tou_on_peak_start_time1_min_price3_winter_weekdays": {
+        "name": "On Peak Start time 1:Min"
+      },
+      "fox_tou_on_peak_start_time1_min_price3_winter_weekends": {
+        "name": "On Peak Start time 1:Min"
+      },
+      "fox_tou_on_peak_start_time1_min_price4_summer_weekdays": {
+        "name": "On Peak Start time 1:Min"
+      },
+      "fox_tou_on_peak_start_time1_min_price4_summer_weekends": {
+        "name": "On Peak Start time 1:Min"
+      },
+      "fox_tou_on_peak_start_time1_min_price4_winter_weekdays": {
+        "name": "On Peak Start time 1:Min"
+      },
+      "fox_tou_on_peak_start_time1_min_price4_winter_weekends": {
+        "name": "On Peak Start time 1:Min"
+      },
+      "fox_tou_on_peak_start_time2_hour_price1_summer_weekdays": {
+        "name": "On Peak Start time 2:Hour"
+      },
+      "fox_tou_on_peak_start_time2_hour_price1_summer_weekends": {
+        "name": "On Peak Start time 2:Hour"
+      },
+      "fox_tou_on_peak_start_time2_hour_price1_winter_weekdays": {
+        "name": "On Peak Start time 2:Hour"
+      },
+      "fox_tou_on_peak_start_time2_hour_price1_winter_weekends": {
+        "name": "On Peak Start time 2:Hour"
+      },
+      "fox_tou_on_peak_start_time2_hour_price2_summer_weekdays": {
+        "name": "On Peak Start time 2:Hour"
+      },
+      "fox_tou_on_peak_start_time2_hour_price2_summer_weekends": {
+        "name": "On Peak Start time 2:Hour"
+      },
+      "fox_tou_on_peak_start_time2_hour_price2_winter_weekdays": {
+        "name": "On Peak Start time 2:Hour"
+      },
+      "fox_tou_on_peak_start_time2_hour_price2_winter_weekends": {
+        "name": "On Peak Start time 2:Hour"
+      },
+      "fox_tou_on_peak_start_time2_hour_price3_summer_weekdays": {
+        "name": "On Peak Start time 2:Hour"
+      },
+      "fox_tou_on_peak_start_time2_hour_price3_summer_weekends": {
+        "name": "On Peak Start time 2:Hour"
+      },
+      "fox_tou_on_peak_start_time2_hour_price3_winter_weekdays": {
+        "name": "On Peak Start time 2:Hour"
+      },
+      "fox_tou_on_peak_start_time2_hour_price3_winter_weekends": {
+        "name": "On Peak Start time 2:Hour"
+      },
+      "fox_tou_on_peak_start_time2_hour_price4_summer_weekdays": {
+        "name": "On Peak Start time 2:Hour"
+      },
+      "fox_tou_on_peak_start_time2_hour_price4_summer_weekends": {
+        "name": "On Peak Start time 2:Hour"
+      },
+      "fox_tou_on_peak_start_time2_hour_price4_winter_weekdays": {
+        "name": "On Peak Start time 2:Hour"
+      },
+      "fox_tou_on_peak_start_time2_hour_price4_winter_weekends": {
+        "name": "On Peak Start time 2:Hour"
+      },
+      "fox_tou_on_peak_start_time2_min_price1_summer_weekdays": {
+        "name": "On Peak Start time 2:Min"
+      },
+      "fox_tou_on_peak_start_time2_min_price1_summer_weekends": {
+        "name": "On Peak Start time 2:Min"
+      },
+      "fox_tou_on_peak_start_time2_min_price1_winter_weekdays": {
+        "name": "On Peak Start time 2:Min"
+      },
+      "fox_tou_on_peak_start_time2_min_price1_winter_weekends": {
+        "name": "On Peak Start time 2:Min"
+      },
+      "fox_tou_on_peak_start_time2_min_price2_summer_weekdays": {
+        "name": "On Peak Start time 2:Min"
+      },
+      "fox_tou_on_peak_start_time2_min_price2_summer_weekends": {
+        "name": "On Peak Start time 2:Min"
+      },
+      "fox_tou_on_peak_start_time2_min_price2_winter_weekdays": {
+        "name": "On Peak Start time 2:Min"
+      },
+      "fox_tou_on_peak_start_time2_min_price2_winter_weekends": {
+        "name": "On Peak Start time 2:Min"
+      },
+      "fox_tou_on_peak_start_time2_min_price3_summer_weekdays": {
+        "name": "On Peak Start time 2:Min"
+      },
+      "fox_tou_on_peak_start_time2_min_price3_summer_weekends": {
+        "name": "On Peak Start time 2:Min"
+      },
+      "fox_tou_on_peak_start_time2_min_price3_winter_weekdays": {
+        "name": "On Peak Start time 2:Min"
+      },
+      "fox_tou_on_peak_start_time2_min_price3_winter_weekends": {
+        "name": "On Peak Start time 2:Min"
+      },
+      "fox_tou_on_peak_start_time2_min_price4_summer_weekdays": {
+        "name": "On Peak Start time 2:Min"
+      },
+      "fox_tou_on_peak_start_time2_min_price4_summer_weekends": {
+        "name": "On Peak Start time 2:Min"
+      },
+      "fox_tou_on_peak_start_time2_min_price4_winter_weekdays": {
+        "name": "On Peak Start time 2:Min"
+      },
+      "fox_tou_on_peak_start_time2_min_price4_winter_weekends": {
+        "name": "On Peak Start time 2:Min"
+      },
+      "fox_tou_summer_end_month_price1": {
+        "name": "Summer End Month Price1"
+      },
+      "fox_tou_summer_end_month_price2": {
+        "name": "Summer End Month Price2"
+      },
+      "fox_tou_summer_end_month_price3": {
+        "name": "Summer End Month Price3"
+      },
+      "fox_tou_summer_end_month_price4": {
+        "name": "Summer End Month Price4"
+      },
+      "fox_tou_summer_start_month_price1": {
+        "name": "Summer Start Month Price1"
+      },
+      "fox_tou_summer_start_month_price2": {
+        "name": "Summer Start Month Price2"
+      },
+      "fox_tou_summer_start_month_price3": {
+        "name": "Summer Start Month Price3"
+      },
+      "fox_tou_summer_start_month_price4": {
+        "name": "Summer Start Month Price4"
+      },
+      "fox_tou_touplan": {
+        "name": "TOU Plan"
+      },
+      "fox_tou_weekend_enable_price1": {
+        "name": "Weekend Enable"
+      },
+      "fox_tou_weekend_enable_price2": {
+        "name": "Weekend Enable"
+      },
+      "fox_tou_weekend_enable_price3": {
+        "name": "Weekend Enable"
+      },
+      "fox_tou_weekend_enable_price4": {
+        "name": "Weekend Enable"
+      },
+      "frequency": {
+        "name": "AC frequency"
+      },
+      "grid_status": {
+        "name": "Grid status",
+        "state": {
+          "on_grid": "On grid",
+          "off_grid": "Off grid"
+        }
+      },
+      "heat_sink_temperature": {
+        "name": "Heat sink temperature"
+      },
+      "home_consumption_battery": {
+        "name": "House consumption from battery"
+      },
+      "home_consumption_battery_total": {
+        "name": "House consumption from battery, total"
+      },
+      "home_consumption_grid": {
+        "name": "House consumption from grid"
+      },
+      "home_consumption_grid_total": {
+        "name": "House consumption from grid, total"
+      },
+      "home_consumption_pv": {
+        "name": "House consumption from PV"
+      },
+      "home_consumption_pv_total": {
+        "name": "House consumption from PV, total"
+      },
+      "home_consumption_total": {
+        "name": "House consumption, total"
+      },
+      "inverter_temperature": {
+        "name": "Inverter temperature"
+      },
+      "isolation_resistance": {
+        "name": "Insulation resistance"
+      },
+      "lifetime_energy": {
+        "name": "Lifetime energy produced"
+      },
+      "max_power_setting": {
+        "name": "Configured max power"
+      },
+      "operating_state": {
+        "name": "Operating state"
+      },
+      "other_temperature": {
+        "name": "Other temperature"
+      },
+      "phase_voltage_l1_l2": {
+        "name": "Phase voltage L1-L2"
+      },
+      "phase_voltage_l1_n": {
+        "name": "Phase voltage L1-N"
+      },
+      "phase_voltage_l2_l3": {
+        "name": "Phase voltage L2-L3"
+      },
+      "phase_voltage_l2_n": {
+        "name": "Phase voltage L2-N"
+      },
+      "phase_voltage_l3_l1": {
+        "name": "Phase voltage L3-L1"
+      },
+      "phase_voltage_l3_n": {
+        "name": "Phase voltage L3-N"
+      },
+      "power_factor": {
+        "name": "Power factor"
+      },
+      "power_limit_evu": {
+        "name": "Grid operator power limit"
+      },
+      "pssb_fuse_state": {
+        "name": "String fuse board",
+        "state": {
+          "fuse_fail": "Fuse failed",
+          "fuse_ok": "Fuse OK",
+          "unchecked": "Unchecked"
+        }
+      },
+      "pv_power": {
+        "name": "PV power"
+      },
+      "rated_apparent_power": {
+        "name": "Rated apparent power"
+      },
+      "rated_current": {
+        "name": "Rated AC current"
+      },
+      "rated_lifetime_energy": {
+        "name": "Rated lifetime energy"
+      },
+      "rated_power": {
+        "name": "Rated AC power"
+      },
+      "reactive_power": {
+        "name": "Reactive power"
+      },
+      "register_writes": {
+        "name": "Register writes"
+      },
+      "rrcr_state": {
+        "name": "RRCR input state"
+      },
+      "sma_active_power_mode": {
+        "name": "Active power operating mode",
+        "state": {
+          "off": "Off",
+          "watts": "Watts",
+          "percent": "Percent",
+          "external_setpoint": "External setpoint"
+        }
+      },
+      "sma_device_class": {
+        "name": "Device class",
+        "state": {
+          "pv_inverter": "PV inverter",
+          "wind_inverter": "Wind inverter",
+          "battery_inverter": "Battery inverter",
+          "load": "Load",
+          "sensor": "Sensor",
+          "energy_meter": "Energy meter",
+          "communication": "Communication product"
+        }
+      },
+      "sma_device_type": {
+        "name": "Device type code"
+      },
+      "sma_operating_status": {
+        "name": "Operating status",
+        "state": {
+          "fault": "Fault",
+          "off": "Off",
+          "ok": "Ok",
+          "warning": "Warning"
+        }
+      },
+      "sma_setpoint_timeout": {
+        "name": "External setpoint timeout"
+      },
+      "smart_meter_location": {
+        "name": "Smart meter location",
+        "state": {
+          "feed_in_point": "Feed-in point",
+          "consumption_path": "Consumption path"
+        }
+      },
+      "status_vendor4": {
+        "name": "Vendor status code"
+      },
+      "total_dc_power": {
+        "name": "DC power"
+      },
+      "transformer_temperature": {
+        "name": "Transformer temperature"
+      },
+      "vendor_events_1": {
+        "name": "Vendor events 1"
+      },
+      "vendor_events_2": {
+        "name": "Vendor events 2"
+      },
+      "vendor_events_3": {
+        "name": "Vendor events 3"
+      },
+      "vendor_events_4": {
+        "name": "Vendor events 4"
+      },
+      "vendor_operating_state": {
+        "name": "Vendor operating state"
+      },
+      "voltage_reference": {
+        "name": "Voltage reference"
+      },
+      "watts": {
+        "name": "AC power"
       }
     }
   },

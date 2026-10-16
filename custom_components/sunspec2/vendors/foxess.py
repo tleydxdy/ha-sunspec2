@@ -33,6 +33,8 @@ battery cell voltages are millivolt columns.
 
 from __future__ import annotations
 
+from .foxess_catalog import CATALOG_BLOCKS
+from .foxess_catalog import CATALOG_SENSORS
 from .profile import ModelRelabel
 from .profile import RawBlock
 from .profile import RawField
@@ -390,7 +392,7 @@ FOXESS = VendorProfile(
     slug="foxess",
     manufacturer_prefixes=("BFOX", "FoxESS", "FOX"),
     model_relabels=MODEL_RELABELS,
-    raw_blocks=RAW_BLOCKS,
-    raw_sensors=RAW_SENSORS,
+    raw_blocks=RAW_BLOCKS + CATALOG_BLOCKS,
+    raw_sensors=RAW_SENSORS + CATALOG_SENSORS,
     default_model_ids=frozenset({64201, 64213}),
 )

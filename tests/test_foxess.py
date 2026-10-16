@@ -19,6 +19,8 @@ from custom_components.sunspec2.raw_blocks import decode_block
 from custom_components.sunspec2.vendors import default_models_for_profile
 from custom_components.sunspec2.vendors import profile_for
 from custom_components.sunspec2.vendors.foxess import FOXESS
+from custom_components.sunspec2.vendors.foxess_catalog import CATALOG_BLOCKS
+from custom_components.sunspec2.vendors.foxess_catalog import CATALOG_SENSORS
 
 from .fake_unit import FakeConnection
 from .fake_unit import FakeUnit
@@ -157,3 +159,40 @@ async def test_the_private_blocks_decode_through_the_raw_blocks():
     assert info["monthly_power_gen"] == pytest.approx(14.9)
     assert info["on_grid_voltage_a"] == pytest.approx(121.3)
     assert info["positive_bus_voltage"] == pytest.approx(193.6)
+
+
+def test_every_catalog_block_decodes_over_the_captured_image():
+    """The generated blocks must decode cleanly against the capture.
+
+    The catalog mirror is generated from the device's own field catalog;
+    an offset or size mistake shows up here as a DeviceError (short
+    answer) or a ValueError (unknown kind), not as wrong numbers.
+    """
+    fixture = json.loads(_FIXTURE.read_text())
+    words = {int(address): word for address, word in fixture["image"].items()}
+    for block in CATALOG_BLOCKS:
+        data = _raw_block_bytes(block.address, block.count, words)
+        decoded = decode_block(block, data)
+        assert decoded, block.key
+
+
+def test_every_catalog_sensor_names_a_real_field_and_is_translated():
+    """Each generated sensor points into its block, uniquely, with a name."""
+    from pathlib import Path as path
+
+    en = json.loads(
+        path(__file__)
+        .parents[1]
+        .joinpath("custom_components/sunspec2/translations/en.json")
+        .read_text()
+    )
+    names = en["entity"]["sensor"]
+    blocks = {block.key: block for block in CATALOG_BLOCKS}
+    seen: set[str] = set()
+    for spec in CATALOG_SENSORS:
+        assert spec.key not in seen, spec.key
+        seen.add(spec.key)
+        block = blocks[spec.block]
+        assert spec.field in {f.name for f in block.fields}, spec.key
+        assert spec.key in names, spec.key
+        assert names[spec.key].get("name"), spec.key
